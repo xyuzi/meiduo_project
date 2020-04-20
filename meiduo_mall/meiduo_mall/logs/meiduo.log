@@ -4,3 +4,6 @@ INFO 2020-04-18 04:25:06,114 basehttp 154 "GET /static/admin/css/fonts.css HTTP/
 INFO 2020-04-18 04:25:06,195 basehttp 154 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
 INFO 2020-04-18 04:25:06,203 basehttp 154 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
 INFO 2020-04-18 04:25:06,223 basehttp 154 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2020-04-20 02:51:40,738 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-20 02:56:32,584 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-20 03:14:12,921 autoreload 597 Watching for file changes with StatReloader
