@@ -145,3 +145,32 @@ INFO 2020-04-21 03:09:48,103 basehttp 154 "GET /usernames/chuanzhi/count/ HTTP/1
 WARNING 2020-04-21 03:09:48,159 log 228 Not Found: /favicon.ico
 WARNING 2020-04-21 03:09:48,159 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2370
 INFO 2020-04-21 03:10:29,003 basehttp 154 "GET /usernames/pancan/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 03:14:51,753 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/urls.py changed, reloading.
+INFO 2020-04-21 03:14:52,244 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-21 03:16:31,903 log 228 Not Found: /image_codes/093e8851-3ef1-453d-8ea1-b4c96e17ebb6/
+WARNING 2020-04-21 03:16:31,906 basehttp 154 "GET /image_codes/093e8851-3ef1-453d-8ea1-b4c96e17ebb6/ HTTP/1.1" 404 2484
+WARNING 2020-04-21 03:16:32,706 log 228 Not Found: /image_codes/6a802572-ab66-445d-9420-d821037c6780/
+WARNING 2020-04-21 03:16:32,706 basehttp 154 "GET /image_codes/6a802572-ab66-445d-9420-d821037c6780/ HTTP/1.1" 404 2484
+WARNING 2020-04-21 03:16:34,010 log 228 Not Found: /image_codes/47059fce-43ba-4c9d-b72f-d91ebe9bcefb/
+WARNING 2020-04-21 03:16:34,010 basehttp 154 "GET /image_codes/47059fce-43ba-4c9d-b72f-d91ebe9bcefb/ HTTP/1.1" 404 2484
+INFO 2020-04-21 03:27:21,574 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-04-21 03:27:21,915 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 03:27:39,032 basehttp 154 "GET /usernames/pancan/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 03:27:39,036 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 03:27:41,225 basehttp 154 "GET /usernames/pancan/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 03:27:41,226 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 03:29:20,215 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 03:29:32,940 basehttp 154 "GET /usernames/pancan/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 03:29:35,178 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 04:01:36,271 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 04:02:53,454 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 04:04:05,406 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 04:04:57,359 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 04:05:29,232 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 04:05:47,166 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 04:05:52,619 basehttp 154 "GET /image_codes/b3f115c1-2aeb-4ab3-ba40-a0779c189ad4/ HTTP/1.1" 200 3177
+INFO 2020-04-21 04:06:01,299 basehttp 154 "GET /image_codes/19f80457-4890-4047-99d2-663f4f474b10/ HTTP/1.1" 200 3272
+INFO 2020-04-21 04:06:02,423 basehttp 154 "GET /image_codes/739f92dd-c805-481c-a636-cac94cdfffe8/ HTTP/1.1" 200 2874
+INFO 2020-04-21 04:06:35,058 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 04:06:41,344 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 04:06:44,881 basehttp 154 "GET /image_codes/cfc2f6ce-22c4-4d9d-838c-a1874088ac67/ HTTP/1.1" 200 3476

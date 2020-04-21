@@ -28,6 +28,8 @@ class UsernameCountView(View):
 
 
 class MobileCountView(View):
+    '''手机号重复验证'''
+
     def get(self, request, mobile):
         try:
             count = User.objects.filter(mobile=mobile).count()
