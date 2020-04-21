@@ -17,7 +17,6 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 添加'apps'到路由列表
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
-sys.path.insert(0, os.path.join(BASE_DIR, 'libs'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -44,7 +43,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'verifications',
-    'captcha'
 ]
 
 MIDDLEWARE = [

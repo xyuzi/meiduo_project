@@ -174,3 +174,17 @@ INFO 2020-04-21 04:06:02,423 basehttp 154 "GET /image_codes/739f92dd-c805-481c-a
 INFO 2020-04-21 04:06:35,058 autoreload 597 Watching for file changes with StatReloader
 INFO 2020-04-21 04:06:41,344 autoreload 597 Watching for file changes with StatReloader
 INFO 2020-04-21 04:06:44,881 basehttp 154 "GET /image_codes/cfc2f6ce-22c4-4d9d-838c-a1874088ac67/ HTTP/1.1" 200 3476
+INFO 2020-04-21 06:32:10,216 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 06:32:17,689 basehttp 154 "GET /usernames/pancan/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 06:32:19,103 basehttp 154 "GET /usernames/pancan/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 06:32:22,038 basehttp 154 "GET /image_codes/f3b30a8d-5f16-43ec-a9f6-b57ac075e5d7/ HTTP/1.1" 200 3217
+INFO 2020-04-21 06:32:26,360 basehttp 154 "GET /usernames/pancan/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 06:32:37,690 basehttp 154 "GET /usernames/pancan/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 06:32:42,639 basehttp 154 "GET /usernames/pancan/count/ HTTP/1.1" 200 39
+INFO 2020-04-21 06:56:41,535 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 07:04:08,058 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-04-21 07:04:08,441 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 07:58:51,940 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 07:59:19,968 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-04-21 07:59:20,391 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-21 07:59:20,721 basehttp 154 "GET /image_codes/39734b19-6a5b-4738-b792-374f0b0f17ed/ HTTP/1.1" 200 3383
