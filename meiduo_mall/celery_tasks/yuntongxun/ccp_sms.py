@@ -2,20 +2,20 @@
 
 import ssl
 
-from .CCPRestSDK import REST
+from celery_tasks.yuntongxun.CCPRestSDK import REST
 
 ssl._create_default_https_context = ssl._create_unverified_context  # 全局取消证书验证
 
 
 
 # 说明：主账号，登陆云通讯网站后，可在"控制台-应用"中看到开发者主账号ACCOUNT SID
-_accountSid = ''
+_accountSid = '8a216da87172b2ee01719b774b3c143c'
 
 # 说明：主账号Token，登陆云通讯网站后，可在控制台-应用中看到开发者主账号AUTH TOKEN
-_accountToken = ''
+_accountToken = '717de3d5a5ea497c92c2447f6ee78605'
 
 # 请使用管理控制台首页的APPID或自己创建应用的APPID
-_appId = ''
+_appId = '8a216da87172b2ee01719b774ba11443'
 
 # 说明：请求地址，生产环境配置成app.cloopen.com
 _serverIP = 'sandboxapp.cloopen.com'
@@ -78,4 +78,4 @@ class CCP(object):
 
 # if __name__ == '__main__':
 #     # 注意： 测试的短信模板编号为1
-#     CCP().send_template_sms('手机号', ['验证码', 5], 1)
+#     CCP().send_template_sms('15972148869', ['验证码', 5], 1)

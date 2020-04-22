@@ -2,7 +2,7 @@
 美多商城
 
 
-#Package:
+# Package:
 
 `django == 2.2.5`
 
@@ -12,7 +12,8 @@
 
 `pymysql == 0.9.3`
 
-#相关配置
+# 相关配置
+
 `进入hosts添加->127.0.0.1	www.meiduo.site`
 
 `进入libs/yuntongxun/cpp_sms.py -> 添加云通讯相关配置说明：`
@@ -28,7 +29,8 @@ _accountToken = ''
 请使用管理控制台首页的APPID或自己创建应用的APPID
 _appId = ''
 ````
-#start:
+# start:
+
 `启动redis，启动mysql`
 
 `进入front_end_pc执行 --> python3 -m http.server 8080`

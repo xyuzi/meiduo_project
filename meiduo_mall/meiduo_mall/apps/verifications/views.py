@@ -2,13 +2,13 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views import View
-
-from captcha.captcha import captcha
+from meiduo_mall.libs.captcha.captcha import captcha
 from django_redis import get_redis_connection
 from django.http import HttpResponse, JsonResponse
-from yuntongxun.ccp_sms import CCP
+from meiduo_mall.libs.yuntongxun.ccp_sms import CCP
 import logging
 import random
+from celery_tasks.sms.tasks import ccp_send_sms_code
 
 logger = logging.getLogger('django')
 
@@ -80,6 +80,9 @@ class SMSCodeView(View):
 
         # 发送短信
         # CCP().send_template_sms(mobile, [sms_code, 5], 1)
+        # 代码优化 celery 异步
+        ccp_send_sms_code.delay(mobile, sms_code)
+
         return JsonResponse({
             'code': 0,
             'errmsg': '发送短信验证码成功'

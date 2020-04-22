@@ -338,3 +338,72 @@ INFO 2020-04-22 04:05:22,204 autoreload 217 /home/ubuntu/Desktop/meiduo_project/
 INFO 2020-04-22 04:05:22,795 autoreload 597 Watching for file changes with StatReloader
 INFO 2020-04-22 04:06:36,202 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/libs/yuntongxun/ccp_sms.py changed, reloading.
 INFO 2020-04-22 04:06:36,733 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-22 07:30:02,147 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-22 07:30:19,404 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-04-22 07:31:07,492 log 228 Internal Server Error: /image_codes/213c38f6-4e45-492e-b1a0-e13e2b29ddf5/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 20, in get
+    text, image = captcha.generate_captcha()
+AttributeError: module 'meiduo_mall.libs.captcha.captcha' has no attribute 'generate_captcha'
+ERROR 2020-04-22 07:31:07,493 basehttp 154 "GET /image_codes/213c38f6-4e45-492e-b1a0-e13e2b29ddf5/ HTTP/1.1" 500 81044
+INFO 2020-04-22 07:32:10,057 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-04-22 07:32:13,128 log 228 Internal Server Error: /image_codes/0bc961ed-15f5-44f0-af58-ce0127254753/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 20, in get
+    text, image = captcha.generate_captcha()
+AttributeError: module 'libs.captcha.captcha' has no attribute 'generate_captcha'
+ERROR 2020-04-22 07:32:13,129 basehttp 154 "GET /image_codes/0bc961ed-15f5-44f0-af58-ce0127254753/ HTTP/1.1" 500 81020
+INFO 2020-04-22 07:33:05,715 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-04-22 07:33:06,989 log 228 Internal Server Error: /image_codes/e19eb798-6427-4caf-b593-c3c9d94848e3/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 20, in get
+    text, image = captcha.generate_captcha()
+AttributeError: module 'libs.captcha.captcha' has no attribute 'generate_captcha'
+ERROR 2020-04-22 07:33:06,992 basehttp 154 "GET /image_codes/e19eb798-6427-4caf-b593-c3c9d94848e3/ HTTP/1.1" 500 81128
+INFO 2020-04-22 07:34:27,158 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-22 07:34:30,774 basehttp 154 "GET /image_codes/383eebd7-6880-485a-a9e4-af590bef5e9d/ HTTP/1.1" 200 3184
+INFO 2020-04-22 08:02:31,678 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-22 08:38:13,907 basehttp 154 "GET /image_codes/cb9fbb90-868e-4ecf-8853-dde49c131c4c/ HTTP/1.1" 200 3173
+INFO 2020-04-22 08:38:16,316 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-22 08:38:17,923 basehttp 154 "GET /image_codes/edb639c7-d72e-4ebc-8bba-49c3543464bc/ HTTP/1.1" 200 3201
+INFO 2020-04-22 08:38:21,715 views 71 639387
+INFO 2020-04-22 08:38:21,725 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-22 08:38:21,820 basehttp 154 "GET /sms_codes/15972148869/?image_code=ahtj&image_code_id=edb639c7-d72e-4ebc-8bba-49c3543464bc HTTP/1.1" 200 79
+INFO 2020-04-22 08:45:47,768 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-22 08:45:50,067 basehttp 154 "GET /image_codes/be480b87-1d03-4a6b-81f4-9c40e4601ecc/ HTTP/1.1" 200 3317
+INFO 2020-04-22 08:56:37,928 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-22 08:57:07,734 basehttp 154 "GET /image_codes/5e990591-dc78-4fbd-9a7d-fec1ca27f47e/ HTTP/1.1" 200 3250
+INFO 2020-04-22 08:57:24,383 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-22 08:57:30,958 views 71 653457
+INFO 2020-04-22 08:57:30,961 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-22 08:57:31,102 basehttp 154 "GET /sms_codes/15972148869/?image_code=8bho&image_code_id=5e990591-dc78-4fbd-9a7d-fec1ca27f47e HTTP/1.1" 200 79
