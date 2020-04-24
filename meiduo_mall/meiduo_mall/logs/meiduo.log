@@ -407,3 +407,36 @@ INFO 2020-04-22 08:57:24,383 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/
 INFO 2020-04-22 08:57:30,958 views 71 653457
 INFO 2020-04-22 08:57:30,961 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
 INFO 2020-04-22 08:57:31,102 basehttp 154 "GET /sms_codes/15972148869/?image_code=8bho&image_code_id=5e990591-dc78-4fbd-9a7d-fec1ca27f47e HTTP/1.1" 200 79
+INFO 2020-04-24 02:46:17,427 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 02:52:44,803 basehttp 154 "GET /image_codes/1c3e0496-1c32-453f-ba77-6985377c9585/ HTTP/1.1" 200 3314
+INFO 2020-04-24 02:52:52,691 basehttp 154 "GET /usernames/xyuzi/count/ HTTP/1.1" 200 39
+INFO 2020-04-24 02:52:59,742 basehttp 154 "GET /usernames/xyuzi/count/ HTTP/1.1" 200 39
+INFO 2020-04-24 02:53:02,088 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-24 02:53:07,834 views 71 771898
+INFO 2020-04-24 02:53:07,837 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-24 02:53:08,119 basehttp 154 "GET /sms_codes/15972148869/?image_code=fnaj&image_code_id=1c3e0496-1c32-453f-ba77-6985377c9585 HTTP/1.1" 200 79
+INFO 2020-04-24 02:53:17,647 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-24 02:53:17,648 basehttp 154 "GET /usernames/xyuzi/count/ HTTP/1.1" 200 39
+INFO 2020-04-24 02:53:17,808 basehttp 154 "OPTIONS /register/ HTTP/1.1" 200 0
+ERROR 2020-04-24 02:53:17,925 log 228 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py", line 56, in post
+    dict = json.loads(request.body.deconde())
+AttributeError: 'bytes' object has no attribute 'deconde'
+ERROR 2020-04-24 02:53:17,926 basehttp 154 "POST /register/ HTTP/1.1" 500 79932
+INFO 2020-04-24 02:53:39,197 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 02:53:45,330 basehttp 154 "GET /usernames/xyuzi/count/ HTTP/1.1" 200 39
+INFO 2020-04-24 02:53:45,333 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-04-24 02:53:45,836 basehttp 154 "POST /register/ HTTP/1.1" 200 27
+WARNING 2020-04-24 02:53:46,648 log 228 Not Found: /carts/simple/
+WARNING 2020-04-24 02:53:46,649 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 2907
