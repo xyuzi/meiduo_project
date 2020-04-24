@@ -138,14 +138,16 @@ class LoginView(View):
                             password=password)
         if user is None:
             return JsonResponse({'code': 400,
-                                'errmsg': '用户名或者密码错误'})
+                                 'errmsg': '用户名或者密码错误'})
         login(request, user)
 
         if remembered != True:
             request.session.set_expiry(0)
         else:
             request.session.set_expiry(None)
-        return JsonResponse({
+        response = JsonResponse({
             'code': 0,
             'errmsg': 'ok'
         })
+        response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
+        return response
