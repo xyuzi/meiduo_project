@@ -1,7 +1,7 @@
 import json
 import re
 
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from django.shortcuts import render
 from django.views import View
 
@@ -61,7 +61,7 @@ class RegisterView(View):
         sms_code_client = dict.get('sms_code')
         allow = dict.get('allow')
 
-        if not all(['username', 'password', 'password2', 'mobile', 'sms_code_client', 'allow']):
+        if not all([username, password, password2, mobile, sms_code_client, allow]):
             return JsonResponse({
                 'code': 400,
                 'errmsg': '缺少必传参数'
@@ -115,6 +115,36 @@ class RegisterView(View):
                 'errmsg': '存入数据库失败'
             })
         login(request, user)
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok'
+        })
+
+
+class LoginView(View):
+
+    def post(self, request):
+        dict = json.loads(request.body.decode())
+        username = dict.get('username')
+        password = dict.get('password')
+        remembered = dict.get('remembered')
+
+        if not all([username, password]):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '缺少必穿参数'
+            })
+        user = authenticate(username=username,
+                            password=password)
+        if user is None:
+            return JsonResponse({'code': 400,
+                                'errmsg': '用户名或者密码错误'})
+        login(request, user)
+
+        if remembered != True:
+            request.session.set_expiry(0)
+        else:
+            request.session.set_expiry(None)
         return JsonResponse({
             'code': 0,
             'errmsg': 'ok'

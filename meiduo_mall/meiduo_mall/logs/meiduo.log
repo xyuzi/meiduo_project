@@ -440,3 +440,32 @@ INFO 2020-04-24 02:53:45,333 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/
 INFO 2020-04-24 02:53:45,836 basehttp 154 "POST /register/ HTTP/1.1" 200 27
 WARNING 2020-04-24 02:53:46,648 log 228 Not Found: /carts/simple/
 WARNING 2020-04-24 02:53:46,649 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 2907
+INFO 2020-04-24 03:49:31,835 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 03:49:49,474 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-24 03:49:49,627 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-24 03:49:50,050 log 228 Not Found: /carts/simple/
+WARNING 2020-04-24 03:49:50,051 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3062
+INFO 2020-04-24 03:53:36,042 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-24 03:53:36,358 log 228 Not Found: /carts/simple/
+WARNING 2020-04-24 03:53:36,359 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3062
+INFO 2020-04-24 03:54:15,600 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 03:54:34,501 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-24 03:55:17,471 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-24 03:55:17,910 log 228 Not Found: /carts/simple/
+WARNING 2020-04-24 03:55:17,915 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3062
+INFO 2020-04-24 03:55:29,182 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 03:56:15,578 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-24 03:56:15,928 log 228 Not Found: /carts/simple/
+WARNING 2020-04-24 03:56:15,932 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3062
+INFO 2020-04-24 03:57:18,789 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 03:57:46,140 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-24 03:57:46,462 log 228 Not Found: /carts/simple/
+WARNING 2020-04-24 03:57:46,464 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3062
+INFO 2020-04-24 03:58:07,192 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 03:58:23,374 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 03:58:48,019 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 03:58:53,396 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-24 03:59:06,075 basehttp 154 "POST /login/ HTTP/1.1" 200 81
+INFO 2020-04-24 03:59:17,097 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-24 03:59:17,407 log 228 Not Found: /carts/simple/
+WARNING 2020-04-24 03:59:17,408 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3062
