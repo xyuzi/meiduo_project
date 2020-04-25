@@ -490,3 +490,23 @@ WARNING 2020-04-24 08:24:18,120 log 228 Not Found: /logout/
 WARNING 2020-04-24 08:24:18,120 basehttp 154 "DELETE /logout/ HTTP/1.1" 404 3047
 WARNING 2020-04-24 08:24:19,402 log 228 Not Found: /logout/
 WARNING 2020-04-24 08:24:19,403 basehttp 154 "DELETE /logout/ HTTP/1.1" 404 3047
+INFO 2020-04-25 01:05:29,474 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-25 01:06:15,124 basehttp 154 "GET /image_codes/4fe63415-1f64-42e4-9a18-5bbe100b8148/ HTTP/1.1" 200 3245
+INFO 2020-04-25 01:06:23,894 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-25 01:06:24,101 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-25 01:06:24,929 log 228 Not Found: /carts/simple/
+WARNING 2020-04-25 01:06:24,930 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3218
+INFO 2020-04-25 01:06:26,656 basehttp 154 "OPTIONS /logout/ HTTP/1.1" 200 0
+INFO 2020-04-25 01:06:26,668 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+INFO 2020-04-25 01:07:03,365 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-25 01:07:11,886 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-25 01:07:12,140 log 228 Not Found: /carts/simple/
+WARNING 2020-04-25 01:07:12,140 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3218
+WARNING 2020-04-25 01:07:42,238 log 228 Not Found: /carts/simple/
+WARNING 2020-04-25 01:07:42,238 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3218
+INFO 2020-04-25 01:07:44,114 basehttp 154 "OPTIONS /logout/ HTTP/1.1" 200 0
+INFO 2020-04-25 01:07:44,123 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+WARNING 2020-04-25 01:07:48,841 log 228 Not Found: /carts/simple/
+WARNING 2020-04-25 01:07:48,842 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3218
+INFO 2020-04-25 02:08:14,622 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-25 02:08:20,231 basehttp 154 "GET /image_codes/21036edd-789d-4191-8589-798bb414c455/ HTTP/1.1" 200 3331

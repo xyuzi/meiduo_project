@@ -1,13 +1,14 @@
 import json
 import re
 
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render
 from django.views import View
 
 # Create your views here.
+from meiduo_mall.untils.JudgeLogin import LoginMixin
 from users.models import User
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django_redis import get_redis_connection
 
 
@@ -94,7 +95,7 @@ class RegisterView(View):
             })
         redis_coon = get_redis_connection('verify_code')
         sms_code_server = redis_coon.get('sms_%s' % mobile)
-        if not sms_code_client:
+        if not sms_code_server:
             return JsonResponse({
                 'code': 400,
                 'errmsg': '短信验证码过期'
@@ -141,7 +142,7 @@ class LoginView(View):
                                  'errmsg': '用户名或者密码错误'})
         login(request, user)
 
-        if remembered != True:
+        if remembered is False:
             request.session.set_expiry(0)
         else:
             request.session.set_expiry(None)
@@ -151,3 +152,19 @@ class LoginView(View):
         })
         response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
         return response
+
+
+class LogoutView(View):
+    def delete(self, request):
+        logout(request)
+        response = JsonResponse({
+            'code': 0,
+            'errmsg': 'ok'
+        })
+        response.delete_cookie('username')
+        return response
+
+
+class UserInfoView(LoginMixin, View):
+    def get(self, request):
+        return HttpResponse('UserInfoView')

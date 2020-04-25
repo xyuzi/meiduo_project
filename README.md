@@ -12,6 +12,10 @@
 
 `pymysql == 0.9.3`
 
+`celery == 4.4.2 `
+
+`QQLoginTool == 0.3.0 `
+
 # 相关配置
 
 `进入hosts添加->127.0.0.1	www.meiduo.site`
