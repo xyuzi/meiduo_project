@@ -16,6 +16,8 @@
 
 `QQLoginTool == 0.3.0 `
 
+`itsdangerous == 1.1.0`
+
 # 相关配置
 
 `进入hosts添加->127.0.0.1	www.meiduo.site`
