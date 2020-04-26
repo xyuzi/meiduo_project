@@ -21,4 +21,5 @@ if __name__ == '__main__':
     print(access_token)
 
     access_token = obj.loads(access_token)
-    print(access_token)
+    # access_token = obj.loads('eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4Nzg2NzIxNCwiZXhwIjoxNTg3ODY3ODE0fQ.eyJuYW1lIjoi5bCP5LuT5ZSvIiwiYWdlIjoxMn0.J8c93RtZrISXQM1_0D6uFzvPNa7IrW0w9hgwD50ceRSn3zLJzz9Z41Mh7H1284n585jrqeVviu6veyYQP_94L1')
+    print(access_token.get('name'))

@@ -605,3 +605,151 @@ INFO 2020-04-25 08:36:14,941 autoreload 217 /home/ubuntu/Desktop/meiduo_project/
 INFO 2020-04-25 08:36:15,450 autoreload 597 Watching for file changes with StatReloader
 INFO 2020-04-25 08:36:30,698 basehttp 154 "GET /oauth_callback/?code=044362F4523534746042AC02A4CC26CD HTTP/1.1" 200 263
 INFO 2020-04-25 08:36:30,868 basehttp 154 "GET /image_codes/33d41fd6-66a7-49b4-aaeb-adcf44810d7e/ HTTP/1.1" 200 3296
+INFO 2020-04-26 02:43:43,415 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 02:43:49,824 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 02:44:46,868 basehttp 154 "GET /oauth_callback/?code=8C00ED39162F8A739C8CF6D4F24D32FD HTTP/1.1" 200 263
+INFO 2020-04-26 02:44:47,295 basehttp 154 "GET /image_codes/dab67156-4963-4924-9aad-7311aca3067a/ HTTP/1.1" 200 3135
+INFO 2020-04-26 02:45:11,897 basehttp 154 "GET /sms_codes/15972148868/?image_code=nxpk&image_code_id=dab67156-4963-4924-9aad-7311aca3067a HTTP/1.1" 200 81
+INFO 2020-04-26 02:46:36,218 basehttp 154 "GET /sms_codes/15972148868/?image_code=nxpk&image_code_id=dab67156-4963-4924-9aad-7311aca3067a HTTP/1.1" 200 69
+INFO 2020-04-26 02:48:09,640 basehttp 154 "GET /image_codes/84aa9bd3-7c13-4e8d-939d-9737e5c4fad7/ HTTP/1.1" 200 3049
+INFO 2020-04-26 02:48:11,646 basehttp 154 "GET /image_codes/3119c8b6-f024-49e2-823f-2fe910e3b717/ HTTP/1.1" 200 2781
+INFO 2020-04-26 02:48:16,229 views 71 311257
+INFO 2020-04-26 02:48:16,539 basehttp 154 "GET /sms_codes/15972148868/?image_code=amlg&image_code_id=3119c8b6-f024-49e2-823f-2fe910e3b717 HTTP/1.1" 200 79
+INFO 2020-04-26 02:48:24,182 basehttp 154 "OPTIONS /oauth_callback/ HTTP/1.1" 200 0
+ERROR 2020-04-26 02:48:24,314 log 228 Internal Server Error: /oauth_callback/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/oatuh/views.py", line 83, in post
+    dict = json.loads(request.body.deconde)
+AttributeError: 'bytes' object has no attribute 'deconde'
+ERROR 2020-04-26 02:48:24,314 basehttp 154 "POST /oauth_callback/ HTTP/1.1" 500 80542
+INFO 2020-04-26 02:48:52,478 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-04-26 02:48:57,556 log 228 Internal Server Error: /oauth_callback/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/oatuh/views.py", line 83, in post
+    dict = json.loads(request.body.decode)
+  File "/usr/lib/python3.6/json/__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'builtin_function_or_method'
+ERROR 2020-04-26 02:48:57,557 basehttp 154 "POST /oauth_callback/ HTTP/1.1" 500 85738
+INFO 2020-04-26 02:51:06,635 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 02:51:17,938 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 02:51:17,939 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 02:51:21,947 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 02:51:39,709 basehttp 154 "GET /oauth_callback/?code=3F956C85452E7F8927352901A802BF85 HTTP/1.1" 200 263
+INFO 2020-04-26 02:51:39,788 basehttp 154 "GET /image_codes/06580ea4-c9e8-4773-800b-0052817d4caf/ HTTP/1.1" 200 3364
+INFO 2020-04-26 02:51:51,259 basehttp 154 "GET /sms_codes/15972148868/?image_code=xkq6&image_code_id=06580ea4-c9e8-4773-800b-0052817d4caf HTTP/1.1" 200 75
+INFO 2020-04-26 02:53:47,483 basehttp 154 "GET /image_codes/198c599c-75db-485a-b2bb-fd2f7562e3dc/ HTTP/1.1" 200 3549
+INFO 2020-04-26 02:53:53,538 views 71 094725
+INFO 2020-04-26 02:53:53,686 basehttp 154 "GET /sms_codes/15972148868/?image_code=hmmp&image_code_id=198c599c-75db-485a-b2bb-fd2f7562e3dc HTTP/1.1" 200 79
+INFO 2020-04-26 02:54:04,049 basehttp 154 "OPTIONS /oauth_callback/ HTTP/1.1" 200 0
+INFO 2020-04-26 02:54:04,274 basehttp 154 "POST /oauth_callback/ HTTP/1.1" 200 59
+WARNING 2020-04-26 02:54:04,879 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 02:54:04,880 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 02:55:33,652 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/verifications/views.py changed, reloading.
+INFO 2020-04-26 02:55:34,427 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 03:03:22,618 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/oatuh/views.py changed, reloading.
+INFO 2020-04-26 03:03:23,294 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 03:04:57,540 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 03:05:12,535 basehttp 154 "GET /oauth_callback/?code=3306D27E6341F2E87A7037DC0518ED02 HTTP/1.1" 200 263
+INFO 2020-04-26 03:05:12,599 basehttp 154 "GET /image_codes/1bc6cbe8-f4e3-4629-a9a8-1662235604b4/ HTTP/1.1" 200 3055
+INFO 2020-04-26 03:05:20,990 views 72 954921
+INFO 2020-04-26 03:05:21,140 basehttp 154 "GET /sms_codes/15972148868/?image_code=cfuq&image_code_id=1bc6cbe8-f4e3-4629-a9a8-1662235604b4 HTTP/1.1" 200 79
+INFO 2020-04-26 03:05:29,778 basehttp 154 "OPTIONS /oauth_callback/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:05:29,906 basehttp 154 "POST /oauth_callback/ HTTP/1.1" 200 59
+WARNING 2020-04-26 03:05:30,620 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:05:30,621 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 03:09:21,937 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/oatuh/views.py changed, reloading.
+INFO 2020-04-26 03:09:22,779 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 03:09:31,269 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 03:09:46,188 basehttp 154 "GET /oauth_callback/?code=31DA83A6CAA49FDEDCE288EFA19A5958 HTTP/1.1" 200 263
+INFO 2020-04-26 03:09:46,252 basehttp 154 "GET /image_codes/17be1c16-ecba-4b31-b0ec-7c4965b40002/ HTTP/1.1" 200 3233
+INFO 2020-04-26 03:09:56,899 basehttp 154 "GET /sms_codes/15972148868/?image_code=kzjg&image_code_id=17be1c16-ecba-4b31-b0ec-7c4965b40002 HTTP/1.1" 200 75
+INFO 2020-04-26 03:11:04,067 basehttp 154 "GET /image_codes/66b4b6be-1057-4646-9cf3-60e40ecb39d9/ HTTP/1.1" 200 3366
+INFO 2020-04-26 03:11:09,060 views 72 263420
+INFO 2020-04-26 03:11:09,214 basehttp 154 "GET /sms_codes/15972148868/?image_code=yrkm&image_code_id=66b4b6be-1057-4646-9cf3-60e40ecb39d9 HTTP/1.1" 200 79
+INFO 2020-04-26 03:11:18,247 basehttp 154 "OPTIONS /oauth_callback/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:11:18,354 basehttp 154 "POST /oauth_callback/ HTTP/1.1" 200 59
+WARNING 2020-04-26 03:11:19,043 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:11:19,044 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 03:11:43,295 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 03:12:11,669 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 03:12:26,460 basehttp 154 "GET /oauth_callback/?code=7FC6F84F1B0FF51AADF8FAF9595ADCD0 HTTP/1.1" 200 263
+INFO 2020-04-26 03:12:26,542 basehttp 154 "GET /image_codes/3c7cc00f-062f-40fa-965f-e38d1ccaf7e5/ HTTP/1.1" 200 3422
+INFO 2020-04-26 03:12:48,206 basehttp 154 "GET /image_codes/ae2c8c9d-34bc-47e7-b2da-2a58aced6ed3/ HTTP/1.1" 200 3206
+INFO 2020-04-26 03:12:49,418 basehttp 154 "GET /image_codes/c6cd24f5-e352-4326-89c0-0a1da7591e32/ HTTP/1.1" 200 3215
+INFO 2020-04-26 03:12:51,832 basehttp 154 "GET /image_codes/9b10dcc2-4b49-47e0-a61f-d5a2ca4bbc60/ HTTP/1.1" 200 3344
+INFO 2020-04-26 03:12:55,933 basehttp 154 "GET /sms_codes/15972148868/?image_code=rbca&image_code_id=9b10dcc2-4b49-47e0-a61f-d5a2ca4bbc60 HTTP/1.1" 200 75
+INFO 2020-04-26 03:13:41,187 basehttp 154 "GET /image_codes/fca17421-e329-4567-98be-1ac3bd9388c1/ HTTP/1.1" 200 3211
+INFO 2020-04-26 03:13:56,670 basehttp 154 "GET /sms_codes/15972148868/?image_code=eyj9&image_code_id=fca17421-e329-4567-98be-1ac3bd9388c1 HTTP/1.1" 200 75
+INFO 2020-04-26 03:14:57,871 basehttp 154 "GET /image_codes/eac4b567-ef13-41b9-a804-13357693d3b2/ HTTP/1.1" 200 3466
+INFO 2020-04-26 03:15:03,576 basehttp 154 "GET /sms_codes/15972148868/?image_code=uowe&image_code_id=eac4b567-ef13-41b9-a804-13357693d3b2 HTTP/1.1" 200 75
+INFO 2020-04-26 03:15:27,633 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 03:15:33,231 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:15:33,235 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 03:15:36,503 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 03:16:00,476 basehttp 154 "GET /oauth_callback/?code=8B891CE9811A0BD6F64755F97210A848 HTTP/1.1" 200 263
+INFO 2020-04-26 03:16:00,547 basehttp 154 "GET /image_codes/0380cf72-a38b-4d83-a7b4-62189cbcd14e/ HTTP/1.1" 200 3511
+INFO 2020-04-26 03:16:14,159 views 72 287658
+INFO 2020-04-26 03:16:14,260 basehttp 154 "GET /sms_codes/15972148868/?image_code=ycas&image_code_id=0380cf72-a38b-4d83-a7b4-62189cbcd14e HTTP/1.1" 200 79
+INFO 2020-04-26 03:16:22,953 basehttp 154 "OPTIONS /oauth_callback/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:17:09,957 basehttp 154 "POST /oauth_callback/ HTTP/1.1" 200 59
+WARNING 2020-04-26 03:17:10,678 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:17:10,690 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 03:17:17,002 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 03:19:09,215 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 03:19:18,603 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 03:19:33,423 basehttp 154 "GET /oauth_callback/?code=4410DD7EF8C307017AD74727687B960B HTTP/1.1" 200 263
+INFO 2020-04-26 03:19:33,540 basehttp 154 "GET /image_codes/5b442476-6662-4c0f-9e47-3de0fd564954/ HTTP/1.1" 200 3438
+INFO 2020-04-26 03:19:45,360 basehttp 154 "GET /sms_codes/15972148868/?image_code=vmaq&image_code_id=5b442476-6662-4c0f-9e47-3de0fd564954 HTTP/1.1" 200 75
+INFO 2020-04-26 03:21:27,557 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/oatuh/views.py changed, reloading.
+INFO 2020-04-26 03:23:10,937 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 03:23:22,031 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:23:22,032 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 03:23:24,342 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 03:23:39,395 basehttp 154 "GET /oauth_callback/?code=AE8CBFA8A655C3EBE962378553B29B07 HTTP/1.1" 200 263
+INFO 2020-04-26 03:23:39,438 basehttp 154 "GET /image_codes/60210a9f-51df-4f18-961d-4232a36fea60/ HTTP/1.1" 200 3077
+INFO 2020-04-26 03:24:31,340 views 65 输入图形验证码有误
+INFO 2020-04-26 03:24:31,341 basehttp 154 "GET /sms_codes/15972148867/?image_code=hsqk&image_code_id=60210a9f-51df-4f18-961d-4232a36fea60 HTTP/1.1" 200 81
+INFO 2020-04-26 03:25:56,178 basehttp 154 "GET /image_codes/cb497b5b-507c-400a-950b-87318598d5d5/ HTTP/1.1" 200 3039
+INFO 2020-04-26 03:26:01,842 basehttp 154 "GET /image_codes/db90e4cc-4114-4d0d-a780-4522f41730af/ HTTP/1.1" 200 3383
+INFO 2020-04-26 03:26:05,907 views 65 输入图形验证码有误
+INFO 2020-04-26 03:26:05,908 basehttp 154 "GET /sms_codes/15972148867/?image_code=fedm&image_code_id=db90e4cc-4114-4d0d-a780-4522f41730af HTTP/1.1" 200 81
+INFO 2020-04-26 03:26:44,820 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 03:26:58,253 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:26:58,257 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 03:27:00,352 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 03:27:15,132 basehttp 154 "GET /oauth_callback/?code=6FB85F796C6D6D474063C6FFA28E485D HTTP/1.1" 200 263
+INFO 2020-04-26 03:27:15,177 views 23 EDJQ
+INFO 2020-04-26 03:27:15,179 basehttp 154 "GET /image_codes/4b262d4d-54fd-4cb2-b06a-0f06170c4d57/ HTTP/1.1" 200 3450
+INFO 2020-04-26 03:27:38,390 views 73 261758
+INFO 2020-04-26 03:27:38,572 basehttp 154 "GET /sms_codes/15972148867/?image_code=EDJQ&image_code_id=4b262d4d-54fd-4cb2-b06a-0f06170c4d57 HTTP/1.1" 200 79
+INFO 2020-04-26 03:27:46,232 basehttp 154 "OPTIONS /oauth_callback/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:27:46,405 basehttp 154 "POST /oauth_callback/ HTTP/1.1" 200 27
+WARNING 2020-04-26 03:27:47,094 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:27:47,095 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 03:29:20,445 basehttp 154 "OPTIONS /logout/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:29:20,458 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+INFO 2020-04-26 03:29:23,526 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.1" 200 203
+INFO 2020-04-26 03:29:38,022 basehttp 154 "GET /oauth_callback/?code=226D418C06D3BF3E9799A2EE212572AE HTTP/1.1" 200 27
+WARNING 2020-04-26 03:29:38,736 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:29:38,736 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548

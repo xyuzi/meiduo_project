@@ -20,6 +20,7 @@ class ImgcodeView(View):
         # 调用captcha框架生成图片和文本
         text, image = captcha.generate_captcha()
         redis_conn = get_redis_connection('verify_code')
+        logger.info('图形验证码:',text)
         # 存入uuid
         redis_conn.setex('img_%s' % uuid, 300, text)
         return HttpResponse(
@@ -62,13 +63,14 @@ class SMSCodeView(View):
             logger.error(e)
         # 判断验证码是否正确
         if image_code_client.lower() != image_code_server.decode().lower():
+            logger.info('输入图形验证码有误')
             return JsonResponse({
                 'code': 400,
                 'errmsg': '输入图形验证码有误'
             })
         sms_code = '%06d' % random.randint(1, 999999)
         # 日志输出验证码
-        logger.info(sms_code)
+        logger.info('短信验证码:',sms_code)
         # 管道创建
         p1 = redis_conn.pipeline()
         # redis保存电话与验证码，保存倒计时时间

@@ -1,3 +1,6 @@
+import json
+import re
+
 from QQLoginTool.QQtool import OAuthQQ
 from django.conf import settings
 from django.contrib.auth import login
@@ -6,9 +9,11 @@ from django.http import JsonResponse
 # Create your views here.
 from django.views import View
 import logging
+from django_redis import get_redis_connection
 
 from oatuh.models import OAuthQQUser
-from oatuh.utils import generate_access_token_by_openid
+from oatuh.utils import generate_access_token_by_openid, check_access_token_by_openid
+from users.models import User
 
 logger = logging.getLogger('django')
 
@@ -54,7 +59,7 @@ class QqUrlSecondView(View):
             })
 
         try:
-            auth_qq = OAuthQQUser.object.get(openid=openid)
+            auth_qq = OAuthQQUser.objects.get(openid=openid)
         except:
             access_token = generate_access_token_by_openid(openid)
             return JsonResponse({
@@ -73,3 +78,75 @@ class QqUrlSecondView(View):
                                 user.username,
                                 max_age=3600 * 24 * 14)
             return response
+
+    def post(self, request):
+        dict = json.loads(request.body.decode())
+        mobile = dict.get('mobile')
+        password = dict.get('password')
+        sms_code_client = dict.get('sms_code')
+        access_token = dict.get('access_token')
+
+        if not all([mobile, password, sms_code_client, access_token]):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '缺少必传参数'
+            })
+
+        if not re.match(r'^1[3-9]\d{9}$', mobile):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '手机号格式错误'
+            })
+
+        if not re.match(r'^[a-zA-Z0-9]{8,20}$', password):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '密码格式错误'
+            })
+        redis_conn = get_redis_connection('verify_code')
+        sms_code_server = redis_conn.get('sms_%s' % mobile)
+        if not sms_code_server:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '短信验证码过期'
+            })
+        if sms_code_client != sms_code_server.decode():
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '验证码不匹配'
+            })
+        openid = check_access_token_by_openid(access_token)
+        if not openid:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': 'openid验证失败'
+            })
+
+        try:
+            user = User.objects.get(mobile=mobile)
+        except Exception as e:
+            user = User.objects.create_user(username=mobile,
+                                            password=password,
+                                            mobile=mobile)
+        else:
+            if not user.check_password(password):
+                return JsonResponse({
+                    'code': 400,
+                    'errmsg': '密码匹配失败'
+                })
+        try:
+            OAuthQQUser.objects.create(openid=openid,
+                                       user=user)
+        except:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '存入QQ表失败'
+            })
+        login(request, user)
+        response = JsonResponse({
+            'code': 0,
+            'errmsg': 'ok'
+        })
+        response.set_cookie('username', user.username,
+                            max_age=3600 * 24 * 14)
+        return response
