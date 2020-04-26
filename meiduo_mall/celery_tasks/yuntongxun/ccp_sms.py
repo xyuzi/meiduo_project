@@ -9,13 +9,13 @@ ssl._create_default_https_context = ssl._create_unverified_context  # 全局取�
 
 
 # 说明：主账号，登陆云通讯网站后，可在"控制台-应用"中看到开发者主账号ACCOUNT SID
-_accountSid = '8a216da87172b2ee01719b774b3c143c'
+_accountSid = ''
 
 # 说明：主账号Token，登陆云通讯网站后，可在控制台-应用中看到开发者主账号AUTH TOKEN
-_accountToken = '717de3d5a5ea497c92c2447f6ee78605'
+_accountToken = ''
 
 # 请使用管理控制台首页的APPID或自己创建应用的APPID
-_appId = '8a216da87172b2ee01719b774ba11443'
+_appId = ''
 
 # 说明：请求地址，生产环境配置成app.cloopen.com
 _serverIP = 'sandboxapp.cloopen.com'

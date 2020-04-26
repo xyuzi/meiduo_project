@@ -24,8 +24,8 @@
 
 `进入libs/yuntongxun/cpp_sms.py -> 添加云通讯相关配置说明：`
 
+[https://www.yuntongxun.com/](https://www.yuntongxun.com/)
 ````
-https://www.yuntongxun.com/
 主账号，登陆云通讯网站后，可在"控制台-应用"中看到开发者主账号ACCOUNT SID`
 _accountSid = ''
 
@@ -34,6 +34,21 @@ _accountToken = ''
 
 请使用管理控制台首页的APPID或自己创建应用的APPID
 _appId = ''
+````
+````
+dev.py设置
+# QQ登录参数
+# 申请的 客户端id
+QQ_CLIENT_ID = ''
+# 申请的 客户端秘钥
+QQ_CLIENT_SECRET = ''
+
+# 发送邮件的邮箱
+EMAIL_HOST_USER = ''
+# 在邮箱中设置的客户端授权密码
+EMAIL_HOST_PASSWORD = ''
+# 收件人看到的发件人
+EMAIL_FROM = '随便写<这里写显示的邮箱>'
 ````
 # start:
 

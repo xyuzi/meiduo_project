@@ -10,6 +10,10 @@ from meiduo_mall.untils.JudgeLogin import LoginMixin
 from users.models import User
 from django.http import JsonResponse, HttpResponse
 from django_redis import get_redis_connection
+from celery_tasks.email.tasks import send_verify_email
+import logging
+
+logger = logging.getLogger('django')
 
 
 class UsernameCountView(View):
@@ -123,6 +127,7 @@ class RegisterView(View):
 
 
 class LoginView(View):
+    '''登录接口'''
 
     def post(self, request):
         dict = json.loads(request.body.decode())
@@ -141,16 +146,29 @@ class LoginView(View):
             return JsonResponse({'code': 400,
                                  'errmsg': '用户名或者密码错误'})
         login(request, user)
-
-        if remembered is False:
-            request.session.set_expiry(0)
-        else:
-            request.session.set_expiry(None)
+        # TODO 这里勾选后会判断让cookis里面username一起消失或出现
         response = JsonResponse({
             'code': 0,
             'errmsg': 'ok'
         })
-        response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
+        if remembered is False:
+            request.session.set_expiry(0)
+            response.set_cookie('username', user.username, max_age=None)
+        else:
+            request.session.set_expiry(None)
+            response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
+
+        # TODO 这里无论还是不勾选会判断让cookis里面username单独存在14天
+        # if remembered is False:
+        #     request.session.set_expiry(0)
+        #
+        # else:
+        #     request.session.set_expiry(None)
+        # response = JsonResponse({
+        #     'code': 0,
+        #     'errmsg': 'ok'
+        # })
+        # response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
         return response
 
 
@@ -167,4 +185,82 @@ class LogoutView(View):
 
 class UserInfoView(LoginMixin, View):
     def get(self, request):
-        return HttpResponse('UserInfoView')
+        dict = {
+            "username": request.user.username,
+            "mobile": request.user.mobile,
+            "email": request.user.email,
+            "email_active": request.user.email_active
+        }
+
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok',
+            'info_data': dict
+        })
+
+
+class EmailView(View):
+    def put(self, request):
+        dict = json.loads(request.body.decode())
+        email = dict.get('email')
+        if not email:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '缺少必传参数'
+            })
+
+        if not re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '邮箱格式不正确'
+            })
+
+        try:
+            request.user.email = email
+            request.user.save()
+        except Exception as e:
+            logger.info(e)
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '保持邮箱信息失败'
+            })
+        url = request.user.generate_verify_email_url()
+        # TODO 发送邮件给email 异步执行
+        # send_verify_email.delay(email, '邮箱验证链接')
+        send_verify_email.delay(email, url)
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok'
+        })
+
+
+class VerifyEmailView(View):
+    def put(self, request):
+        token = request.GET.get('token')
+
+        if not token:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '缺少必传参数'
+            })
+
+        user = User.check_verify_email_token(token)
+        if not user:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '无效的token'
+            })
+
+        try:
+            user.email_active = True
+            user.save()
+        except Exception as e:
+            logger.error(e)
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '激活失败'
+            })
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok'
+        })

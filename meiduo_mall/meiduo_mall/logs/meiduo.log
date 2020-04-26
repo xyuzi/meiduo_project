@@ -753,3 +753,285 @@ INFO 2020-04-26 03:29:23,526 basehttp 154 "GET /qq/authorization/?next=/ HTTP/1.
 INFO 2020-04-26 03:29:38,022 basehttp 154 "GET /oauth_callback/?code=226D418C06D3BF3E9799A2EE212572AE HTTP/1.1" 200 27
 WARNING 2020-04-26 03:29:38,736 log 228 Not Found: /carts/simple/
 WARNING 2020-04-26 03:29:38,736 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3548
+INFO 2020-04-26 03:37:40,187 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 03:37:45,376 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 03:37:45,381 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3714
+INFO 2020-04-26 03:38:10,342 basehttp 154 "GET /info/ HTTP/1.1" 200 130
+WARNING 2020-04-26 03:44:11,013 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:44:11,021 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3702
+INFO 2020-04-26 03:44:23,411 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:44:23,575 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 03:44:24,169 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:44:24,170 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3702
+WARNING 2020-04-26 03:44:32,143 log 228 Not Found: /browse_histories/
+INFO 2020-04-26 03:44:32,145 basehttp 154 "GET /info/ HTTP/1.1" 200 124
+WARNING 2020-04-26 03:44:32,147 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3714
+INFO 2020-04-26 03:44:37,972 basehttp 154 "GET /info/ HTTP/1.1" 200 130
+WARNING 2020-04-26 03:44:37,984 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 03:44:37,986 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3714
+INFO 2020-04-26 03:44:48,690 basehttp 154 "OPTIONS /logout/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:44:48,709 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+INFO 2020-04-26 03:45:09,872 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 03:45:17,042 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:45:17,043 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3702
+WARNING 2020-04-26 03:45:25,661 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:45:25,662 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3702
+INFO 2020-04-26 03:45:38,069 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:45:38,196 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 03:45:38,718 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:45:38,718 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3702
+WARNING 2020-04-26 03:45:43,660 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 03:45:43,661 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3714
+INFO 2020-04-26 03:45:43,677 basehttp 154 "GET /info/ HTTP/1.1" 200 124
+WARNING 2020-04-26 03:45:45,902 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 03:45:45,908 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3714
+INFO 2020-04-26 03:45:45,958 basehttp 154 "GET /info/ HTTP/1.1" 200 130
+INFO 2020-04-26 03:49:00,417 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-26 03:49:01,141 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 03:49:04,973 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 03:49:04,988 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3714
+ERROR 2020-04-26 03:49:05,096 log 228 Internal Server Error: /info/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/untils/JudgeLogin.py", line 7, in wrapper
+    return func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py", line 176, in get
+    print(request.user.openid)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'openid'
+ERROR 2020-04-26 03:49:05,097 basehttp 154 "GET /info/ HTTP/1.1" 500 89035
+INFO 2020-04-26 03:49:18,608 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:49:18,812 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 03:49:19,139 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:49:19,140 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3702
+WARNING 2020-04-26 03:49:21,602 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 03:49:21,603 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3714
+ERROR 2020-04-26 03:49:21,677 log 228 Internal Server Error: /info/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/untils/JudgeLogin.py", line 7, in wrapper
+    return func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py", line 176, in get
+    print(request.user.openid)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'openid'
+ERROR 2020-04-26 03:49:21,678 basehttp 154 "GET /info/ HTTP/1.1" 500 89035
+INFO 2020-04-26 03:49:35,339 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-26 03:49:35,871 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 03:49:39,393 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 03:49:39,394 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3714
+INFO 2020-04-26 03:49:39,412 basehttp 154 "GET /info/ HTTP/1.1" 200 130
+INFO 2020-04-26 03:51:10,884 basehttp 154 "OPTIONS /logout/ HTTP/1.1" 200 0
+INFO 2020-04-26 03:51:10,894 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+WARNING 2020-04-26 03:51:12,827 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:51:12,828 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3702
+INFO 2020-04-26 03:51:13,985 basehttp 154 "GET /info/ HTTP/1.1" 200 51
+WARNING 2020-04-26 03:51:13,991 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 03:51:13,993 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3714
+WARNING 2020-04-26 03:51:19,456 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 03:51:19,457 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3702
+INFO 2020-04-26 08:50:33,202 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 08:51:05,812 basehttp 154 "GET /image_codes/10690c98-d7cb-4c22-927f-43657764aaec/ HTTP/1.1" 200 3102
+INFO 2020-04-26 08:51:17,816 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-26 08:51:18,052 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 08:51:18,874 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 08:51:18,874 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+WARNING 2020-04-26 08:51:20,775 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 08:51:20,776 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 08:51:20,778 basehttp 154 "GET /info/ HTTP/1.1" 200 124
+INFO 2020-04-26 08:51:30,560 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2020-04-26 08:51:30,934 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-04-26 08:53:32,628 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 08:54:12,674 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 08:55:01,230 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+WARNING 2020-04-26 08:55:01,244 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 08:55:01,245 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+WARNING 2020-04-26 08:55:02,729 log 228 Not Found: /browse_histories/
+INFO 2020-04-26 08:55:02,742 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+WARNING 2020-04-26 08:55:02,744 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 08:55:18,608 views 23 图形验证码:HEUC
+INFO 2020-04-26 08:55:18,613 basehttp 154 "GET /image_codes/2c6e3c11-03b2-4e11-be91-839ac5fa76a0/ HTTP/1.1" 200 3385
+WARNING 2020-04-26 08:55:22,567 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 08:55:22,568 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+INFO 2020-04-26 08:55:42,274 basehttp 154 "GET /info/ HTTP/1.1" 200 51
+WARNING 2020-04-26 08:55:42,279 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 08:55:42,280 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+WARNING 2020-04-26 08:56:14,469 log 228 Not Found: /browse_histories/
+INFO 2020-04-26 08:56:14,470 basehttp 154 "GET /info/ HTTP/1.1" 200 51
+WARNING 2020-04-26 08:56:14,472 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 08:56:25,706 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-26 08:56:25,811 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 08:56:26,071 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 08:56:26,072 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+WARNING 2020-04-26 08:56:27,766 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 08:56:27,769 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 08:56:27,777 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+INFO 2020-04-26 08:56:30,751 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2020-04-26 08:57:27,994 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-04-26 09:02:09,145 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 09:12:51,191 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+WARNING 2020-04-26 09:12:51,209 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 09:12:51,209 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 09:12:52,950 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2020-04-26 09:12:53,048 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+WARNING 2020-04-26 09:13:03,715 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 09:13:03,718 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 09:13:03,722 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+INFO 2020-04-26 09:13:04,982 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-04-26 09:16:05,309 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 09:16:28,359 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+WARNING 2020-04-26 09:16:28,365 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 09:16:28,365 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 09:16:29,938 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-04-26 09:20:16,467 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/celery_tasks/main.py changed, reloading.
+INFO 2020-04-26 09:20:16,859 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 09:20:25,410 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 09:20:25,412 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 09:20:25,426 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+INFO 2020-04-26 09:20:27,581 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-04-26 09:26:26,103 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 09:26:38,142 views 23 图形验证码:VAKQ
+INFO 2020-04-26 09:26:38,144 basehttp 154 "GET /image_codes/85314ce6-8797-4a78-8a39-a2df411917ab/ HTTP/1.1" 200 3350
+WARNING 2020-04-26 09:26:42,058 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 09:26:42,059 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+INFO 2020-04-26 09:33:20,222 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 09:33:27,546 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-26 09:33:27,661 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 09:33:27,972 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 09:33:27,976 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+INFO 2020-04-26 09:33:34,202 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+WARNING 2020-04-26 09:33:34,210 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 09:33:34,211 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 09:34:22,530 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 09:34:36,371 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 09:34:36,371 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+WARNING 2020-04-26 09:34:38,119 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 09:34:38,120 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 09:34:38,127 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+WARNING 2020-04-26 09:34:40,626 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 09:34:40,626 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+INFO 2020-04-26 09:35:18,357 views 23 图形验证码:JDLK
+INFO 2020-04-26 09:35:18,359 basehttp 154 "GET /image_codes/29b223d4-707f-45a6-8e04-e65ddcdd0394/ HTTP/1.1" 200 3304
+WARNING 2020-04-26 09:35:35,031 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 09:35:35,032 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+INFO 2020-04-26 09:36:33,244 basehttp 154 "GET /info/ HTTP/1.1" 200 51
+WARNING 2020-04-26 09:36:33,252 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 09:36:33,253 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 09:41:58,615 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 09:42:07,818 views 23 图形验证码:XQMJ
+INFO 2020-04-26 09:42:07,819 basehttp 154 "GET /image_codes/e3716e0d-f448-446c-93e3-0aeffd72dc40/ HTTP/1.1" 200 3290
+INFO 2020-04-26 09:42:17,148 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-26 09:42:17,258 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 09:42:17,880 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 09:42:17,880 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+INFO 2020-04-26 09:44:18,332 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 09:44:24,642 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 09:44:24,643 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 09:44:24,654 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+INFO 2020-04-26 09:44:35,289 basehttp 154 "OPTIONS /logout/ HTTP/1.1" 200 0
+INFO 2020-04-26 09:44:35,297 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+INFO 2020-04-26 09:44:41,519 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 09:44:41,804 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 09:44:41,804 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+WARNING 2020-04-26 09:45:07,278 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 09:45:07,279 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+INFO 2020-04-26 10:20:23,560 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 10:20:32,593 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-26 10:20:32,697 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 10:20:33,003 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 10:20:33,004 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+INFO 2020-04-26 10:20:36,271 basehttp 154 "OPTIONS /logout/ HTTP/1.1" 200 0
+INFO 2020-04-26 10:20:36,280 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+WARNING 2020-04-26 10:20:38,503 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 10:20:38,504 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+INFO 2020-04-26 11:20:10,058 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 11:20:14,633 basehttp 154 "GET /info/ HTTP/1.1" 200 51
+WARNING 2020-04-26 11:20:14,685 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 11:20:14,686 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 11:20:19,625 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-26 11:20:19,724 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-26 11:20:20,044 log 228 Not Found: /carts/simple/
+WARNING 2020-04-26 11:20:20,048 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 3858
+WARNING 2020-04-26 11:20:23,120 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 11:20:23,123 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 11:20:23,124 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+INFO 2020-04-26 11:20:27,056 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2020-04-26 11:20:27,223 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-04-26 11:21:21,324 basehttp 154 "OPTIONS /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4NzkwMDAyNywiZXhwIjoxNTg3OTg2NDI3fQ.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6IjEwOTcyMTgwMzlAcXEuY29tIn0.GMGwRcCHy7Ou6nPI94EZCo8MGNmhsSkwE6k07LGy98Y3jfmYeMXOd-vy7jDPXx9VcgJ4AFAODfTbYMTxzim6Yg HTTP/1.1" 200 0
+WARNING 2020-04-26 11:21:21,390 log 228 Not Found: /emails/verification/
+WARNING 2020-04-26 11:21:21,391 basehttp 154 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4NzkwMDAyNywiZXhwIjoxNTg3OTg2NDI3fQ.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6IjEwOTcyMTgwMzlAcXEuY29tIn0.GMGwRcCHy7Ou6nPI94EZCo8MGNmhsSkwE6k07LGy98Y3jfmYeMXOd-vy7jDPXx9VcgJ4AFAODfTbYMTxzim6Yg HTTP/1.1" 404 4095
+INFO 2020-04-26 11:22:48,830 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 11:22:54,677 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 11:22:54,683 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 3870
+INFO 2020-04-26 11:22:54,692 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+INFO 2020-04-26 11:23:55,407 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-04-26 12:09:44,505 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-26 12:09:48,883 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 12:09:48,890 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 4039
+INFO 2020-04-26 12:09:48,907 basehttp 154 "GET /info/ HTTP/1.1" 200 141
+INFO 2020-04-26 12:09:59,330 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2020-04-26 12:09:59,440 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-04-26 12:10:14,707 basehttp 154 "OPTIONS /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4NzkwMjk5OSwiZXhwIjoxNTg3OTg5Mzk5fQ.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6IjEwOTcyMTgwMzlAcXEuY29tIn0.xprHqUSf66RGM2sZ4tXzCE_VoEmbQZjbz10Xj5lBPmTVZ3X36gwT02F7nsrdmfRKCskk_ITvxPLc58AXkQV7Tg HTTP/1.1" 200 0
+ERROR 2020-04-26 12:10:14,913 log 228 Internal Server Error: /emails/verification/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py", line 247, in put
+    user = request.user.check_verify_email_token(token)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'check_verify_email_token'
+ERROR 2020-04-26 12:10:14,942 basehttp 154 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4NzkwMjk5OSwiZXhwIjoxNTg3OTg5Mzk5fQ.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6IjEwOTcyMTgwMzlAcXEuY29tIn0.xprHqUSf66RGM2sZ4tXzCE_VoEmbQZjbz10Xj5lBPmTVZ3X36gwT02F7nsrdmfRKCskk_ITvxPLc58AXkQV7Tg HTTP/1.1" 500 87857
+INFO 2020-04-26 12:12:55,740 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-04-26 12:12:59,391 log 228 Internal Server Error: /emails/verification/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py", line 247, in put
+    user = request.user.check_verify_email_token(token)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'check_verify_email_token'
+ERROR 2020-04-26 12:12:59,395 basehttp 154 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4NzkwMjk5OSwiZXhwIjoxNTg3OTg5Mzk5fQ.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6IjEwOTcyMTgwMzlAcXEuY29tIn0.xprHqUSf66RGM2sZ4tXzCE_VoEmbQZjbz10Xj5lBPmTVZ3X36gwT02F7nsrdmfRKCskk_ITvxPLc58AXkQV7Tg HTTP/1.1" 500 87857
+INFO 2020-04-26 12:14:20,493 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-26 12:14:20,950 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-26 12:14:24,919 basehttp 154 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4NzkwMjk5OSwiZXhwIjoxNTg3OTg5Mzk5fQ.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6IjEwOTcyMTgwMzlAcXEuY29tIn0.xprHqUSf66RGM2sZ4tXzCE_VoEmbQZjbz10Xj5lBPmTVZ3X36gwT02F7nsrdmfRKCskk_ITvxPLc58AXkQV7Tg HTTP/1.1" 200 27
+WARNING 2020-04-26 12:15:48,766 log 228 Not Found: /browse_histories/
+WARNING 2020-04-26 12:15:48,767 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 4039
+INFO 2020-04-26 12:15:48,859 basehttp 154 "GET /info/ HTTP/1.1" 200 140
