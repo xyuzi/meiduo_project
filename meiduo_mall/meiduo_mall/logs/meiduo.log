@@ -1035,3 +1035,134 @@ INFO 2020-04-26 12:14:24,919 basehttp 154 "PUT /emails/verification/?token=eyJhb
 WARNING 2020-04-26 12:15:48,766 log 228 Not Found: /browse_histories/
 WARNING 2020-04-26 12:15:48,767 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 4039
 INFO 2020-04-26 12:15:48,859 basehttp 154 "GET /info/ HTTP/1.1" 200 140
+INFO 2020-04-27 07:01:02,232 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 07:01:07,893 log 228 Not Found: /areas/
+WARNING 2020-04-27 07:01:07,895 log 228 Not Found: /addresses/
+WARNING 2020-04-27 07:01:07,895 basehttp 154 "GET /areas/ HTTP/1.1" 404 4006
+WARNING 2020-04-27 07:01:07,896 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4018
+INFO 2020-04-27 07:24:47,515 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 07:24:52,773 log 228 Not Found: /addresses/
+WARNING 2020-04-27 07:24:52,773 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4173
+INFO 2020-04-27 07:24:52,819 basehttp 154 "GET /areas/ HTTP/1.1" 200 27
+INFO 2020-04-27 07:26:58,327 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 07:26:58,914 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 07:27:04,483 log 228 Not Found: /addresses/
+WARNING 2020-04-27 07:27:04,484 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4173
+INFO 2020-04-27 07:27:04,489 basehttp 154 "GET /areas/ HTTP/1.1" 200 27
+INFO 2020-04-27 07:27:20,236 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 07:27:20,844 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 07:27:24,477 basehttp 154 "GET /areas/ HTTP/1.1" 200 27
+WARNING 2020-04-27 07:27:24,510 log 228 Not Found: /addresses/
+WARNING 2020-04-27 07:27:24,511 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4173
+INFO 2020-04-27 07:31:19,980 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 07:31:20,664 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 07:31:24,850 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 07:31:24,860 log 228 Not Found: /addresses/
+WARNING 2020-04-27 07:31:24,861 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4173
+INFO 2020-04-27 07:44:43,001 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 07:44:43,680 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 07:44:47,656 basehttp 154 "GET /areas/ HTTP/1.1" 200 50
+WARNING 2020-04-27 07:44:47,663 log 228 Not Found: /addresses/
+WARNING 2020-04-27 07:44:47,664 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4173
+INFO 2020-04-27 07:45:10,333 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 07:45:10,894 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 07:45:14,443 views 23 进入存储缓存
+WARNING 2020-04-27 07:45:14,451 log 228 Not Found: /addresses/
+WARNING 2020-04-27 07:45:14,453 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4173
+INFO 2020-04-27 07:45:14,480 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 07:45:54,926 log 228 Not Found: /addresses/
+INFO 2020-04-27 07:45:54,927 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 07:45:54,932 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4173
+WARNING 2020-04-27 07:57:00,021 log 228 Not Found: /areas/110000/
+WARNING 2020-04-27 07:57:00,022 basehttp 154 "GET /areas/110000/ HTTP/1.1" 404 4182
+INFO 2020-04-27 09:34:20,242 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/urls.py changed, reloading.
+INFO 2020-04-27 09:34:22,727 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 09:34:29,229 log 228 Not Found: /addresses/
+WARNING 2020-04-27 09:34:29,230 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4350
+INFO 2020-04-27 09:34:29,246 views 25 进入存储缓存
+INFO 2020-04-27 09:34:29,266 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 09:34:31,725 log 228 Not Found: /areas/110000/
+WARNING 2020-04-27 09:34:31,726 basehttp 154 "GET /areas/110000/ HTTP/1.1" 404 4359
+INFO 2020-04-27 09:35:05,929 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/urls.py changed, reloading.
+INFO 2020-04-27 09:35:06,641 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 09:35:11,940 log 228 Not Found: /addresses/
+WARNING 2020-04-27 09:35:11,940 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4351
+INFO 2020-04-27 09:35:11,953 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 09:35:14,078 views 58 'Area' object has no attribute 'namel'
+INFO 2020-04-27 09:35:14,079 basehttp 154 "GET /areas/110000/ HTTP/1.1" 200 69
+INFO 2020-04-27 09:35:33,397 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 09:35:34,066 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 09:35:37,838 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 09:35:37,874 log 228 Not Found: /addresses/
+WARNING 2020-04-27 09:35:37,875 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4351
+INFO 2020-04-27 09:35:39,989 basehttp 154 "GET /areas/120000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:35:41,625 basehttp 154 "GET /areas/120100/ HTTP/1.1" 200 837
+INFO 2020-04-27 09:35:47,819 basehttp 154 "GET /areas/110000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:35:49,557 basehttp 154 "GET /areas/140000/ HTTP/1.1" 200 601
+INFO 2020-04-27 09:35:52,236 basehttp 154 "GET /areas/140500/ HTTP/1.1" 200 365
+INFO 2020-04-27 09:40:38,458 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 09:40:39,247 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 09:40:44,241 log 228 Not Found: /addresses/
+WARNING 2020-04-27 09:40:44,245 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4351
+INFO 2020-04-27 09:40:44,253 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 09:40:48,160 basehttp 154 "GET /areas/110000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:40:49,197 basehttp 154 "GET /areas/110100/ HTTP/1.1" 200 843
+INFO 2020-04-27 09:42:28,989 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 09:42:29,754 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 09:42:33,046 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 09:42:33,070 log 228 Not Found: /addresses/
+WARNING 2020-04-27 09:42:33,070 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4351
+INFO 2020-04-27 09:42:47,507 views 51 进入市存储缓存
+INFO 2020-04-27 09:42:47,565 basehttp 154 "GET /areas/120000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:42:48,481 views 51 进入市存储缓存
+INFO 2020-04-27 09:42:48,543 basehttp 154 "GET /areas/120100/ HTTP/1.1" 200 837
+INFO 2020-04-27 09:43:06,536 views 51 进入市存储缓存
+INFO 2020-04-27 09:43:06,602 basehttp 154 "GET /areas/210000/ HTTP/1.1" 200 745
+INFO 2020-04-27 09:43:15,996 views 51 进入市存储缓存
+INFO 2020-04-27 09:43:16,005 basehttp 154 "GET /areas/210300/ HTTP/1.1" 200 441
+INFO 2020-04-27 09:43:35,638 views 51 进入市存储缓存
+INFO 2020-04-27 09:43:35,687 basehttp 154 "GET /areas/210100/ HTTP/1.1" 200 705
+INFO 2020-04-27 09:43:54,329 views 51 进入市存储缓存
+INFO 2020-04-27 09:43:54,340 basehttp 154 "GET /areas/210200/ HTTP/1.1" 200 585
+INFO 2020-04-27 09:43:58,647 views 51 进入市存储缓存
+INFO 2020-04-27 09:43:58,721 basehttp 154 "GET /areas/210100/ HTTP/1.1" 200 705
+INFO 2020-04-27 09:44:10,238 views 51 进入市存储缓存
+INFO 2020-04-27 09:44:10,262 basehttp 154 "GET /areas/210200/ HTTP/1.1" 200 585
+INFO 2020-04-27 09:44:18,403 views 51 进入市存储缓存
+INFO 2020-04-27 09:44:18,417 basehttp 154 "GET /areas/210100/ HTTP/1.1" 200 705
+INFO 2020-04-27 09:44:27,337 views 51 进入市存储缓存
+INFO 2020-04-27 09:44:27,394 basehttp 154 "GET /areas/210200/ HTTP/1.1" 200 585
+INFO 2020-04-27 09:44:28,151 views 51 进入市存储缓存
+INFO 2020-04-27 09:44:28,160 basehttp 154 "GET /areas/210100/ HTTP/1.1" 200 705
+INFO 2020-04-27 09:44:29,026 views 51 进入市存储缓存
+INFO 2020-04-27 09:44:29,057 basehttp 154 "GET /areas/210200/ HTTP/1.1" 200 585
+INFO 2020-04-27 09:45:16,191 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 09:45:16,850 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 09:45:40,478 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/areas/views.py changed, reloading.
+INFO 2020-04-27 09:45:40,956 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 09:45:44,949 log 228 Not Found: /addresses/
+WARNING 2020-04-27 09:45:44,951 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4351
+INFO 2020-04-27 09:45:44,950 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 09:45:48,278 views 91 进入市存储缓存
+INFO 2020-04-27 09:45:48,291 basehttp 154 "GET /areas/110000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:45:58,652 views 91 进入市存储缓存
+INFO 2020-04-27 09:45:58,708 basehttp 154 "GET /areas/110100/ HTTP/1.1" 200 843
+INFO 2020-04-27 09:46:04,295 views 91 进入市存储缓存
+INFO 2020-04-27 09:46:04,330 basehttp 154 "GET /areas/120000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:46:05,695 views 91 进入市存储缓存
+INFO 2020-04-27 09:46:05,701 basehttp 154 "GET /areas/120100/ HTTP/1.1" 200 837
+INFO 2020-04-27 09:46:10,650 basehttp 154 "GET /areas/110000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:46:11,719 basehttp 154 "GET /areas/110100/ HTTP/1.1" 200 843
+INFO 2020-04-27 09:46:17,681 basehttp 154 "GET /areas/120000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:46:18,866 basehttp 154 "GET /areas/120100/ HTTP/1.1" 200 837
+INFO 2020-04-27 09:46:33,298 basehttp 154 "GET /areas/110000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:47:31,039 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 09:47:34,238 log 228 Not Found: /addresses/
+WARNING 2020-04-27 09:47:34,240 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4351
+INFO 2020-04-27 09:47:34,246 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 09:47:36,362 basehttp 154 "GET /areas/120000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:47:37,435 basehttp 154 "GET /areas/120100/ HTTP/1.1" 200 837
+INFO 2020-04-27 09:47:44,827 basehttp 154 "GET /areas/110000/ HTTP/1.1" 200 141
+INFO 2020-04-27 09:47:45,653 basehttp 154 "GET /areas/110100/ HTTP/1.1" 200 843
+INFO 2020-04-27 09:47:49,901 views 51 进入市存储缓存
+INFO 2020-04-27 09:47:49,928 basehttp 154 "GET /areas/130000/ HTTP/1.1" 200 701

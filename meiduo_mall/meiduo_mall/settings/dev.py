@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'verifications',
-    'oatuh'
+    'oatuh',
+    'areas',
 ]
 
 MIDDLEWARE = [
