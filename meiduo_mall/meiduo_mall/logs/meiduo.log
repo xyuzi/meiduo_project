@@ -1166,3 +1166,127 @@ INFO 2020-04-27 09:47:44,827 basehttp 154 "GET /areas/110000/ HTTP/1.1" 200 141
 INFO 2020-04-27 09:47:45,653 basehttp 154 "GET /areas/110100/ HTTP/1.1" 200 843
 INFO 2020-04-27 09:47:49,901 views 51 进入市存储缓存
 INFO 2020-04-27 09:47:49,928 basehttp 154 "GET /areas/130000/ HTTP/1.1" 200 701
+INFO 2020-04-27 10:53:02,747 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 10:53:07,053 views 19 进入省存储缓存
+INFO 2020-04-27 10:53:07,073 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 10:53:07,127 log 228 Not Found: /addresses/
+WARNING 2020-04-27 10:53:07,128 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4517
+INFO 2020-04-27 10:53:48,090 views 47 进入市存储缓存
+INFO 2020-04-27 10:53:48,100 basehttp 154 "GET /areas/420000/ HTTP/1.1" 200 817
+INFO 2020-04-27 10:53:49,134 views 47 进入市存储缓存
+INFO 2020-04-27 10:53:49,241 basehttp 154 "GET /areas/420200/ HTTP/1.1" 200 383
+INFO 2020-04-27 10:53:50,100 views 47 进入市存储缓存
+INFO 2020-04-27 10:53:50,107 basehttp 154 "GET /areas/420100/ HTTP/1.1" 200 699
+INFO 2020-04-27 10:54:10,616 basehttp 154 "OPTIONS /addresses/create/ HTTP/1.1" 200 0
+ERROR 2020-04-27 10:54:10,816 log 228 Internal Server Error: /addresses/create/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py", line 348, in post
+    'receiver': address.receiver.name,
+AttributeError: 'str' object has no attribute 'name'
+ERROR 2020-04-27 10:54:10,817 basehttp 154 "POST /addresses/create/ HTTP/1.1" 500 83720
+INFO 2020-04-27 10:56:09,236 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-27 10:56:09,980 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 10:56:17,193 basehttp 154 "POST /addresses/create/ HTTP/1.1" 200 307
+INFO 2020-04-27 10:56:17,410 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 10:56:17,418 log 228 Not Found: /addresses/
+WARNING 2020-04-27 10:56:17,419 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4517
+WARNING 2020-04-27 10:56:21,924 log 228 Not Found: /addresses/
+WARNING 2020-04-27 10:56:21,925 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4517
+INFO 2020-04-27 10:56:21,931 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 11:10:14,984 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-27 11:10:15,573 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 11:10:20,361 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 11:10:20,366 log 228 Not Found: /addresses/
+WARNING 2020-04-27 11:10:20,367 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4517
+INFO 2020-04-27 11:10:45,213 basehttp 154 "GET /areas/420000/ HTTP/1.1" 200 817
+INFO 2020-04-27 11:10:46,626 basehttp 154 "GET /areas/420100/ HTTP/1.1" 200 699
+INFO 2020-04-27 11:11:37,159 basehttp 154 "OPTIONS /addresses/create/ HTTP/1.1" 200 0
+INFO 2020-04-27 11:11:37,190 basehttp 154 "POST /addresses/create/ HTTP/1.1" 200 27
+WARNING 2020-04-27 11:11:37,390 log 228 Not Found: /addresses/
+INFO 2020-04-27 11:11:37,391 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 11:11:37,392 basehttp 154 "GET /addresses/ HTTP/1.1" 404 4517
+INFO 2020-04-27 11:48:56,011 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-27 11:48:57,312 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 12:04:00,229 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-27 12:04:01,484 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 12:04:13,633 base 102 Method Not Allowed (GET): /addresses/
+INFO 2020-04-27 12:04:13,645 views 19 进入省存储缓存
+INFO 2020-04-27 12:04:13,747 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2020-04-27 12:04:13,753 log 228 Method Not Allowed: /addresses/
+WARNING 2020-04-27 12:04:13,754 basehttp 154 "GET /addresses/ HTTP/1.1" 405 0
+INFO 2020-04-27 12:04:57,500 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-04-27 12:05:05,209 log 228 Not Found: /carts/simple/
+WARNING 2020-04-27 12:05:05,210 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 4685
+WARNING 2020-04-27 12:05:11,462 log 228 Not Found: /browse_histories/
+WARNING 2020-04-27 12:05:11,463 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 4697
+INFO 2020-04-27 12:05:11,529 basehttp 154 "GET /info/ HTTP/1.1" 200 140
+WARNING 2020-04-27 12:05:17,387 base 102 Method Not Allowed (GET): /addresses/
+WARNING 2020-04-27 12:05:17,387 log 228 Method Not Allowed: /addresses/
+WARNING 2020-04-27 12:05:17,388 basehttp 154 "GET /addresses/ HTTP/1.1" 405 0
+INFO 2020-04-27 12:05:17,393 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 12:05:50,739 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 12:05:53,042 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 12:05:53,083 basehttp 154 "GET /addresses/ HTTP/1.1" 200 317
+INFO 2020-04-27 12:11:01,995 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-27 12:11:02,405 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 12:11:15,077 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 12:11:18,981 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 12:11:41,880 basehttp 154 "GET /addresses/ HTTP/1.1" 200 317
+INFO 2020-04-27 12:12:00,504 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 12:12:02,748 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 12:12:43,685 basehttp 154 "GET /addresses/ HTTP/1.1" 200 855
+INFO 2020-04-27 12:14:58,249 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 12:15:07,047 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 12:15:09,946 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 12:15:24,439 basehttp 154 "GET /addresses/ HTTP/1.1" 200 855
+INFO 2020-04-27 12:31:53,357 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 12:31:57,076 basehttp 154 "OPTIONS /addresses/3/ HTTP/1.1" 200 0
+WARNING 2020-04-27 12:31:57,086 log 228 Not Found: /addresses/3/
+WARNING 2020-04-27 12:31:57,087 basehttp 154 "DELETE /addresses/3/ HTTP/1.1" 404 4685
+INFO 2020-04-27 13:05:25,931 basehttp 154 "OPTIONS /addresses/1/title/ HTTP/1.1" 200 0
+WARNING 2020-04-27 13:05:25,940 log 228 Not Found: /addresses/1/title/
+WARNING 2020-04-27 13:05:25,940 basehttp 154 "PUT /addresses/1/title/ HTTP/1.1" 404 4700
+INFO 2020-04-27 13:26:59,205 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-27 13:26:59,580 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 13:27:24,713 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/urls.py changed, reloading.
+INFO 2020-04-27 13:27:25,080 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 13:27:59,478 views 47 进入市存储缓存
+INFO 2020-04-27 13:27:59,499 basehttp 154 "GET /areas/420000/ HTTP/1.1" 200 817
+INFO 2020-04-27 13:28:00,692 views 47 进入市存储缓存
+INFO 2020-04-27 13:28:00,725 basehttp 154 "GET /areas/420100/ HTTP/1.1" 200 699
+INFO 2020-04-27 13:28:04,450 basehttp 154 "OPTIONS /addresses/2/ HTTP/1.1" 200 0
+ERROR 2020-04-27 13:28:04,544 log 228 Internal Server Error: /addresses/2/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py", line 463, in put
+    'city': address.city_id.name,
+AttributeError: 'int' object has no attribute 'name'
+ERROR 2020-04-27 13:28:04,545 basehttp 154 "PUT /addresses/2/ HTTP/1.1" 500 84084
+INFO 2020-04-27 13:28:18,120 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-27 13:28:18,817 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 13:28:24,861 basehttp 154 "PUT /addresses/2/ HTTP/1.1" 200 286
+INFO 2020-04-27 13:32:57,952 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-27 13:32:58,327 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-27 13:33:06,656 basehttp 154 "DELETE /addresses/2/ HTTP/1.1" 200 27
+INFO 2020-04-27 13:33:06,828 views 19 进入省存储缓存
+INFO 2020-04-27 13:33:06,866 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-27 13:33:06,874 basehttp 154 "GET /addresses/ HTTP/1.1" 200 586

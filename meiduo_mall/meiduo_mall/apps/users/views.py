@@ -7,7 +7,7 @@ from django.views import View
 
 # Create your views here.
 from meiduo_mall.untils.JudgeLogin import LoginMixin
-from users.models import User
+from users.models import User, Address
 from django.http import JsonResponse, HttpResponse
 from django_redis import get_redis_connection
 from celery_tasks.email.tasks import send_verify_email
@@ -263,4 +263,229 @@ class VerifyEmailView(View):
         return JsonResponse({
             'code': 0,
             'errmsg': 'ok'
+        })
+
+
+class CreateAddressView(View):
+    def post(self, request):
+        try:
+            count = Address.objects.filter(user=request.user,
+                                           is_delete=False).count()
+        except Exception as e:
+            logger.info(e)
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '访问数据库出错'
+            })
+        if count > 20:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '超过地址存储数量上限'
+            })
+
+        dict = json.loads(request.body.decode())
+        receiver = dict.get('receiver')
+        province_id = dict.get('province_id')
+        city_id = dict.get('city_id')
+        district_id = dict.get('district_id')
+        place = dict.get('place')
+        mobile = dict.get('mobile')
+        tel = dict.get('tel')
+        email = dict.get('email')
+
+        if not all([receiver, province_id, city_id, district_id, place, mobile]):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '缺少必传参数'
+            })
+
+        if not re.match(r'^1[3-9]\d{9}$', mobile):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '传入mobile格式有误'
+            })
+
+        if tel:
+            if re.match(r'^(0[0-9]{2,3}-)?([2-9][0-9]{6,7})+(-[0-9]{1,4})?$', tel):
+                return JsonResponse({
+                    'code': 400,
+                    'errmsg': '传入tel格式有误'
+                })
+
+        if email:
+            if re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
+                return JsonResponse({
+                    'code': 400,
+                    'errmsg': '传入email格式有误'
+                })
+
+        try:
+            address = Address.objects.create(
+                user=request.user,
+                title=receiver,
+                receiver=receiver,
+                province_id=province_id,
+                city_id=city_id,
+                district_id=district_id,
+                place=place,
+                mobile=mobile,
+                tel=tel,
+                email=email
+            )
+            if not request.user.default_address:
+                request.user.default_address = address
+                request.user.save()
+        except Exception as e:
+            logger.info(e)
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '存入数据失败'
+            })
+
+        # address_dict = {
+        #     'id': address.id,
+        #     'title': address.title,
+        #     'receiver': address.receiver,
+        #     'province': address.province.name,
+        #     'city': address.city.name,
+        #     'district': address.district.name,
+        #     'place': address.place,
+        #     'mobile': address.mobile,
+        #     'tel': address.tel,
+        #     'email': address.email
+        # }
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok',
+            # 'address': address_dict
+        })
+
+
+class AddressView(View):
+    def get(self, request):
+        addresses = Address.objects.filter(user=request.user,
+                                           is_delete=False)
+        address_list = []
+
+        for address in addresses:
+            address_dict = {
+                'id': address.id,
+                'title': address.title,
+                'receiver': address.receiver,
+                'province': address.province.name,
+                'city': address.city.name,
+                'district': address.district.name,
+                'place': address.place,
+                'mobile': address.mobile,
+                'tel': address.tel,
+                'email': address.email
+            }
+
+            default_address = request.user.default_address
+            if default_address.id == address.id:
+                address_list.insert(0, address_dict)
+            else:
+                address_list.append(address_dict)
+
+        default_id = request.user.default_address.id
+        return JsonResponse({
+            'code': 400,
+            'errmsg': 'ok',
+            'default_address_id': default_id,
+            'addresses': address_list
+        })
+
+
+class UpdateDestroyAddressView(View):
+    def put(self, request, address_id):
+        dict = json.loads(request.body.decode())
+        receiver = dict.get('receiver')
+        province_id = dict.get('province_id')
+        city_id = dict.get('city_id')
+        district_id = dict.get('district_id')
+        place = dict.get('place')
+        mobile = dict.get('mobile')
+        tel = dict.get('tel')
+        email = dict.get('email')
+
+        if not all([receiver, province_id, city_id, district_id, place, mobile]):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '缺少比穿参数'
+            })
+
+        if not re.match(r'^1[3-9]\d{9}$', mobile):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '传入mobile格式有误'
+            })
+
+        if tel:
+            if re.match(r'^(0[0-9]{2,3}-)?([2-9][0-9]{6,7})+(-[0-9]{1,4})?$', tel):
+                return JsonResponse({
+                    'code': 400,
+                    'errmsg': '传入tel格式有误'
+                })
+
+        if email:
+            if re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
+                return JsonResponse({
+                    'code': 400,
+                    'errmsg': '传入email格式有误'
+                })
+
+        try:
+            Address.objects.filter(id=address_id).update(
+                user=request.user,
+                title=receiver,
+                receiver=receiver,
+                province_id=province_id,
+                city_id=city_id,
+                district_id=district_id,
+                place=place,
+                mobile=mobile,
+                tel=tel,
+                email=email
+            )
+        except Exception as e:
+            logger.error(e)
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '更新地址失败'
+            })
+
+        address = Address.objects.get(id=address_id)
+        address_dict = {
+            'id': address.id,
+            'title': address.title,
+            'receiver': address.receiver,
+            'province': address.province.name,
+            'city': address.city.name,
+            'district': address.district.name,
+            'place': address.place,
+            'mobile': address.mobile,
+            'tel': address.tel,
+            'email': address.email
+        }
+
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok',
+            'address': address_dict
+        })
+
+    def delete(self, request, address_id):
+        try:
+            address = Address.objects.get(id=address_id)
+            address.is_delete = True
+            address.save()
+        except Exception as e:
+            logger.info(e)
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '数据修改失败',
+            })
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok',
         })
