@@ -1290,3 +1290,73 @@ INFO 2020-04-27 13:33:06,656 basehttp 154 "DELETE /addresses/2/ HTTP/1.1" 200 27
 INFO 2020-04-27 13:33:06,828 views 19 进入省存储缓存
 INFO 2020-04-27 13:33:06,866 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
 INFO 2020-04-27 13:33:06,874 basehttp 154 "GET /addresses/ HTTP/1.1" 200 586
+INFO 2020-04-28 07:20:50,385 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 07:22:45,920 views 23 图形验证码:LEGK
+INFO 2020-04-28 07:22:45,972 basehttp 154 "GET /image_codes/cdf1a0ab-141e-4235-8490-f013b8fe8874/ HTTP/1.1" 200 3206
+WARNING 2020-04-28 07:22:52,625 log 228 Not Found: /carts/simple/
+WARNING 2020-04-28 07:22:52,626 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 4870
+WARNING 2020-04-28 07:22:58,877 log 228 Not Found: /browse_histories/
+WARNING 2020-04-28 07:22:58,889 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 4882
+INFO 2020-04-28 07:22:59,511 basehttp 154 "GET /info/ HTTP/1.1" 200 140
+INFO 2020-04-28 07:23:11,673 views 19 进入省存储缓存
+INFO 2020-04-28 07:23:11,820 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-28 07:23:11,839 basehttp 154 "GET /addresses/ HTTP/1.1" 200 586
+INFO 2020-04-28 07:25:15,273 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-28 07:25:16,003 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 07:29:20,814 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 07:29:56,152 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 07:30:01,236 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-28 07:30:01,257 basehttp 154 "GET /addresses/ HTTP/1.1" 200 586
+INFO 2020-04-28 07:30:03,935 views 47 进入市存储缓存
+INFO 2020-04-28 07:30:03,944 basehttp 154 "GET /areas/120000/ HTTP/1.1" 200 141
+INFO 2020-04-28 07:30:05,381 views 47 进入市存储缓存
+INFO 2020-04-28 07:30:05,388 basehttp 154 "GET /areas/120100/ HTTP/1.1" 200 837
+INFO 2020-04-28 08:07:58,064 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 08:08:02,586 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-28 08:08:02,605 basehttp 154 "GET /addresses/ HTTP/1.1" 200 586
+INFO 2020-04-28 08:08:05,009 basehttp 154 "OPTIONS /addresses/3/default/ HTTP/1.1" 200 0
+INFO 2020-04-28 08:08:05,163 basehttp 154 "PUT /addresses/3/default/ HTTP/1.1" 200 27
+INFO 2020-04-28 08:08:05,250 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-28 08:08:05,272 basehttp 154 "GET /addresses/ HTTP/1.1" 200 586
+INFO 2020-04-28 08:08:06,435 basehttp 154 "OPTIONS /addresses/1/default/ HTTP/1.1" 200 0
+INFO 2020-04-28 08:08:06,454 basehttp 154 "PUT /addresses/1/default/ HTTP/1.1" 200 27
+INFO 2020-04-28 08:08:06,514 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-28 08:08:06,533 basehttp 154 "GET /addresses/ HTTP/1.1" 200 586
+INFO 2020-04-28 08:19:46,974 basehttp 154 "OPTIONS /addresses/1/title/ HTTP/1.1" 200 0
+WARNING 2020-04-28 08:19:46,985 log 228 Not Found: /addresses/1/title/
+WARNING 2020-04-28 08:19:46,985 basehttp 154 "PUT /addresses/1/title/ HTTP/1.1" 404 5078
+INFO 2020-04-28 08:20:03,891 basehttp 154 "OPTIONS /addresses/3/title/ HTTP/1.1" 200 0
+WARNING 2020-04-28 08:20:03,899 log 228 Not Found: /addresses/3/title/
+WARNING 2020-04-28 08:20:03,899 basehttp 154 "PUT /addresses/3/title/ HTTP/1.1" 404 5078
+INFO 2020-04-28 08:28:16,716 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-28 08:28:17,361 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 08:28:22,859 views 19 进入省存储缓存
+INFO 2020-04-28 08:28:22,872 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-28 08:28:22,885 basehttp 154 "GET /addresses/ HTTP/1.1" 200 586
+WARNING 2020-04-28 08:28:37,709 log 228 Not Found: /addresses/3/title/
+WARNING 2020-04-28 08:28:37,709 basehttp 154 "PUT /addresses/3/title/ HTTP/1.1" 404 5267
+INFO 2020-04-28 08:29:39,567 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/urls.py changed, reloading.
+INFO 2020-04-28 08:29:40,140 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 08:29:43,464 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-04-28 08:29:43,485 basehttp 154 "GET /addresses/ HTTP/1.1" 200 586
+INFO 2020-04-28 08:29:48,437 basehttp 154 "PUT /addresses/3/title/ HTTP/1.1" 200 27
+INFO 2020-04-28 08:31:51,713 basehttp 154 "OPTIONS /password/ HTTP/1.1" 200 0
+WARNING 2020-04-28 08:31:51,721 log 228 Not Found: /password/
+WARNING 2020-04-28 08:31:51,722 basehttp 154 "PUT /password/ HTTP/1.1" 404 5242
+INFO 2020-04-28 08:40:25,284 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-28 08:40:25,865 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 08:53:59,317 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-28 08:53:59,912 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 08:54:17,708 basehttp 154 "OPTIONS /password/ HTTP/1.1" 200 0
+INFO 2020-04-28 08:54:17,807 basehttp 154 "PUT /password/ HTTP/1.1" 200 69
+INFO 2020-04-28 08:55:24,447 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-04-28 08:55:24,991 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-04-28 08:55:45,358 basehttp 154 "PUT /password/ HTTP/1.1" 200 81
+INFO 2020-04-28 08:56:30,333 basehttp 154 "PUT /password/ HTTP/1.1" 200 27
+INFO 2020-04-28 08:56:45,245 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-04-28 08:56:45,338 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-04-28 08:56:45,692 log 228 Not Found: /carts/simple/
+WARNING 2020-04-28 08:56:45,693 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 5412
+WARNING 2020-04-28 08:56:47,451 log 228 Not Found: /browse_histories/
+INFO 2020-04-28 08:56:47,452 basehttp 154 "GET /info/ HTTP/1.1" 200 140
+WARNING 2020-04-28 08:56:47,453 basehttp 154 "GET /browse_histories/ HTTP/1.1" 404 5424

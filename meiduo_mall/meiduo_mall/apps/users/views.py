@@ -489,3 +489,96 @@ class UpdateDestroyAddressView(View):
             'code': 0,
             'errmsg': 'ok',
         })
+
+
+class DefaultAddressView(View):
+    def put(self, request, address_id):
+        try:
+            address = Address.objects.get(id=address_id)
+            request.user.default_address = address
+            request.user.save()
+        except Exception as e:
+            logger.info(e)
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '保存数据失败'
+            })
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok'
+        })
+
+
+class UpdateTitleAddressView(View):
+    def put(self, request, address_id):
+        title_dict = json.loads(request.body.decode())
+        title = title_dict.get('title')
+        if not title:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '缺少必传参数'
+            })
+        try:
+            address = Address.objects.get(id=address_id)
+            address.title = title
+        except Exception as e:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '保存数据失败'
+            })
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok'
+        })
+
+
+class ChangePasswordView(LoginMixin, View):
+    def put(self, request):
+        password_dict = json.loads(request.body.decode())
+        old_password = password_dict.get('old_password')
+        new_password = password_dict.get('new_password')
+        new_password2 = password_dict.get('new_password2')
+
+        if not all([old_password, new_password, new_password2]):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '缺少必传参数'
+            })
+
+        if not request.user.check_password(old_password):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '原始密码不正确'
+            })
+
+        if not re.match(r'^[a-zA-Z0-9]{8,20}$', new_password):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '修改密码格式错误'
+            })
+
+        if new_password != new_password2:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '两次密码输入不一致'
+            })
+        if new_password == old_password:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '新密码与旧密码一致'
+            })
+        try:
+            request.user.set_password(new_password)
+            request.user.save()
+        except Exception as e:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '修改密码失败'
+            })
+        response = JsonResponse({
+            'code': 0,
+            'errmsg': 'ok'
+        })
+        logout(request)
+        response.delete_cookie('username')
+        return response
