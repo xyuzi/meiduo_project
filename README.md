@@ -18,6 +18,14 @@
 
 `itsdangerous == 1.1.0`
 
+`mutagen == 1.44.0`
+
+`requests == 2.23.0 `
+
+`本地utils文件夹安装`
+
+`pip install fdfs_client-py-master.zip `
+
 # 相关配置
 
 `进入hosts添加->127.0.0.1	www.meiduo.site`
@@ -49,10 +57,12 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 # 收件人看到的发件人
 EMAIL_FROM = '随便写<这里写显示的邮箱>'
+
+utils/fastdfs/client.conf --> 修改配置文件地址和ip
 ````
 # start:
 
-`启动redis，启动mysql`
+`启动redis，启动mysql，启动FastDFS(docker下启动)`
 
 `进入front_end_pc执行 --> python3 -m http.server 8080`
 

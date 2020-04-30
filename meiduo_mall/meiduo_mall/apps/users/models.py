@@ -4,7 +4,7 @@ from itsdangerous import TimedJSONWebSignatureSerializer
 from django.conf import settings
 import logging
 
-from meiduo_mall.untils.BaseModel import BaseModel
+from meiduo_mall.utils.BaseModel import BaseModel
 
 logger = logging.getLogger('django')
 

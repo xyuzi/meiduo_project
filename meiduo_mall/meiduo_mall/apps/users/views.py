@@ -6,7 +6,7 @@ from django.shortcuts import render
 from django.views import View
 
 # Create your views here.
-from meiduo_mall.untils.JudgeLogin import LoginMixin
+from meiduo_mall.utils.JudgeLogin import LoginMixin
 from users.models import User, Address
 from django.http import JsonResponse, HttpResponse
 from django_redis import get_redis_connection
@@ -447,6 +447,7 @@ class UpdateDestroyAddressView(View):
                 tel=tel,
                 email=email
             )
+            address = Address.objects.get(id=address_id)
         except Exception as e:
             logger.error(e)
             return JsonResponse({
@@ -454,7 +455,6 @@ class UpdateDestroyAddressView(View):
                 'errmsg': '更新地址失败'
             })
 
-        address = Address.objects.get(id=address_id)
         address_dict = {
             'id': address.id,
             'title': address.title,
@@ -494,8 +494,10 @@ class UpdateDestroyAddressView(View):
 class DefaultAddressView(View):
     def put(self, request, address_id):
         try:
-            address = Address.objects.get(id=address_id)
-            request.user.default_address = address
+            # address = Address.objects.get(id=address_id)
+            # request.user.default_address = address
+            # request.user.save()
+            request.user.default_address_id = address_id
             request.user.save()
         except Exception as e:
             logger.info(e)

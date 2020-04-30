@@ -2,7 +2,7 @@ from django.db import models
 
 
 # 定义QQ登录的模型类:
-from meiduo_mall.untils.BaseModel import BaseModel
+from meiduo_mall.utils.BaseModel import BaseModel
 
 
 class OAuthQQUser(BaseModel):
