@@ -98,7 +98,14 @@ class RegisterView(View):
                 'errmsg': '未勾选条款'
             })
         redis_coon = get_redis_connection('verify_code')
-        sms_code_server = redis_coon.get('sms_%s' % mobile)
+        try:
+            sms_code_server = redis_coon.get('sms_%s' % mobile)
+        except Exception as e:
+            logger.info(e)
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '访问数据库失败'
+            })
         if not sms_code_server:
             return JsonResponse({
                 'code': 400,
@@ -146,7 +153,7 @@ class LoginView(View):
             return JsonResponse({'code': 400,
                                  'errmsg': '用户名或者密码错误'})
         login(request, user)
-        # TODO 这里勾选后会判断让cookis里面username一起消失或出现
+        # 勾选后会判断让cookis里面username一起消失或出现
         response = JsonResponse({
             'code': 0,
             'errmsg': 'ok'
@@ -157,18 +164,6 @@ class LoginView(View):
         else:
             request.session.set_expiry(None)
             response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
-
-        # TODO 这里无论还是不勾选会判断让cookis里面username单独存在14天
-        # if remembered is False:
-        #     request.session.set_expiry(0)
-        #
-        # else:
-        #     request.session.set_expiry(None)
-        # response = JsonResponse({
-        #     'code': 0,
-        #     'errmsg': 'ok'
-        # })
-        # response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
         return response
 
 
@@ -199,7 +194,7 @@ class UserInfoView(LoginMixin, View):
         })
 
 
-class EmailView(View):
+class EmailView(LoginMixin, View):
     def put(self, request):
         dict = json.loads(request.body.decode())
         email = dict.get('email')
@@ -225,7 +220,7 @@ class EmailView(View):
                 'errmsg': '保持邮箱信息失败'
             })
         url = request.user.generate_verify_email_url()
-        # TODO 发送邮件给email 异步执行
+        # 发送邮件给email 异步执行
         # send_verify_email.delay(email, '邮箱验证链接')
         send_verify_email.delay(email, url)
         return JsonResponse({
@@ -266,7 +261,7 @@ class VerifyEmailView(View):
         })
 
 
-class CreateAddressView(View):
+class CreateAddressView(LoginMixin, View):
     def post(self, request):
         try:
             count = Address.objects.filter(user=request.user,
@@ -361,10 +356,17 @@ class CreateAddressView(View):
         })
 
 
-class AddressView(View):
+class AddressView(LoginMixin, View):
     def get(self, request):
-        addresses = Address.objects.filter(user=request.user,
-                                           is_delete=False)
+        try:
+            addresses = Address.objects.filter(user=request.user,
+                                               is_delete=False)
+        except Exception as e:
+            logger.info(e)
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '访问数据库失败',
+            })
         address_list = []
 
         for address in addresses:
@@ -387,7 +389,7 @@ class AddressView(View):
             else:
                 address_list.append(address_dict)
 
-        default_id = request.user.default_address.id
+        default_id = request.user.default_address_id
         return JsonResponse({
             'code': 400,
             'errmsg': 'ok',
@@ -396,7 +398,7 @@ class AddressView(View):
         })
 
 
-class UpdateDestroyAddressView(View):
+class UpdateDestroyAddressView(LoginMixin, View):
     def put(self, request, address_id):
         dict = json.loads(request.body.decode())
         receiver = dict.get('receiver')
@@ -411,7 +413,7 @@ class UpdateDestroyAddressView(View):
         if not all([receiver, province_id, city_id, district_id, place, mobile]):
             return JsonResponse({
                 'code': 400,
-                'errmsg': '缺少比穿参数'
+                'errmsg': '缺少必传参数'
             })
 
         if not re.match(r'^1[3-9]\d{9}$', mobile):
@@ -491,12 +493,9 @@ class UpdateDestroyAddressView(View):
         })
 
 
-class DefaultAddressView(View):
+class DefaultAddressView(LoginMixin, View):
     def put(self, request, address_id):
         try:
-            # address = Address.objects.get(id=address_id)
-            # request.user.default_address = address
-            # request.user.save()
             request.user.default_address_id = address_id
             request.user.save()
         except Exception as e:
@@ -511,7 +510,7 @@ class DefaultAddressView(View):
         })
 
 
-class UpdateTitleAddressView(View):
+class UpdateTitleAddressView(LoginMixin, View):
     def put(self, request, address_id):
         title_dict = json.loads(request.body.decode())
         title = title_dict.get('title')

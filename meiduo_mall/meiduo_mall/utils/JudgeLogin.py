@@ -1,4 +1,6 @@
 from django.http import JsonResponse
+import logging
+logger = logging.getLogger('django')
 
 
 def my_decorator(func):
@@ -6,6 +8,7 @@ def my_decorator(func):
         if request.user.is_authenticated:
             return func(request, *args, **kwargs)
         else:
+            logger.info('这人没登录')
             return JsonResponse({
                 'code': 400,
                 'errmsg': '请先登录'

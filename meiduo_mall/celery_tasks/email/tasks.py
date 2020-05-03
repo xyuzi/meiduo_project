@@ -1,9 +1,5 @@
-# 导入: 
 from django.core.mail import send_mail
 from django.conf import settings
-import logging
-
-logger = logging.getLogger('django')
 from celery_tasks.main import celery_app
 
 
