@@ -22,6 +22,8 @@
 
 `requests == 2.23.0 `
 
+`django-crontab == 0.7.1`
+
 `本地utils文件夹安装`
 
 `pip install fdfs_client-py-master.zip `
