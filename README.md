@@ -24,6 +24,10 @@
 
 `django-crontab == 0.7.1`
 
+`django-haystack == 2.8.1`
+
+`elasticsearch == 2.4.1`
+
 `本地utils文件夹安装`
 
 `pip install fdfs_client-py-master.zip `
@@ -61,11 +65,22 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_FROM = '随便写<这里写显示的邮箱>'
 
 utils/fastdfs/client.conf --> 修改配置文件地址和ip
+
+手动生成索引表
+python manage.py rebuild_index
 ````
 # start:
 
 `启动redis，启动mysql，启动FastDFS(docker下启动)`
 
 `进入front_end_pc执行 --> python3 -m http.server 8080`
+
+`生成迁移文件: `
+
+`python manage.py makemigrations`
+
+`进行迁移: `
+
+`python manage.py migrate`
 
 `进入meiduo_mall执行 --> python3 manage.py runserver`
