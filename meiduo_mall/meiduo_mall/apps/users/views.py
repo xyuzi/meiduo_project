@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.views import View
 
 # Create your views here.
+from goods.models import SKU
 from meiduo_mall.utils.JudgeLogin import LoginMixin
 from users.models import User, Address
 from django.http import JsonResponse, HttpResponse
@@ -583,3 +584,55 @@ class ChangePasswordView(LoginMixin, View):
         logout(request)
         response.delete_cookie('username')
         return response
+
+
+class UserHistoryView(LoginMixin, View):
+    """用户浏览记录"""
+
+    def post(self, request):
+        """保存用户浏览记录"""
+        json_dict = json.loads(request.body.decode())
+        sku_id = json_dict.get('sku_id')
+
+        try:
+            SKU.objects.get(id=sku_id)
+        except SKU.DoesNotExist:
+            return JsonResponse({'code': 400,
+                                 'errmsg': '数据错误'})
+
+        redis_conn = get_redis_connection('history')
+        pl = redis_conn.pipeline()
+
+        pl.lrem('history_%s' % request.user.id, 0, sku_id)
+        pl.lpush('history_%s' % request.user.id, sku_id)
+        pl.ltrim('history_%s' % request.user.id, 0, 4)
+
+        pl.execute()
+
+        return JsonResponse({'code': 0,
+                             'errmsg': 'OK'})
+
+    def get(self, request):
+        """展示浏览记录"""
+        redis_coon = get_redis_connection('history')
+        sku_ids = redis_coon.lrange('history_%s' % request.user.id, 0, -1)
+        list = []
+        for sku_id in sku_ids:
+            try:
+                sku = SKU.objects.get(id=sku_id)
+            except Exception  as e:
+                return JsonResponse({
+                    'code': 400,
+                    'errmsg': '访问数据出错'
+                })
+            list.append({
+                'id': sku.id,
+                'name': sku.name,
+                'default_image_url': sku.default_image_url,
+                'price': sku.price
+            })
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok',
+            'skus': list
+        })
