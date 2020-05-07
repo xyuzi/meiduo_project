@@ -60,12 +60,27 @@ var vm = new Vue({
                 console.log(error.response.data);
             })
     },
+    // methods: {
+    //     // 退出
+    //     logoutfunc: function(){
+    //         sessionStorage.clear();
+    //         localStorage.clear();
+    //         location.href = '/login.html';
+    //     },
     methods: {
-        // 退出
-        logoutfunc: function(){
-            sessionStorage.clear();
-            localStorage.clear();
-            location.href = '/login.html';
+          // 退出登录按钮
+        logoutfunc: function () {
+            var url = this.host + '/logout/';
+            axios.delete(url, {
+                responseType: 'json',
+                withCredentials:true,
+            })
+                .then(response => {
+                    location.href = 'login.html';
+                })
+                .catch(error => {
+                    console.log(error.response);
+                })
         },
         // 减少操作
         on_minus: function(index){

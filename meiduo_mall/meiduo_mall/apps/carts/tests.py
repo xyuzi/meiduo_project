@@ -9,6 +9,9 @@ dict = {
     'age': 8,
     'like': 'none'
 }
+
+# dict.pop('a')
+# del dict['a']
 print(dict)
 # 加密
 # data_by = pickle.dumps(dict)
@@ -24,3 +27,4 @@ data_by64 = base64.b64encode(pickle.dumps(dict)).decode()
 print(data_by64)
 data = pickle.loads(base64.b64decode(data_by64))
 print(data)
+
