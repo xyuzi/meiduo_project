@@ -199,7 +199,10 @@ class CartsView(View):
             if cookies_carts:
                 cart_dict = pickle.loads(base64.b64decode(cookies_carts.encode()))
             else:
-                cart_dict = {}
+                return JsonResponse({
+                    'code': 400,
+                    'errmsg': '修改数据不存在'
+                })
 
             cart_dict[sku_id] = {
                 'count': count,
@@ -258,7 +261,10 @@ class CartsView(View):
             if carts_data:
                 carts_dict = pickle.loads(base64.b64decode(carts_data))
             else:
-                carts_dict = {}
+                return JsonResponse({
+                    'code': 400,
+                    'errmsg': '删除数据不存在'
+                })
 
             if sku_id in carts_dict:
                 # del carts_dict[sku_id]
@@ -274,8 +280,56 @@ class CartsView(View):
                 response.set_cookie('carts', carts_data, max_age=3600 * 24 * 14)
 
                 return response
+
+
+class Selectcarts(View):
+    def put(self, request):
+        dict = json.loads(request.body.decode())
+        selected = dict.get('selected', True)
+
+        if not isinstance(selected, bool):
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '传入值类型错误'
+            })
+
+        if request.user.is_authenticated:
+            redis_conn = get_redis_connection('carts')
+
+            carts_dict = redis_conn.hgetall('carts_%s' % request.user.id)
+
+            selected_list = carts_dict.keys()
+
+            if selected:
+                redis_conn.sadd('selects_%s' % request.user.id, *selected_list)
+            else:
+                redis_conn.srem('selects_%s' % request.user.id, *selected_list)
+
+            return JsonResponse({
+                'code': 0,
+                'errmsg': 'ok'
+            })
+
+        else:
+            carts_data = request.COOKIES.get('carts')
+
+            if carts_data:
+                carts_dict = pickle.loads(base64.b64decode(carts_data))
+
+                for carts_key in carts_dict.keys():
+                    carts_dict[carts_key] = selected
+
+                response = JsonResponse({
+                    'code': 0,
+                    'errmsg': 'ok'
+                })
+                carts_data = base64.b64encode(pickle.dumps(carts_dict))
+
+                response.set_cookie('carts', carts_data, max_age=3600 * 24 * 14)
+
+                return response
             else:
                 return JsonResponse({
                     'code': 400,
-                    'errmsg': '删除数据不存在'
+                    'errmsg': '操作异常'
                 })

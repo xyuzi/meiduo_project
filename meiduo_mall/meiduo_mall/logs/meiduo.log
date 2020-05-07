@@ -3027,3 +3027,147 @@ WARNING 2020-05-07 10:08:01,979 log 228 Not Found: /carts/simple/
 WARNING 2020-05-07 10:08:01,980 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6255
 INFO 2020-05-07 10:08:03,013 basehttp 154 "GET /carts/ HTTP/1.1" 200 1378
 INFO 2020-05-07 10:08:05,667 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+INFO 2020-05-07 10:11:57,359 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+WARNING 2020-05-07 10:11:57,655 log 228 Not Found: /carts/simple/
+WARNING 2020-05-07 10:11:57,656 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6255
+INFO 2020-05-07 10:11:59,656 basehttp 154 "GET /carts/ HTTP/1.1" 200 1378
+INFO 2020-05-07 10:12:02,673 basehttp 154 "OPTIONS /carts/selection/ HTTP/1.1" 200 0
+WARNING 2020-05-07 10:12:02,681 log 228 Not Found: /carts/selection/
+WARNING 2020-05-07 10:12:02,682 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 404 6264
+INFO 2020-05-07 10:26:03,611 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/carts/views.py changed, reloading.
+INFO 2020-05-07 10:26:04,564 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-07 10:44:22,533 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/carts/views.py changed, reloading.
+INFO 2020-05-07 10:44:23,202 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-07 10:59:31,477 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/carts/views.py changed, reloading.
+INFO 2020-05-07 10:59:32,089 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-07 10:59:37,867 basehttp 154 "GET /carts/ HTTP/1.1" 200 1378
+INFO 2020-05-07 10:59:41,151 basehttp 154 "OPTIONS /carts/selection/ HTTP/1.1" 200 0
+INFO 2020-05-07 10:59:41,155 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 10:59:41,645 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 10:59:42,101 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 10:59:42,581 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 10:59:42,943 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 10:59:43,443 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 10:59:43,845 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 10:59:44,900 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 10:59:49,284 basehttp 154 "OPTIONS /logout/ HTTP/1.1" 200 0
+INFO 2020-05-07 10:59:49,303 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+WARNING 2020-05-07 11:00:01,677 log 228 Not Found: /carts/simple/
+WARNING 2020-05-07 11:00:01,678 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6420
+WARNING 2020-05-07 11:00:03,471 log 228 Not Found: /carts/simple/
+WARNING 2020-05-07 11:00:03,478 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6420
+INFO 2020-05-07 11:00:03,489 basehttp 154 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1561
+INFO 2020-05-07 11:00:03,500 basehttp 154 "GET /hot/115/ HTTP/1.1" 200 582
+INFO 2020-05-07 11:00:04,222 basehttp 154 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2020-05-07 11:00:04,229 log 228 Not Found: /carts/simple/
+WARNING 2020-05-07 11:00:04,230 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6420
+INFO 2020-05-07 11:00:04,246 JudgeLogin 11 这人没登录
+INFO 2020-05-07 11:00:04,247 basehttp 154 "POST /browse_histories/ HTTP/1.1" 200 51
+INFO 2020-05-07 11:00:05,134 basehttp 154 "OPTIONS /carts/ HTTP/1.1" 200 0
+INFO 2020-05-07 11:00:05,143 basehttp 154 "POST /carts/ HTTP/1.1" 200 27
+INFO 2020-05-07 11:00:08,597 JudgeLogin 11 这人没登录
+INFO 2020-05-07 11:00:08,598 basehttp 154 "POST /browse_histories/ HTTP/1.1" 200 51
+WARNING 2020-05-07 11:00:08,609 log 228 Not Found: /carts/simple/
+WARNING 2020-05-07 11:00:08,609 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6420
+INFO 2020-05-07 11:00:09,682 basehttp 154 "POST /carts/ HTTP/1.1" 200 27
+INFO 2020-05-07 11:00:12,350 JudgeLogin 11 这人没登录
+INFO 2020-05-07 11:00:12,351 basehttp 154 "POST /browse_histories/ HTTP/1.1" 200 51
+WARNING 2020-05-07 11:00:12,359 log 228 Not Found: /carts/simple/
+WARNING 2020-05-07 11:00:12,360 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6420
+INFO 2020-05-07 11:00:13,053 basehttp 154 "POST /carts/ HTTP/1.1" 200 27
+INFO 2020-05-07 11:00:16,651 basehttp 154 "GET /carts/ HTTP/1.1" 200 1043
+INFO 2020-05-07 11:00:18,414 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:00:18,887 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:00:19,365 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:00:19,750 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:00:34,563 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:00:34,951 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:00:38,452 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:00:38,595 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:00:38,731 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:00:42,043 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:00:42,172 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:00:42,291 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:00:42,402 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:00:43,080 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:00:43,233 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:00:43,362 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:00:43,506 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:01:35,043 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 27
+INFO 2020-05-07 11:01:35,193 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:01:35,336 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:01:36,428 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:01:37,193 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:01:37,643 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:01:37,770 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:01:42,189 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:01:43,073 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:01:43,378 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:01:43,504 basehttp 154 "DELETE /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:04:20,241 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/carts/views.py changed, reloading.
+INFO 2020-05-07 11:04:20,999 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-07 11:04:25,536 basehttp 154 "GET /carts/ HTTP/1.1" 200 44
+WARNING 2020-05-07 11:04:27,238 log 228 Not Found: /carts/simple/
+WARNING 2020-05-07 11:04:27,239 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6420
+WARNING 2020-05-07 11:04:28,946 log 228 Not Found: /carts/simple/
+WARNING 2020-05-07 11:04:28,951 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6420
+INFO 2020-05-07 11:04:28,955 basehttp 154 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1561
+INFO 2020-05-07 11:04:28,965 basehttp 154 "GET /hot/115/ HTTP/1.1" 200 582
+INFO 2020-05-07 11:04:29,745 JudgeLogin 11 这人没登录
+INFO 2020-05-07 11:04:29,746 basehttp 154 "POST /browse_histories/ HTTP/1.1" 200 51
+WARNING 2020-05-07 11:04:29,753 log 228 Not Found: /carts/simple/
+WARNING 2020-05-07 11:04:29,754 basehttp 154 "GET /carts/simple/ HTTP/1.1" 404 6420
+INFO 2020-05-07 11:04:31,643 basehttp 154 "POST /carts/ HTTP/1.1" 200 27
+INFO 2020-05-07 11:04:34,498 basehttp 154 "GET /carts/ HTTP/1.1" 200 376
+INFO 2020-05-07 11:04:43,172 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:04:43,451 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:04:43,566 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:04:43,706 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:04:43,819 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:04:43,945 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:04:44,099 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:04:44,380 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-07 11:04:44,514 basehttp 154 "PUT /carts/ HTTP/1.1" 200 82
+INFO 2020-05-07 11:04:47,086 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:04:47,428 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:04:54,857 basehttp 154 "PUT /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:04:55,125 basehttp 154 "PUT /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:04:55,263 basehttp 154 "PUT /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:04:55,696 basehttp 154 "PUT /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:04:55,986 basehttp 154 "PUT /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:04:56,112 basehttp 154 "PUT /carts/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:04:57,037 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:04:57,571 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:04:58,053 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:04:58,187 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:04:58,333 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:04:58,452 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:05:31,267 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:05:31,876 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:05:58,303 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-07 11:06:02,164 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:06:03,055 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:06:20,097 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:06:20,646 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:06:31,820 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/carts/urls.py changed, reloading.
+INFO 2020-05-07 11:06:32,886 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-07 11:07:00,114 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:07:28,296 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:07:29,283 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:07:29,852 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:07:30,507 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:07:31,099 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:07:31,611 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:07:32,076 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:07:32,539 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:07:33,068 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:07:33,761 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:07:55,013 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:07:55,811 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 63
+INFO 2020-05-07 11:08:01,915 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-07 11:08:32,757 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/carts/views.py changed, reloading.
+INFO 2020-05-07 11:08:33,757 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-07 11:08:50,278 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 69
+INFO 2020-05-07 11:09:19,746 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-07 11:09:36,681 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 51
+INFO 2020-05-07 11:09:47,880 basehttp 154 "PUT /carts/selection/ HTTP/1.1" 200 51
