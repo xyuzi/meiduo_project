@@ -11,6 +11,7 @@ from django.views import View
 import logging
 from django_redis import get_redis_connection
 
+from carts.utiles import merage_cookie
 from oatuh.models import OAuthQQUser
 from oatuh.utils import generate_access_token_by_openid, check_access_token_by_openid
 from users.models import User
@@ -149,4 +150,6 @@ class QqUrlSecondView(View):
         })
         response.set_cookie('username', user.username,
                             max_age=3600 * 24 * 14)
+
+        response = merage_cookie(request, response)
         return response

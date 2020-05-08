@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.views import View
 
 # Create your views here.
+from carts.utiles import merage_cookie
 from goods.models import SKU
 from meiduo_mall.utils.JudgeLogin import LoginMixin
 from users.models import User, Address
@@ -128,10 +129,12 @@ class RegisterView(View):
                 'errmsg': '存入数据库失败'
             })
         login(request, user)
-        return JsonResponse({
+        response = JsonResponse({
             'code': 0,
             'errmsg': 'ok'
         })
+        response = merage_cookie(request, response)
+        return response
 
 
 class LoginView(View):
@@ -165,6 +168,9 @@ class LoginView(View):
         else:
             request.session.set_expiry(None)
             response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
+
+        response = merage_cookie(request, response)
+
         return response
 
 

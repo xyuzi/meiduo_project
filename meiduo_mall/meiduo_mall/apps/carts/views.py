@@ -182,11 +182,7 @@ class CartsView(View):
             cart_sku = {
                 'id': sku_id,
                 'count': count,
-                'selected': selected,
-                'name': sku.name,
-                'default_image_url': sku.default_image_url,
-                'price': sku.price,
-                'amount': sku.price * count
+                'selected': selected
             }
             return JsonResponse({
                 'code': 0,
@@ -197,7 +193,7 @@ class CartsView(View):
         else:
             cookies_carts = request.COOKIES.get('carts')
             if cookies_carts:
-                cart_dict = pickle.loads(base64.b64decode(cookies_carts.encode()))
+                cart_dict = pickle.loads(base64.b64decode(cookies_carts))
             else:
                 return JsonResponse({
                     'code': 400,
@@ -263,7 +259,7 @@ class CartsView(View):
             else:
                 return JsonResponse({
                     'code': 400,
-                    'errmsg': '删除数据不存在'
+                    'errmsg': '操作异常'
                 })
 
             if sku_id in carts_dict:
@@ -280,6 +276,11 @@ class CartsView(View):
                 response.set_cookie('carts', carts_data, max_age=3600 * 24 * 14)
 
                 return response
+            else:
+                return JsonResponse({
+                    'code': 400,
+                    'errmsg': '删除数据不存在'
+                })
 
 
 class Selectcarts(View):
@@ -333,3 +334,48 @@ class Selectcarts(View):
                     'code': 400,
                     'errmsg': '操作异常'
                 })
+
+
+class SimpleView(View):
+    def get(self, request):
+        if request.user.is_authenticated:
+            redis_conn = get_redis_connection('carts')
+            carts_dict = redis_conn.hgetall('carts_%s' % request.user.id)
+            selects_dict = redis_conn.smembers('selects_%s' % request.user.id)
+            cart_dict = {}
+            for sku_id, count in carts_dict.items():
+                cart_dict[int(sku_id)] = {
+                    'count': int(count),
+                    'selected': sku_id in selects_dict
+                }
+        else:
+            cart_cookie = request.COOKIES.get('carts')
+            if cart_cookie:
+                cart_dict = pickle.loads(base64.b64decode(cart_cookie))
+            else:
+                cart_dict = {}
+
+        sku_ids = cart_dict.keys()
+        try:
+            skus = SKU.objects.filter(id__in=sku_ids)
+        except Exception as e:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '访问数据失败'
+            })
+
+        list = []
+        for sku in skus:
+            list.append({
+                'id': sku.id,
+                'name': sku.name,
+                'count': cart_dict.get(sku.id).get('count'),
+                'selected': cart_dict.get(sku.id).get('selected'),
+                'default_image_url': sku.default_image_url,
+                'price': sku.price,
+                'amount': sku.price * cart_dict.get(sku.id).get('count'),
+            })
+
+        return JsonResponse({'code': 0,
+                             'errmsg': 'ok',
+                             'cart_skus': list})
