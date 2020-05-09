@@ -3642,3 +3642,492 @@ INFO 2020-05-08 10:09:23,351 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
 INFO 2020-05-08 10:09:24,806 basehttp 154 "PUT /carts/ HTTP/1.1" 200 82
 INFO 2020-05-08 10:09:26,545 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 200 770
 INFO 2020-05-08 10:09:40,444 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 200 770
+INFO 2020-05-09 11:50:58,479 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 11:53:14,905 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-09 11:54:12,621 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 11:54:19,365 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-09 11:54:25,341 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-05-09 11:54:26,132 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+INFO 2020-05-09 11:54:26,771 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 1715
+INFO 2020-05-09 11:54:29,545 basehttp 154 "GET /carts/ HTTP/1.1" 200 1715
+INFO 2020-05-09 11:54:34,700 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 200 770
+INFO 2020-05-09 11:54:39,682 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+INFO 2020-05-09 11:55:42,229 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 11:56:55,856 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 11:57:12,858 basehttp 154 "POST /orders/commit/ HTTP/1.1" 200 63
+INFO 2020-05-09 11:57:40,300 basehttp 154 "POST /orders/commit/ HTTP/1.1" 200 63
+INFO 2020-05-09 11:57:54,237 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 11:58:37,279 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 106, in post
+    order_id = timezone.localtime().strftime('%Y%m%d%H%M%S') + ('%09d' % request.user.id)
+AttributeError: type object 'datetime.timezone' has no attribute 'localtime'
+ERROR 2020-05-09 11:58:37,281 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 86393
+INFO 2020-05-09 12:02:15,844 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py changed, reloading.
+INFO 2020-05-09 12:02:17,200 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 12:02:24,645 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 12:04:49,669 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(sku=sku, sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 12:04:49,680 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93529
+INFO 2020-05-09 12:05:46,038 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 12:05:50,506 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+ERROR 2020-05-09 12:06:05,189 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 137, in post
+    goods = Goods.sku
+AttributeError: type object 'Goods' has no attribute 'sku'
+ERROR 2020-05-09 12:06:05,197 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 87775
+INFO 2020-05-09 12:06:40,292 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 12:07:09,531 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(sku=sku, sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 12:07:09,535 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93529
+INFO 2020-05-09 12:11:36,979 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 12:11:45,819 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 137, in post
+    goods = Goods.objects.get(id=sku)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1251, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1116, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/lookups.py", line 20, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/lookups.py", line 70, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 968, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'SKU'
+ERROR 2020-05-09 12:11:45,823 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 141895
+INFO 2020-05-09 12:16:48,420 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 12:16:50,433 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+ERROR 2020-05-09 12:16:57,084 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 137, in post
+    goods = sku.spu
+AttributeError: 'SKU' object has no attribute 'spu'
+ERROR 2020-05-09 12:16:57,087 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 87743
+INFO 2020-05-09 12:17:50,133 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 12:18:06,496 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 137, in post
+    goods = sku.spu_id
+AttributeError: 'SKU' object has no attribute 'spu_id'
+ERROR 2020-05-09 12:18:06,498 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 87761
+INFO 2020-05-09 12:20:39,533 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 12:21:08,413 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(sku=sku, sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 12:21:08,415 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93529
+INFO 2020-05-09 12:23:01,092 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 12:23:06,834 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(goods=goods, sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 12:23:06,838 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93537
+INFO 2020-05-09 12:26:44,096 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 12:26:52,797 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+ERROR 2020-05-09 12:26:53,024 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 12:26:53,029 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93511
+INFO 2020-05-09 12:27:00,670 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 12:27:18,038 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 12:27:18,041 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93511
+INFO 2020-05-09 12:27:57,811 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 12:28:03,174 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = Goods.objects.filter(id=goods, sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1251, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1116, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/lookups.py", line 20, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/lookups.py", line 70, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 968, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'Goods'
+ERROR 2020-05-09 12:28:03,178 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 138745
+INFO 2020-05-09 12:28:46,605 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py changed, reloading.
+INFO 2020-05-09 12:28:47,632 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 12:28:53,799 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 189, in post
+    pl.sdel('carts_%s' % request.user.id, *selects_list)
+AttributeError: 'Pipeline' object has no attribute 'sdel'
+ERROR 2020-05-09 12:28:53,801 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 89430
+INFO 2020-05-09 12:29:52,314 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 12:52:24,354 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 12:52:27,697 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+ERROR 2020-05-09 12:52:39,267 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = Goods.objects.filter(id=sku.sup_id).update(sales=new_goods)
+AttributeError: 'SKU' object has no attribute 'sup_id'
+ERROR 2020-05-09 12:52:39,270 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 89376
+INFO 2020-05-09 13:04:03,459 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 13:04:07,236 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+ERROR 2020-05-09 13:04:26,681 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = Goods.objects.filter(id=sku.goods).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1251, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1116, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/lookups.py", line 20, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/lookups.py", line 70, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 968, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'Goods'
+ERROR 2020-05-09 13:04:26,685 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 138611
+INFO 2020-05-09 13:09:22,222 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 13:12:00,858 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 13:12:00,868 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93511
+INFO 2020-05-09 13:15:21,402 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 13:15:25,534 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+ERROR 2020-05-09 13:15:41,113 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(id=sku_id, sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 13:15:41,116 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93533
+INFO 2020-05-09 13:17:51,976 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 13:20:07,248 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(id=sku_id, sales=goods_sales).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 13:20:07,250 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93533
+INFO 2020-05-09 13:20:07,724 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py changed, reloading.
+INFO 2020-05-09 13:20:10,030 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 13:20:20,668 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 13:20:41,404 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = goods.objects.filter(id=goods).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Goods instances
+ERROR 2020-05-09 13:20:41,405 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 93493
+INFO 2020-05-09 13:21:10,483 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 13:21:21,530 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 165, in post
+    result = Goods.objects.filter(id=goods).update(sales=new_goods)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1251, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1116, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/lookups.py", line 20, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/lookups.py", line 70, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 968, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'Goods'
+ERROR 2020-05-09 13:21:21,533 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 138603
+INFO 2020-05-09 13:24:32,024 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-09 13:25:14,059 log 228 Internal Server Error: /orders/commit/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/orders/views.py", line 189, in post
+    pl.sdel('selects_%s' % request.user.id, *selects_list)
+AttributeError: 'Pipeline' object has no attribute 'sdel'
+ERROR 2020-05-09 13:25:14,070 basehttp 154 "POST /orders/commit/ HTTP/1.1" 500 89434
+INFO 2020-05-09 13:26:13,142 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-09 13:26:16,247 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+INFO 2020-05-09 13:26:25,493 basehttp 154 "POST /orders/commit/ HTTP/1.1" 200 66
+INFO 2020-05-09 13:26:37,390 basehttp 154 "GET /carts/ HTTP/1.1" 200 1382
