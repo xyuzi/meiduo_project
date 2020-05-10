@@ -1,0 +1,84 @@
+配置文件百度-> /s/1o7Tz9ytaqV6pCTfoNd7qqQ  78vs
+
+使用 Docker 安装 mysql:5.7.22
+sudo docker image pull mysql:5.7.22
+
+$ cd ~
+$ mkdir mysql_slave
+$ cd mysql_slave
+$ mkdir data
+$ cp -r  /etc/mysql/mysql.conf.d  ./
+
+编辑 ~/mysql_slave/mysql.conf.d/mysqld.cnf文件。
+# 从机端口号
+port = 8306
+# 关闭日志
+general_log = 0
+# 从机唯一编号
+server-id = 2
+
+安装mysql并启动容器
+$ sudo docker run --name mysql-slave -e MYSQL_ROOT_PASSWORD=123456 -d --network=host -v /home/ubuntu/mysql_slave/data:/var/lib/mysql -v /home/ubuntu/mysql_slave/mysql.conf.d:/etc/mysql/mysql.conf.d mysql:5.7.22
+测试从机是否创建成功
+$ mysql -uroot -pmysql -h127.0.0.1 --port=8306
+
+同步实现
+cd /etc/mysql/mysql.conf.d/
+
+找到 mysqld.cnf 文件, 对其进行修改
+general_log_file = /var/log/mysql/mysql.log
+general_log = 1
+# 主机唯一编号
+server-id = 1
+# 二进制日志文件
+log_bin = /var/log/mysql/mysql-bin.log
+
+# 1. 收集主机原有数据
+$ mysqldump -uroot -pmysql --all-databases --lock-all-tables > ~/master_db.sql
+
+# 2. 从机复制主机原有数据
+$ mysql -uroot -p123456 -h127.0.0.1 --port=8306 < ~/master_db.sql
+
+# 登录到主机
+$ mysql –uroot –pmysql
+# 创建从机账号
+$ GRANT REPLICATION SLAVE ON *.* TO 'slave'@'%' identified by 'slave';
+# 刷新权限
+$ FLUSH PRIVILEGES;
+
+展示 ubuntu 中 MySQL 主机的二进制日志信息  每次都会变
+$ SHOW MASTER STATUS;
+
+# 登录到从机
+$ mysql -uroot -p123456 -h 127.0.0.1 --port=8306
+# 从机连接到主机
+$ change master to master_host='127.0.0.1', master_user='slave', master_password='slave',master_log_file='这里写二进制日志第一个', master_log_pos=这里写第二个;
+# 开启从机服务
+$ start slave;
+# 展示从机服务状态
+$ show slave status \G;
+
+测试：
+
+在主机中新建一个数据库后，直接在从机查看是否存在。
+
+---------------------------------------------------------------------------------
+使用 Docker 安装 Elasticsearch
+sudo docker image pull delron/elasticsearch-ik:2.4.6-1.0
+
+sudo docker run -dti --name=elasticsearch --network=host -v /home/elasticsearch-2.4.6/config:/usr/elasticsearch/config delron/elasticsearch-ik:2.4.6-1.0
+
+
+---------------------------------------------------------------------------------
+使用 Docker 安装 Docker 和 FastDFS
+sudo docker image pull delron/fastdfs
+
+开启 tracker 容器
+映射到宿主机的 /var/fdfs/tracker目录中
+sudo docker run -dit --name=tracker --network=host -v /var/fdfs/tracker:/var/fdfs delron/fastdfs tracker
+
+开启 storage 容器
+映射到宿主机的 /var/fdfs/storage目录中
+sudo docker run -dti --name=storage --network=host -e TRACKER_SERVER=tracker所在ip:22122 -v /var/fdfs/storage:/var/fdfs delron/fastdfs storage
+
+需要到配置 client.conf

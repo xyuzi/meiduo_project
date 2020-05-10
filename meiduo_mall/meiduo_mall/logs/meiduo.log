@@ -4170,3 +4170,19 @@ INFO 2020-05-10 03:53:46,523 basehttp 154 "POST /orders/commit/ HTTP/1.1" 200 66
 INFO 2020-05-10 03:53:48,478 basehttp 154 "GET /payment/20200510035346000000001/ HTTP/1.1" 200 889
 INFO 2020-05-10 03:54:47,416 basehttp 154 "OPTIONS /payment/status/?charset=utf-8&out_trade_no=20200510035346000000001&method=alipay.trade.page.pay.return&total_amount=3398.00&sign=LcYpmNBO9JI9IFR2lwP8ULgMMKfihR0%2BB4WF%2BCz0Uc%2BZbkEU2TEiTNfZIRhfCN2n400c0utTFUBuD6ISk7gcS46gGLST1OzU79UXhVK58otrla4BG%2FUawILgMXfcy%2F3hSb%2FU9epPNikzq%2BGjmYFbCFR98tXCt%2FKuZZxiAwk4yQ5R5bfEada%2Fh50dp7jhrf16jVZcG1nj6AiAasNghSkUOFlIa6Tup%2FLBx80cFk4jocquanBnuyX%2FwZyD%2B5LejejxE99JbYMDg0fqLmM1XvGzzvq66IqcQePWD0ETbMESc%2BlJ8IT9p1bqNUQXGaGn5RNRK7s7Yx5MFbD1mqe3zYL%2Fxw%3D%3D&trade_no=2020051022001411950500849932&auth_app_id=2016102200739447&version=1.0&app_id=2016102200739447&sign_type=RSA2&seller_id=2088102180659002&timestamp=2020-05-10+11%3A54%3A44 HTTP/1.1" 200 0
 INFO 2020-05-10 03:54:47,524 basehttp 154 "PUT /payment/status/?charset=utf-8&out_trade_no=20200510035346000000001&method=alipay.trade.page.pay.return&total_amount=3398.00&sign=LcYpmNBO9JI9IFR2lwP8ULgMMKfihR0%2BB4WF%2BCz0Uc%2BZbkEU2TEiTNfZIRhfCN2n400c0utTFUBuD6ISk7gcS46gGLST1OzU79UXhVK58otrla4BG%2FUawILgMXfcy%2F3hSb%2FU9epPNikzq%2BGjmYFbCFR98tXCt%2FKuZZxiAwk4yQ5R5bfEada%2Fh50dp7jhrf16jVZcG1nj6AiAasNghSkUOFlIa6Tup%2FLBx80cFk4jocquanBnuyX%2FwZyD%2B5LejejxE99JbYMDg0fqLmM1XvGzzvq66IqcQePWD0ETbMESc%2BlJ8IT9p1bqNUQXGaGn5RNRK7s7Yx5MFbD1mqe3zYL%2Fxw%3D%3D&trade_no=2020051022001411950500849932&auth_app_id=2016102200739447&version=1.0&app_id=2016102200739447&sign_type=RSA2&seller_id=2088102180659002&timestamp=2020-05-10+11%3A54%3A44 HTTP/1.1" 200 71
+INFO 2020-05-10 08:25:36,793 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-10 08:26:30,875 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-10 08:26:39,374 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-10 08:26:39,408 basehttp 154 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1561
+INFO 2020-05-10 08:26:39,410 basehttp 154 "GET /hot/115/ HTTP/1.1" 200 582
+INFO 2020-05-10 10:19:34,432 views 23 图形验证码:KQLP
+INFO 2020-05-10 10:39:47,845 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-10 10:41:28,410 basehttp 154 "GET /info/ HTTP/1.1" 200 142
+INFO 2020-05-10 10:41:28,418 basehttp 154 "GET /browse_histories/ HTTP/1.1" 200 39
+INFO 2020-05-10 10:41:30,860 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-10 10:41:32,661 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-10 10:41:32,671 basehttp 154 "GET /hot/115/ HTTP/1.1" 200 582
+INFO 2020-05-10 10:41:32,685 basehttp 154 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1561
+INFO 2020-05-10 12:33:19,072 views 19 进入省存储缓存
+INFO 2020-05-10 12:33:22,349 views 47 进入市存储缓存
+INFO 2020-05-10 12:33:23,206 views 47 进入市存储缓存

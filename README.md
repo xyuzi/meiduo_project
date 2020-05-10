@@ -4,31 +4,8 @@
 
 # Package:
 
-`django == 2.2.5`
-
-`django-redis == 4.11.0`
-
-`django-cors-headers == 3.2.1`
-
-`pymysql == 0.9.3`
-
-`celery == 4.4.2 `
-
-`QQLoginTool == 0.3.0 `
-
-`itsdangerous == 1.1.0`
-
-`mutagen == 1.44.0`
-
-`requests == 2.23.0 `
-
-`django-crontab == 0.7.1`
-
-`django-haystack == 2.8.1`
-
-`elasticsearch == 2.4.1`
-
-`python-alipay-sdk == 1.8.0`
+`详情导入使用`
+script/requirements.txt
 
 `本地utils文件夹安装`
 
@@ -38,51 +15,38 @@
 
 `进入hosts添加->127.0.0.1	www.meiduo.site`
 
-`进入libs/yuntongxun/cpp_sms.py -> 添加云通讯相关配置说明：`
-
 [https://www.yuntongxun.com/](https://www.yuntongxun.com/)
+
+`进入cpp_sms.py -> 添加云通讯相关配置：`
+
+
 ````
-主账号，登陆云通讯网站后，可在"控制台-应用"中看到开发者主账号ACCOUNT SID`
-_accountSid = ''
 
-说明：主账号Token，登陆云通讯网站后，可在控制台-应用中看到开发者主账号AUTH TOKEN
-_accountToken = ''
-
-请使用管理控制台首页的APPID或自己创建应用的APPID
-_appId = ''
-````
-````
-dev.py设置
-# QQ登录参数
-# 申请的 客户端id
-QQ_CLIENT_ID = ''
-# 申请的 客户端秘钥
-QQ_CLIENT_SECRET = ''
-
-# 发送邮件的邮箱
-EMAIL_HOST_USER = ''
-# 在邮箱中设置的客户端授权密码
-EMAIL_HOST_PASSWORD = ''
-# 收件人看到的发件人
-EMAIL_FROM = '随便写<这里写显示的邮箱>'
-
+dev.py/pord.py设置
+QQ登录参数 需要配置
+发送邮件的邮箱 需要配置
 utils/fastdfs/client.conf --> 修改配置文件地址和ip
 
-手动生成索引表
+第一次需要手动生成索引表
 python manage.py rebuild_index
+
+uwsgi.ini 需要配置
+
+其他配置可看read.txt
 ````
 # start:
 
-`启动redis，启动mysql，启动FastDFS(docker下启动)`
+`启动redis,启动mysql,启动mysql从机`
+
+`启动docker下启动(mysql-slave ,elasticsearch, storage, tracker)`
 
 `进入front_end_pc执行 --> python3 -m http.server 8080`
 
 `生成迁移文件: `
 
-`python manage.py makemigrations`
-
 `进行迁移: `
 
-`python manage.py migrate`
+```
+进入meiduo_mall执行 --> python3 manage.py runserver
 
-`进入meiduo_mall执行 --> python3 manage.py runserver`
+或者在看见uwsgi.ini地方命令行-->  uwsgi --ini uwsgi.ini```

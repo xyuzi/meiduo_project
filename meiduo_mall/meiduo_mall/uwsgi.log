@@ -1,0 +1,690 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:03:39 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:36547 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+Set PythonHome to /home/ubuntu/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0x5606bc197040
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "meiduo_mall/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 176, in __init__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 20543)
+spawned uWSGI worker 1 (pid: 20548, cores: 2)
+spawned uWSGI worker 2 (pid: 20549, cores: 2)
+spawned uWSGI worker 3 (pid: 20551, cores: 2)
+spawned uWSGI worker 4 (pid: 20552, cores: 2)
+spawned uWSGI http 1 (pid: 20555)
+--- no python application found, check your startup logs for errors ---
+[pid: 20552|app: -1|req: -1/1] 127.0.0.1 () {38 vars in 734 bytes} [Sun May 10 18:03:52 2020] GET /list/115/skus/?page=1&page_size=5&ordering=-create_time => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 20552|app: -1|req: -1/2] 127.0.0.1 () {38 vars in 651 bytes} [Sun May 10 18:03:52 2020] GET /carts/simple/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 20549|app: -1|req: -1/3] 127.0.0.1 () {38 vars in 641 bytes} [Sun May 10 18:03:52 2020] GET /hot/115/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 20555)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:06:20 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:36859 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+Set PythonHome to /home/ubuntu/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0x55deeffcaca0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "meiduo_mall/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 176, in __init__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 20591)
+spawned uWSGI worker 1 (pid: 20593, cores: 2)
+spawned uWSGI worker 2 (pid: 20594, cores: 2)
+spawned uWSGI worker 3 (pid: 20596, cores: 2)
+spawned uWSGI worker 4 (pid: 20597, cores: 2)
+spawned uWSGI http 1 (pid: 20599)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 20599)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:07:39 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:41495 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+Set PythonHome to /home/ubuntu/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0x55f430bbeca0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "meiduo_mall/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 157, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./meiduo_mall/settings/pord.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 176, in __init__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 20845)
+spawned uWSGI worker 1 (pid: 20847, cores: 2)
+spawned uWSGI worker 2 (pid: 20848, cores: 2)
+spawned uWSGI worker 3 (pid: 20850, cores: 2)
+spawned uWSGI worker 4 (pid: 20852, cores: 2)
+spawned uWSGI http 1 (pid: 20854)
+--- no python application found, check your startup logs for errors ---
+[pid: 20852|app: -1|req: -1/1] 127.0.0.1 () {38 vars in 733 bytes} [Sun May 10 18:07:52 2020] GET /list/115/skus/?page=1&page_size=5&ordering=-create_time => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 20848|app: -1|req: -1/2] 127.0.0.1 () {38 vars in 650 bytes} [Sun May 10 18:07:52 2020] GET /carts/simple/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 20848|app: -1|req: -1/3] 127.0.0.1 () {38 vars in 640 bytes} [Sun May 10 18:07:52 2020] GET /hot/115/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 20854)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:08:13 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:35243 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+Set PythonHome to /home/ubuntu/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0x55c5237c9ca0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55c5237c9ca0 pid: 20879 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 20879)
+spawned uWSGI worker 1 (pid: 20881, cores: 2)
+spawned uWSGI worker 2 (pid: 20882, cores: 2)
+spawned uWSGI worker 3 (pid: 20884, cores: 2)
+spawned uWSGI worker 4 (pid: 20886, cores: 2)
+spawned uWSGI http 1 (pid: 20888)
+[pid: 20886|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 643 bytes} [Sun May 10 10:08:20 2020] GET /carts/simple/ => generated 44 bytes in 463 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 20882|app: 0|req: 1/2] 127.0.0.1 () {38 vars in 651 bytes} [Sun May 10 10:08:27 2020] GET /carts/simple/ => generated 44 bytes in 249 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 20881|app: 0|req: 1/3] 127.0.0.1 () {38 vars in 641 bytes} [Sun May 10 10:08:27 2020] GET /hot/115/ => generated 582 bytes in 371 msecs (HTTP/1.1 200) 6 headers in 213 bytes (1 switches on core 0)
+[pid: 20884|app: 0|req: 1/4] 127.0.0.1 () {38 vars in 733 bytes} [Sun May 10 10:08:27 2020] GET /list/115/skus/?page=1&page_size=5&ordering=-create_time => generated 1561 bytes in 414 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 20888)
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:09:14 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:09:29 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:42939 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+Set PythonHome to /home/ubuntu/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0x5590f5139ca0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "meiduo_mall/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 157, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./meiduo_mall/settings/pord.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/conf/__init__.py", line 176, in __init__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21232)
+spawned uWSGI worker 1 (pid: 21234, cores: 2)
+spawned uWSGI worker 2 (pid: 21235, cores: 2)
+spawned uWSGI worker 3 (pid: 21237, cores: 2)
+spawned uWSGI worker 4 (pid: 21239, cores: 2)
+spawned uWSGI http 1 (pid: 21240)
+--- no python application found, check your startup logs for errors ---
+[pid: 21235|app: -1|req: -1/1] 127.0.0.1 () {38 vars in 644 bytes} [Sun May 10 18:09:35 2020] GET /carts/simple/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 21234|app: -1|req: -1/2] 127.0.0.1 () {38 vars in 644 bytes} [Sun May 10 18:11:46 2020] GET /carts/simple/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 21234|app: -1|req: -1/3] 127.0.0.1 () {38 vars in 644 bytes} [Sun May 10 18:11:52 2020] GET /carts/simple/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 21240)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:12:04 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:33435 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+Set PythonHome to /home/ubuntu/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0x5558af7b0ca0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5558af7b0ca0 pid: 21402 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21402)
+spawned uWSGI worker 1 (pid: 21404, cores: 2)
+spawned uWSGI worker 2 (pid: 21405, cores: 2)
+spawned uWSGI worker 3 (pid: 21408, cores: 2)
+spawned uWSGI worker 4 (pid: 21409, cores: 2)
+spawned uWSGI http 1 (pid: 21412)
+[pid: 21404|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 644 bytes} [Sun May 10 10:12:10 2020] GET /carts/simple/ => generated 44 bytes in 408 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 21404|app: 0|req: 2/2] 127.0.0.1 () {38 vars in 734 bytes} [Sun May 10 10:12:19 2020] GET /list/115/skus/?page=1&page_size=5&ordering=-create_time => generated 1561 bytes in 24 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 1)
+[pid: 21409|app: 0|req: 1/3] 127.0.0.1 () {38 vars in 651 bytes} [Sun May 10 10:12:19 2020] GET /carts/simple/ => generated 44 bytes in 470 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 21405|app: 0|req: 1/4] 127.0.0.1 () {38 vars in 641 bytes} [Sun May 10 10:12:19 2020] GET /hot/115/ => generated 582 bytes in 466 msecs (HTTP/1.1 200) 6 headers in 213 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 21412)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:19:25 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34045 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+Set PythonHome to /home/ubuntu/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0x5594f1ec5ca0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5594f1ec5ca0 pid: 22968 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22968)
+spawned uWSGI worker 1 (pid: 22970, cores: 2)
+spawned uWSGI worker 2 (pid: 22971, cores: 2)
+spawned uWSGI worker 3 (pid: 22973, cores: 2)
+spawned uWSGI worker 4 (pid: 22975, cores: 2)
+spawned uWSGI http 1 (pid: 22977)
+[pid: 22971|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 651 bytes} [Sun May 10 10:19:28 2020] GET /carts/simple/ => generated 44 bytes in 561 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 22970|app: 0|req: 1/2] 127.0.0.1 () {38 vars in 641 bytes} [Sun May 10 10:19:28 2020] GET /hot/115/ => generated 582 bytes in 555 msecs (HTTP/1.1 200) 6 headers in 213 bytes (1 switches on core 0)
+[pid: 22973|app: 0|req: 1/3] 127.0.0.1 () {38 vars in 734 bytes} [Sun May 10 10:19:28 2020] GET /list/115/skus/?page=1&page_size=5&ordering=-create_time => generated 1561 bytes in 574 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 22971|app: 0|req: 2/4] 127.0.0.1 () {36 vars in 683 bytes} [Sun May 10 10:19:34 2020] GET /image_codes/7fdcab22-2b3e-44e8-8b06-95a101768a07/ => generated 3274 bytes in 362 msecs (HTTP/1.1 200) 4 headers in 109 bytes (1 switches on core 1)
+[pid: 22973|app: 0|req: 2/5] 127.0.0.1 () {38 vars in 665 bytes} [Sun May 10 10:19:34 2020] GET /usernames/xyuzi/count/ => generated 39 bytes in 32 msecs (HTTP/1.1 200) 6 headers in 212 bytes (1 switches on core 1)
+[pid: 22970|app: 0|req: 2/6] 127.0.0.1 () {38 vars in 667 bytes} [Sun May 10 10:19:39 2020] GET /usernames/xyuzi2/count/ => generated 39 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 212 bytes (1 switches on core 1)
+[pid: 22975|app: 0|req: 1/7] 127.0.0.1 () {38 vars in 673 bytes} [Sun May 10 10:19:52 2020] GET /mobiles/15972148869/count/ => generated 39 bytes in 486 msecs (HTTP/1.1 200) 6 headers in 212 bytes (1 switches on core 0)
+[pid: 22970|app: 0|req: 3/8] 127.0.0.1 () {38 vars in 673 bytes} [Sun May 10 10:20:15 2020] GET /mobiles/15972148860/count/ => generated 39 bytes in 4 msecs (HTTP/1.1 200) 6 headers in 212 bytes (1 switches on core 0)
+--- Logging error ---
+[pid: 22971|app: 0|req: 4/9] 127.0.0.1 () {38 vars in 673 bytes} [Sun May 10 10:20:20 2020] GET /mobiles/15972148860/count/ => generated 39 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 212 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/handlers.py", line 71, in emit
+    if self.shouldRollover(record):
+  File "/usr/lib/python3.6/logging/handlers.py", line 187, in shouldRollover
+    msg = "%s\n" % self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 338, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 73, in get
+    logger.info('短信验证码:', sms_code)
+Message: '短信验证码:'
+Arguments: ('627766',)
+[pid: 22971|app: 0|req: 4/10] 127.0.0.1 () {38 vars in 798 bytes} [Sun May 10 10:20:20 2020] GET /sms_codes/15972148860/?image_code=kqlp&image_code_id=7fdcab22-2b3e-44e8-8b06-95a101768a07 => generated 79 bytes in 651 msecs (HTTP/1.1 200) 6 headers in 212 bytes (1 switches on core 1)
+[pid: 22973|app: 0|req: 3/11] 127.0.0.1 () {38 vars in 667 bytes} [Sun May 10 10:20:42 2020] GET /usernames/xyuzi2/count/ => generated 39 bytes in 4 msecs (HTTP/1.1 200) 6 headers in 212 bytes (1 switches on core 0)
+[pid: 22975|app: 0|req: 2/12] 127.0.0.1 () {38 vars in 673 bytes} [Sun May 10 10:20:42 2020] GET /mobiles/15972148860/count/ => generated 39 bytes in 5 msecs (HTTP/1.1 200) 6 headers in 212 bytes (1 switches on core 1)
+[pid: 22970|app: 0|req: 4/13] 127.0.0.1 () {42 vars in 706 bytes} [Sun May 10 10:20:42 2020] OPTIONS /register/ => generated 0 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 1)
+[pid: 22975|app: 0|req: 3/14] 127.0.0.1 () {42 vars in 707 bytes} [Sun May 10 10:20:42 2020] POST /register/ => generated 27 bytes in 516 msecs (HTTP/1.1 200) 7 headers in 365 bytes (1 switches on core 0)
+[pid: 22971|app: 0|req: 5/15] 127.0.0.1 () {40 vars in 701 bytes} [Sun May 10 10:20:43 2020] GET /carts/simple/ => generated 44 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 22975|app: 0|req: 4/16] 127.0.0.1 () {40 vars in 701 bytes} [Sun May 10 10:20:44 2020] GET /carts/simple/ => generated 44 bytes in 14 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 22975|app: 0|req: 5/17] 127.0.0.1 () {40 vars in 700 bytes} [Sun May 10 10:20:45 2020] GET /carts/simple/ => generated 44 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 22975|app: 0|req: 6/18] 127.0.0.1 () {40 vars in 700 bytes} [Sun May 10 10:20:46 2020] GET /carts/simple/ => generated 44 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 22970|app: 0|req: 5/19] 127.0.0.1 () {42 vars in 696 bytes} [Sun May 10 10:20:51 2020] OPTIONS /login/ => generated 0 bytes in 0 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 0)
+[pid: 22975|app: 0|req: 7/20] 127.0.0.1 () {44 vars in 753 bytes} [Sun May 10 10:20:51 2020] POST /login/ => generated 27 bytes in 102 msecs (HTTP/1.1 200) 8 headers in 347 bytes (1 switches on core 0)
+[pid: 22975|app: 0|req: 8/21] 127.0.0.1 () {40 vars in 717 bytes} [Sun May 10 10:20:51 2020] GET /carts/simple/ => generated 44 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 22975|app: 0|req: 9/22] 127.0.0.1 () {40 vars in 703 bytes} [Sun May 10 10:20:54 2020] GET /carts/ => generated 44 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 22975|app: 0|req: 10/23] 127.0.0.1 () {40 vars in 713 bytes} [Sun May 10 10:20:58 2020] GET /info/ => generated 125 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 22970|app: 0|req: 6/24] 127.0.0.1 () {40 vars in 737 bytes} [Sun May 10 10:20:58 2020] GET /browse_histories/ => generated 39 bytes in 17 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 22973|app: 0|req: 4/25] 127.0.0.1 () {40 vars in 713 bytes} [Sun May 10 10:21:01 2020] GET /info/ => generated 125 bytes in 9 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 22975|app: 0|req: 11/26] 127.0.0.1 () {40 vars in 737 bytes} [Sun May 10 10:21:01 2020] GET /browse_histories/ => generated 39 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 22970|app: 0|req: 7/27] 127.0.0.1 () {42 vars in 709 bytes} [Sun May 10 10:21:06 2020] OPTIONS /emails/ => generated 0 bytes in 0 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 0)
+[pid: 22975|app: 0|req: 12/28] 127.0.0.1 () {44 vars in 783 bytes} [Sun May 10 10:21:06 2020] PUT /emails/ => generated 27 bytes in 64 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 22977)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:41:16 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 18:42:15 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:44231 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+Set PythonHome to /home/ubuntu/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0x5571c759dca0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5571c759dca0 pid: 24308 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 24308)
+spawned uWSGI worker 1 (pid: 24310, cores: 2)
+spawned uWSGI worker 2 (pid: 24312, cores: 2)
+spawned uWSGI worker 3 (pid: 24313, cores: 2)
+spawned uWSGI worker 4 (pid: 24316, cores: 2)
+spawned uWSGI http 1 (pid: 24318)
+[pid: 24316|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 725 bytes} [Sun May 10 11:05:42 2020] GET /carts/simple/ => generated 44 bytes in 297 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 24316|app: 0|req: 2/2] 127.0.0.1 () {40 vars in 737 bytes} [Sun May 10 11:05:43 2020] GET /browse_histories/ => generated 39 bytes in 13 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 24310|app: 0|req: 1/3] 127.0.0.1 () {40 vars in 713 bytes} [Sun May 10 11:05:43 2020] GET /info/ => generated 142 bytes in 267 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 0)
+[pid: 24310|app: 0|req: 2/4] 127.0.0.1 () {42 vars in 709 bytes} [Sun May 10 11:05:46 2020] OPTIONS /emails/ => generated 0 bytes in 7 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 1)
+[pid: 24310|app: 0|req: 3/5] 127.0.0.1 () {44 vars in 783 bytes} [Sun May 10 11:05:46 2020] PUT /emails/ => generated 27 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 24316|app: 0|req: 3/6] 127.0.0.1 () {40 vars in 713 bytes} [Sun May 10 11:11:35 2020] GET /info/ => generated 142 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 0)
+[pid: 24310|app: 0|req: 4/7] 127.0.0.1 () {40 vars in 737 bytes} [Sun May 10 11:11:35 2020] GET /browse_histories/ => generated 39 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 24313|app: 0|req: 1/8] 127.0.0.1 () {44 vars in 783 bytes} [Sun May 10 11:11:36 2020] PUT /emails/ => generated 27 bytes in 538 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 24316|app: 0|req: 4/9] 127.0.0.1 () {40 vars in 737 bytes} [Sun May 10 11:14:18 2020] GET /browse_histories/ => generated 39 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 24312|app: 0|req: 1/10] 127.0.0.1 () {40 vars in 713 bytes} [Sun May 10 11:14:18 2020] GET /info/ => generated 142 bytes in 328 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 0)
+[pid: 24316|app: 0|req: 5/11] 127.0.0.1 () {44 vars in 783 bytes} [Sun May 10 11:14:35 2020] PUT /emails/ => generated 27 bytes in 100 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 24316|app: 0|req: 6/12] 127.0.0.1 () {40 vars in 712 bytes} [Sun May 10 11:16:56 2020] GET /info/ => generated 142 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 24313|app: 0|req: 2/13] 127.0.0.1 () {40 vars in 736 bytes} [Sun May 10 11:16:56 2020] GET /browse_histories/ => generated 39 bytes in 19 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 24313|app: 0|req: 3/14] 127.0.0.1 () {42 vars in 708 bytes} [Sun May 10 11:16:57 2020] OPTIONS /emails/ => generated 0 bytes in 14 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 0)
+[pid: 24316|app: 0|req: 7/15] 127.0.0.1 () {44 vars in 782 bytes} [Sun May 10 11:16:57 2020] PUT /emails/ => generated 27 bytes in 29 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 24316|app: 0|req: 8/16] 127.0.0.1 () {40 vars in 713 bytes} [Sun May 10 11:20:35 2020] GET /info/ => generated 142 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 24316|app: 0|req: 9/17] 127.0.0.1 () {40 vars in 737 bytes} [Sun May 10 11:20:35 2020] GET /browse_histories/ => generated 39 bytes in 9 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 24316|app: 0|req: 10/18] 127.0.0.1 () {44 vars in 783 bytes} [Sun May 10 11:20:36 2020] PUT /emails/ => generated 27 bytes in 20 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 24312|app: 0|req: 3/19] 127.0.0.1 () {40 vars in 713 bytes} [Sun May 10 11:22:04 2020] GET /info/ => generated 142 bytes in 21 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 24312|app: 0|req: 3/20] 127.0.0.1 () {40 vars in 737 bytes} [Sun May 10 11:22:04 2020] GET /browse_histories/ => generated 39 bytes in 21 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 24310|app: 0|req: 5/21] 127.0.0.1 () {44 vars in 783 bytes} [Sun May 10 11:22:05 2020] PUT /emails/ => generated 27 bytes in 19 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 24312|app: 0|req: 4/22] 127.0.0.1 () {40 vars in 661 bytes} [Sun May 10 11:24:22 2020] OPTIONS /logout/ => generated 0 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 1)
+[pid: 24310|app: 0|req: 6/23] 127.0.0.1 () {40 vars in 720 bytes} [Sun May 10 11:24:22 2020] DELETE /logout/ => generated 27 bytes in 8 msecs (HTTP/1.1 200) 8 headers in 381 bytes (1 switches on core 1)
+[pid: 24316|app: 0|req: 11/24] 127.0.0.1 () {38 vars in 665 bytes} [Sun May 10 11:24:24 2020] GET /qq/authorization/?next=/ => generated 203 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 213 bytes (1 switches on core 0)
+[pid: 24316|app: 0|req: 12/25] 127.0.0.1 () {38 vars in 779 bytes} [Sun May 10 11:25:52 2020] GET /oauth_callback/?code=ABB0ECE7DC5C980AD3E8985C3B529666 => generated 27 bytes in 549 msecs (HTTP/1.1 200) 8 headers in 464 bytes (1 switches on core 1)
+[pid: 24310|app: 0|req: 7/26] 127.0.0.1 () {40 vars in 712 bytes} [Sun May 10 11:25:54 2020] GET /carts/simple/ => generated 44 bytes in 14 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 24318)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sun May 10 20:32:10 2020] ***
+compiled with version: 7.5.0 on 10 May 2020 10:03:11
+os: Linux-4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018
+nodename: python
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall
+writing pidfile to uwsgi.pid
+detected binary path: /home/ubuntu/.virtualenvs/meiduo_env/bin/uwsgi
+chdir() to /home/ubuntu/Desktop/meiduo_project/meiduo_mall
+your processes number limit is 15455
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:35869 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Jan 14 2019, 11:02:34)  [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]]
+Set PythonHome to /home/ubuntu/.virtualenvs/meiduo_env
+Python main interpreter initialized at 0x5571eedb5c80
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5571eedb5c80 pid: 39039 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 39039)
+spawned uWSGI worker 1 (pid: 39041, cores: 2)
+spawned uWSGI worker 2 (pid: 39042, cores: 2)
+spawned uWSGI worker 3 (pid: 39045, cores: 2)
+spawned uWSGI worker 4 (pid: 39047, cores: 2)
+spawned uWSGI http 1 (pid: 39048)
+[pid: 39045|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 713 bytes} [Sun May 10 12:32:50 2020] GET /carts/simple/ => generated 44 bytes in 678 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 39045|app: 0|req: 3/2] 127.0.0.1 () {40 vars in 730 bytes} [Sun May 10 12:32:55 2020] GET /carts/simple/ => generated 44 bytes in 28 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 39045|app: 0|req: 3/3] 127.0.0.1 () {40 vars in 720 bytes} [Sun May 10 12:32:55 2020] GET /hot/115/ => generated 582 bytes in 76 msecs (HTTP/1.1 200) 6 headers in 213 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 1/4] 127.0.0.1 () {40 vars in 813 bytes} [Sun May 10 12:32:55 2020] GET /list/115/skus/?page=1&page_size=5&ordering=-create_time => generated 1561 bytes in 428 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 39045|app: 0|req: 4/5] 127.0.0.1 () {42 vars in 722 bytes} [Sun May 10 12:32:57 2020] OPTIONS /browse_histories/ => generated 0 bytes in 5 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 2/6] 127.0.0.1 () {40 vars in 726 bytes} [Sun May 10 12:32:57 2020] GET /carts/simple/ => generated 44 bytes in 23 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 39041|app: 0|req: 1/7] 127.0.0.1 () {44 vars in 801 bytes} [Sun May 10 12:32:58 2020] POST /browse_histories/ => generated 27 bytes in 1134 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 3/8] 127.0.0.1 () {42 vars in 700 bytes} [Sun May 10 12:33:09 2020] OPTIONS /carts/ => generated 0 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 0)
+[pid: 39042|app: 0|req: 1/9] 127.0.0.1 () {44 vars in 779 bytes} [Sun May 10 12:33:09 2020] POST /carts/ => generated 27 bytes in 231 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 4/10] 127.0.0.1 () {40 vars in 708 bytes} [Sun May 10 12:33:12 2020] GET /carts/ => generated 378 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 39045|app: 0|req: 5/11] 127.0.0.1 () {40 vars in 739 bytes} [Sun May 10 12:33:15 2020] GET /orders/settlement/ => generated 378 bytes in 19 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 6/12] 127.0.0.1 () {40 vars in 727 bytes} [Sun May 10 12:33:19 2020] GET /addresses/ => generated 74 bytes in 15 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 6/13] 127.0.0.1 () {40 vars in 719 bytes} [Sun May 10 12:33:19 2020] GET /areas/ => generated 1772 bytes in 56 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 7/14] 127.0.0.1 () {40 vars in 733 bytes} [Sun May 10 12:33:22 2020] GET /areas/110000/ => generated 141 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 213 bytes (1 switches on core 0)
+[pid: 39041|app: 0|req: 2/15] 127.0.0.1 () {40 vars in 734 bytes} [Sun May 10 12:33:23 2020] GET /areas/110100/ => generated 843 bytes in 41 msecs (HTTP/1.1 200) 6 headers in 213 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 8/16] 127.0.0.1 () {42 vars in 730 bytes} [Sun May 10 12:33:33 2020] OPTIONS /addresses/create/ => generated 0 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 9/17] 127.0.0.1 () {44 vars in 810 bytes} [Sun May 10 12:33:33 2020] POST /addresses/create/ => generated 27 bytes in 212 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 10/18] 127.0.0.1 () {40 vars in 720 bytes} [Sun May 10 12:33:34 2020] GET /areas/ => generated 1772 bytes in 3 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 1)
+[pid: 39041|app: 0|req: 3/19] 127.0.0.1 () {40 vars in 728 bytes} [Sun May 10 12:33:34 2020] GET /addresses/ => generated 283 bytes in 31 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 0)
+[pid: 39045|app: 0|req: 6/20] 127.0.0.1 () {40 vars in 708 bytes} [Sun May 10 12:33:37 2020] GET /carts/ => generated 378 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 39042|app: 0|req: 2/21] 127.0.0.1 () {40 vars in 739 bytes} [Sun May 10 12:33:38 2020] GET /orders/settlement/ => generated 548 bytes in 35 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 11/22] 127.0.0.1 () {42 vars in 719 bytes} [Sun May 10 12:33:43 2020] OPTIONS /orders/commit/ => generated 0 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 460 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 12/23] 127.0.0.1 () {44 vars in 798 bytes} [Sun May 10 12:33:43 2020] POST /orders/commit/ => generated 51 bytes in 189 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 39042|app: 0|req: 3/24] 127.0.0.1 () {40 vars in 723 bytes} [Sun May 10 12:34:00 2020] GET /carts/simple/ => generated 378 bytes in 15 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 0)
+[pid: 39045|app: 0|req: 7/25] 127.0.0.1 () {40 vars in 723 bytes} [Sun May 10 12:34:03 2020] GET /carts/simple/ => generated 378 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 14/26] 127.0.0.1 () {40 vars in 730 bytes} [Sun May 10 12:34:06 2020] GET /carts/simple/ => generated 378 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 0)
+[pid: 39045|app: 0|req: 8/27] 127.0.0.1 () {40 vars in 813 bytes} [Sun May 10 12:34:06 2020] GET /list/115/skus/?page=1&page_size=5&ordering=-create_time => generated 1561 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 14/28] 127.0.0.1 () {40 vars in 720 bytes} [Sun May 10 12:34:06 2020] GET /hot/115/ => generated 582 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 213 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 16/29] 127.0.0.1 () {40 vars in 726 bytes} [Sun May 10 12:34:08 2020] GET /carts/simple/ => generated 378 bytes in 34 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 16/30] 127.0.0.1 () {44 vars in 801 bytes} [Sun May 10 12:34:08 2020] POST /browse_histories/ => generated 27 bytes in 37 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 39042|app: 0|req: 4/31] 127.0.0.1 () {44 vars in 779 bytes} [Sun May 10 12:34:09 2020] POST /carts/ => generated 27 bytes in 9 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 17/32] 127.0.0.1 () {40 vars in 708 bytes} [Sun May 10 12:34:11 2020] GET /carts/ => generated 711 bytes in 13 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 18/33] 127.0.0.1 () {44 vars in 774 bytes} [Sun May 10 12:34:13 2020] PUT /carts/ => generated 83 bytes in 9 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 19/34] 127.0.0.1 () {40 vars in 739 bytes} [Sun May 10 12:34:14 2020] GET /orders/settlement/ => generated 546 bytes in 26 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+[pid: 39047|app: 0|req: 20/35] 127.0.0.1 () {44 vars in 798 bytes} [Sun May 10 12:34:18 2020] POST /orders/commit/ => generated 66 bytes in 87 msecs (HTTP/1.1 200) 6 headers in 220 bytes (1 switches on core 0)
+[pid: 39047|app: 0|req: 21/36] 127.0.0.1 () {40 vars in 823 bytes} [Sun May 10 12:34:20 2020] GET /payment/20200510123418000000004/ => generated 883 bytes in 501 msecs (HTTP/1.1 200) 6 headers in 221 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 39048)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.

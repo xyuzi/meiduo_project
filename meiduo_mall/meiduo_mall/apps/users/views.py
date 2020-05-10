@@ -229,6 +229,7 @@ class EmailView(LoginMixin, View):
         url = request.user.generate_verify_email_url()
         # 发送邮件给email 异步执行
         # send_verify_email.delay(email, '邮箱验证链接')
+        email = '<' + email + '>'
         send_verify_email.delay(email, url)
         return JsonResponse({
             'code': 0,
