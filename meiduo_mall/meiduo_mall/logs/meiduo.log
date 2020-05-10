@@ -4131,3 +4131,42 @@ INFO 2020-05-09 13:26:13,142 autoreload 597 Watching for file changes with StatR
 INFO 2020-05-09 13:26:16,247 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
 INFO 2020-05-09 13:26:25,493 basehttp 154 "POST /orders/commit/ HTTP/1.1" 200 66
 INFO 2020-05-09 13:26:37,390 basehttp 154 "GET /carts/ HTTP/1.1" 200 1382
+INFO 2020-05-10 02:39:32,744 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-10 02:41:05,388 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-10 02:41:30,938 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-10 02:41:35,012 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-05-10 02:41:35,869 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+INFO 2020-05-10 02:41:36,239 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 1382
+INFO 2020-05-10 02:41:36,773 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 1382
+INFO 2020-05-10 02:41:38,626 basehttp 154 "GET /carts/ HTTP/1.1" 200 1382
+INFO 2020-05-10 02:41:42,618 basehttp 154 "OPTIONS /carts/ HTTP/1.1" 200 0
+INFO 2020-05-10 02:41:42,638 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-10 02:41:43,919 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 200 771
+INFO 2020-05-10 02:41:50,646 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+INFO 2020-05-10 02:41:50,826 basehttp 154 "POST /orders/commit/ HTTP/1.1" 200 51
+INFO 2020-05-10 02:41:58,736 basehttp 154 "GET /carts/ HTTP/1.1" 200 1381
+INFO 2020-05-10 02:42:01,202 basehttp 154 "PUT /carts/ HTTP/1.1" 200 82
+INFO 2020-05-10 02:42:03,396 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-10 02:42:04,224 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 200 771
+INFO 2020-05-10 02:42:10,247 basehttp 154 "POST /orders/commit/ HTTP/1.1" 200 66
+INFO 2020-05-10 02:44:31,178 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-10 02:44:57,566 basehttp 154 "GET /payment/20200510024210000000001/ HTTP/1.1" 200 909
+INFO 2020-05-10 02:47:20,488 basehttp 154 "OPTIONS /payment/status/?charset=utf-8&out_trade_no=20200510024210000000001&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=KzyOwZWOOgdX5AsxuLl5uiTloG9amvFB%2BjmXqEmznPHviCBe0rVjks0m6ULZfuJStiDSND0aF7AsdApyyerXbkhjpwzSCMBaSAvECdqpaKZ4%2BM0kn05OyD7FEpYRY4TWR02EutrEQHRC6kTCK4QLoQUC%2BaGYxqopZ7BqI0O1%2Bhme61aYoVACmK3dVH0GbXoNRCHxGif686iaSbuaUlKFRpGH6C9hN88vS8z5AMDkMHtOvuzvjYFVoe%2B17ZTc2NWiFIOFX%2BE9kV7LMFw4%2Fqm2hSKPIXfNJgFpZOPoIQMrbIaqlSif7VSpf0xYMu2%2FPSWvHbACcdDZ2wV6VMiL%2Bg2I9Q%3D%3D&trade_no=2020051022001411950500850080&auth_app_id=2016102200739447&version=1.0&app_id=2016102200739447&sign_type=RSA2&seller_id=2088102180659002&timestamp=2020-05-10+10%3A47%3A16 HTTP/1.1" 200 0
+WARNING 2020-05-10 02:47:20,571 log 228 Not Found: /payment/status/
+WARNING 2020-05-10 02:47:20,572 basehttp 154 "PUT /payment/status/?charset=utf-8&out_trade_no=20200510024210000000001&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=KzyOwZWOOgdX5AsxuLl5uiTloG9amvFB%2BjmXqEmznPHviCBe0rVjks0m6ULZfuJStiDSND0aF7AsdApyyerXbkhjpwzSCMBaSAvECdqpaKZ4%2BM0kn05OyD7FEpYRY4TWR02EutrEQHRC6kTCK4QLoQUC%2BaGYxqopZ7BqI0O1%2Bhme61aYoVACmK3dVH0GbXoNRCHxGif686iaSbuaUlKFRpGH6C9hN88vS8z5AMDkMHtOvuzvjYFVoe%2B17ZTc2NWiFIOFX%2BE9kV7LMFw4%2Fqm2hSKPIXfNJgFpZOPoIQMrbIaqlSif7VSpf0xYMu2%2FPSWvHbACcdDZ2wV6VMiL%2Bg2I9Q%3D%3D&trade_no=2020051022001411950500850080&auth_app_id=2016102200739447&version=1.0&app_id=2016102200739447&sign_type=RSA2&seller_id=2088102180659002&timestamp=2020-05-10+10%3A47%3A16 HTTP/1.1" 404 7802
+INFO 2020-05-10 03:48:43,658 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/payment/models.py changed, reloading.
+INFO 2020-05-10 03:48:45,135 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-10 03:52:57,646 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/payment/urls.py changed, reloading.
+INFO 2020-05-10 03:52:58,741 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-10 03:53:09,899 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-10 03:53:15,048 basehttp 154 "GET /info/ HTTP/1.1" 200 140
+INFO 2020-05-10 03:53:15,078 basehttp 154 "GET /browse_histories/ HTTP/1.1" 200 1450
+INFO 2020-05-10 03:53:33,231 basehttp 154 "GET /carts/ HTTP/1.1" 200 1047
+INFO 2020-05-10 03:53:36,336 basehttp 154 "OPTIONS /carts/ HTTP/1.1" 200 0
+INFO 2020-05-10 03:53:36,354 basehttp 154 "PUT /carts/ HTTP/1.1" 200 81
+INFO 2020-05-10 03:53:40,450 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 200 770
+INFO 2020-05-10 03:53:46,472 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+INFO 2020-05-10 03:53:46,523 basehttp 154 "POST /orders/commit/ HTTP/1.1" 200 66
+INFO 2020-05-10 03:53:48,478 basehttp 154 "GET /payment/20200510035346000000001/ HTTP/1.1" 200 889
+INFO 2020-05-10 03:54:47,416 basehttp 154 "OPTIONS /payment/status/?charset=utf-8&out_trade_no=20200510035346000000001&method=alipay.trade.page.pay.return&total_amount=3398.00&sign=LcYpmNBO9JI9IFR2lwP8ULgMMKfihR0%2BB4WF%2BCz0Uc%2BZbkEU2TEiTNfZIRhfCN2n400c0utTFUBuD6ISk7gcS46gGLST1OzU79UXhVK58otrla4BG%2FUawILgMXfcy%2F3hSb%2FU9epPNikzq%2BGjmYFbCFR98tXCt%2FKuZZxiAwk4yQ5R5bfEada%2Fh50dp7jhrf16jVZcG1nj6AiAasNghSkUOFlIa6Tup%2FLBx80cFk4jocquanBnuyX%2FwZyD%2B5LejejxE99JbYMDg0fqLmM1XvGzzvq66IqcQePWD0ETbMESc%2BlJ8IT9p1bqNUQXGaGn5RNRK7s7Yx5MFbD1mqe3zYL%2Fxw%3D%3D&trade_no=2020051022001411950500849932&auth_app_id=2016102200739447&version=1.0&app_id=2016102200739447&sign_type=RSA2&seller_id=2088102180659002&timestamp=2020-05-10+11%3A54%3A44 HTTP/1.1" 200 0
+INFO 2020-05-10 03:54:47,524 basehttp 154 "PUT /payment/status/?charset=utf-8&out_trade_no=20200510035346000000001&method=alipay.trade.page.pay.return&total_amount=3398.00&sign=LcYpmNBO9JI9IFR2lwP8ULgMMKfihR0%2BB4WF%2BCz0Uc%2BZbkEU2TEiTNfZIRhfCN2n400c0utTFUBuD6ISk7gcS46gGLST1OzU79UXhVK58otrla4BG%2FUawILgMXfcy%2F3hSb%2FU9epPNikzq%2BGjmYFbCFR98tXCt%2FKuZZxiAwk4yQ5R5bfEada%2Fh50dp7jhrf16jVZcG1nj6AiAasNghSkUOFlIa6Tup%2FLBx80cFk4jocquanBnuyX%2FwZyD%2B5LejejxE99JbYMDg0fqLmM1XvGzzvq66IqcQePWD0ETbMESc%2BlJ8IT9p1bqNUQXGaGn5RNRK7s7Yx5MFbD1mqe3zYL%2Fxw%3D%3D&trade_no=2020051022001411950500849932&auth_app_id=2016102200739447&version=1.0&app_id=2016102200739447&sign_type=RSA2&seller_id=2088102180659002&timestamp=2020-05-10+11%3A54%3A44 HTTP/1.1" 200 71

@@ -75,7 +75,7 @@ class OrderSettlementView(LoginMixin, View):
         })
 
 
-class OrderCommitView(View):
+class OrderCommitView(LoginMixin, View):
 
     def post(self, request):
         dict = json.loads(request.body.decode())

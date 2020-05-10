@@ -28,6 +28,8 @@
 
 `elasticsearch == 2.4.1`
 
+`python-alipay-sdk == 1.8.0`
+
 `本地utils文件夹安装`
 
 `pip install fdfs_client-py-master.zip `
