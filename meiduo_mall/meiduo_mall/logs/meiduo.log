@@ -4186,3 +4186,91 @@ INFO 2020-05-10 10:41:32,685 basehttp 154 "GET /list/115/skus/?page=1&page_size=
 INFO 2020-05-10 12:33:19,072 views 19 进入省存储缓存
 INFO 2020-05-10 12:33:22,349 views 47 进入市存储缓存
 INFO 2020-05-10 12:33:23,206 views 47 进入市存储缓存
+INFO 2020-05-19 05:47:09,180 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 05:47:25,132 basehttp 154 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2020-05-19 05:47:25,156 basehttp 154 "POST /login/ HTTP/1.1" 200 81
+INFO 2020-05-19 05:47:49,680 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-05-19 05:47:50,432 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 05:47:53,939 basehttp 154 "POST /login/ HTTP/1.1" 200 27
+INFO 2020-05-19 05:47:54,460 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 05:53:15,885 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 05:57:17,478 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 713
+INFO 2020-05-19 06:12:56,365 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 713
+INFO 2020-05-19 06:13:53,726 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 713
+INFO 2020-05-19 06:13:55,795 basehttp 154 "OPTIONS /logout/ HTTP/1.1" 200 0
+INFO 2020-05-19 06:13:55,802 basehttp 154 "DELETE /logout/ HTTP/1.1" 200 27
+INFO 2020-05-19 06:13:58,207 views 23 图形验证码:3HRX
+INFO 2020-05-19 06:13:58,208 basehttp 154 "GET /image_codes/fac7ac89-8e7a-47fe-b9d5-c7385658db35/ HTTP/1.1" 200 3484
+INFO 2020-05-19 06:14:01,818 basehttp 154 "GET /usernames/xiaoyuzi13/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:14:10,576 basehttp 154 "GET /mobiles/15972148853/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:14:13,760 basehttp 154 "GET /mobiles/15972148854/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:14:16,268 basehttp 154 "GET /mobiles/15972148855/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:14:20,605 basehttp 154 "GET /mobiles/15972148855/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:14:20,665 basehttp 154 "GET /sms_codes/15972148855/?image_code=3hrx&image_code_id=fac7ac89-8e7a-47fe-b9d5-c7385658db35 HTTP/1.1" 200 79
+INFO 2020-05-19 06:14:39,650 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/verifications/views.py changed, reloading.
+INFO 2020-05-19 06:14:40,426 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 06:14:42,722 basehttp 154 "OPTIONS /register/ HTTP/1.1" 200 0
+INFO 2020-05-19 06:14:42,724 basehttp 154 "GET /usernames/xiaoyuzi13/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:14:42,731 basehttp 154 "GET /mobiles/15972148855/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:14:42,898 basehttp 154 "POST /register/ HTTP/1.1" 200 27
+INFO 2020-05-19 06:14:43,313 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 06:14:44,122 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 06:15:44,181 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 06:15:45,264 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 06:15:48,147 views 23 图形验证码:YIWJ
+INFO 2020-05-19 06:15:48,148 basehttp 154 "GET /image_codes/c29f5140-1b33-4b4b-8bdf-d7692552a189/ HTTP/1.1" 200 2922
+INFO 2020-05-19 06:15:51,378 basehttp 154 "GET /usernames/xiaoyuzi14/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:16:19,868 basehttp 154 "GET /mobiles/15972148869/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:16:25,602 basehttp 154 "GET /mobiles/15972148840/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:16:34,114 views 73 短信验证码:376463
+INFO 2020-05-19 06:16:34,115 basehttp 154 "GET /mobiles/15972148840/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:16:34,164 basehttp 154 "GET /sms_codes/15972148840/?image_code=YIWJ&image_code_id=c29f5140-1b33-4b4b-8bdf-d7692552a189 HTTP/1.1" 200 79
+INFO 2020-05-19 06:16:42,121 basehttp 154 "GET /mobiles/15972148840/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:16:42,122 basehttp 154 "GET /usernames/xiaoyuzi14/count/ HTTP/1.1" 200 39
+INFO 2020-05-19 06:16:42,270 basehttp 154 "POST /register/ HTTP/1.1" 200 27
+INFO 2020-05-19 06:16:42,702 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 06:34:00,188 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/urls.py changed, reloading.
+INFO 2020-05-19 06:34:01,228 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 06:38:31,874 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 06:38:32,692 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 06:38:38,387 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+WARNING 2020-05-19 06:38:41,210 log 228 Not Found: /
+WARNING 2020-05-19 06:38:41,211 basehttp 154 "GET / HTTP/1.1" 404 7358
+WARNING 2020-05-19 06:38:41,286 log 228 Not Found: /favicon.ico
+WARNING 2020-05-19 06:38:41,287 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 7409
+INFO 2020-05-19 06:38:53,091 basehttp 154 "GET /register HTTP/1.1" 301 0
+WARNING 2020-05-19 06:38:53,093 base 102 Method Not Allowed (GET): /register/
+WARNING 2020-05-19 06:38:53,094 log 228 Method Not Allowed: /register/
+WARNING 2020-05-19 06:38:53,094 basehttp 154 "GET /register/ HTTP/1.1" 405 0
+WARNING 2020-05-19 06:38:57,529 base 102 Method Not Allowed (GET): /register/
+WARNING 2020-05-19 06:38:57,529 log 228 Method Not Allowed: /register/
+WARNING 2020-05-19 06:38:57,530 basehttp 154 "GET /register/ HTTP/1.1" 405 0
+INFO 2020-05-19 06:39:13,269 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 06:39:14,188 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-05-19 06:40:10,330 base 102 Method Not Allowed (DELETE): /register/
+WARNING 2020-05-19 06:40:10,373 log 228 Method Not Allowed: /register/
+WARNING 2020-05-19 06:40:10,373 basehttp 154 "DELETE /register/ HTTP/1.1" 405 0
+WARNING 2020-05-19 06:40:16,834 base 102 Method Not Allowed (DELETE): /register/
+WARNING 2020-05-19 06:40:16,835 log 228 Method Not Allowed: /register/
+WARNING 2020-05-19 06:40:16,835 basehttp 154 "DELETE /register/ HTTP/1.1" 405 0
+INFO 2020-05-19 06:41:24,459 basehttp 154 "POST /register/ HTTP/1.1" 200 63
+INFO 2020-05-19 06:41:42,626 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/urls.py changed, reloading.
+INFO 2020-05-19 06:41:44,624 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-05-19 06:41:48,851 log 228 Bad Request: /register/
+WARNING 2020-05-19 06:41:48,852 basehttp 154 "POST /register/ HTTP/1.1" 400 152
+WARNING 2020-05-19 06:45:17,043 log 228 Method Not Allowed: /register/
+WARNING 2020-05-19 06:45:17,044 basehttp 154 "GET /register/ HTTP/1.1" 405 40
+WARNING 2020-05-19 06:45:23,367 log 228 Bad Request: /register/
+WARNING 2020-05-19 06:45:23,368 basehttp 154 "POST /register/ HTTP/1.1" 400 60
+WARNING 2020-05-19 06:45:35,068 log 228 Not Found: /register/
+WARNING 2020-05-19 06:45:35,068 basehttp 154 "POST /register/ HTTP/1.1" 404 23
+INFO 2020-05-19 06:47:59,056 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 06:47:59,895 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 07:07:52,207 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 07:07:52,996 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 07:21:42,228 basehttp 154 "GET /browse_histories/ HTTP/1.1" 200 39
+INFO 2020-05-19 07:21:42,229 basehttp 154 "GET /info/ HTTP/1.1" 200 129
+INFO 2020-05-19 07:32:51,594 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/urls.py changed, reloading.
+INFO 2020-05-19 07:32:52,422 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 07:33:25,294 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-05-19 07:33:26,051 autoreload 597 Watching for file changes with StatReloader

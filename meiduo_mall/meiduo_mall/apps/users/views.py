@@ -133,12 +133,26 @@ class RegisterView(View):
             'code': 0,
             'errmsg': 'ok'
         })
+        response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
         response = merage_cookie(request, response)
         return response
 
 
+from rest_framework.views import APIView
+from users.serializers import UserSerializers
+from rest_framework.response import Response
+
+class RegisterSerializersView(APIView):
+    def post(self, request):
+        serializers = UserSerializers(data=request.data)
+        user = serializers.is_valid(raise_exception=True)
+        serializers.save()
+        # login(request, user)
+
+        return Response(data=dict({'code': 0, 'errmsg': 'ok'}, **serializers.data))
+
 class LoginView(View):
-    '''登录接口'''
+    """登录接口"""
 
     def post(self, request):
         dict = json.loads(request.body.decode())
@@ -173,7 +187,6 @@ class LoginView(View):
 
         return response
 
-
 class LogoutView(View):
     def delete(self, request):
         logout(request)
@@ -183,7 +196,6 @@ class LogoutView(View):
         })
         response.delete_cookie('username')
         return response
-
 
 class UserInfoView(LoginMixin, View):
     def get(self, request):
@@ -199,7 +211,6 @@ class UserInfoView(LoginMixin, View):
             'errmsg': 'ok',
             'info_data': dict
         })
-
 
 class EmailView(LoginMixin, View):
     def put(self, request):
@@ -236,7 +247,6 @@ class EmailView(LoginMixin, View):
             'errmsg': 'ok'
         })
 
-
 class VerifyEmailView(View):
     def put(self, request):
         token = request.GET.get('token')
@@ -267,7 +277,6 @@ class VerifyEmailView(View):
             'code': 0,
             'errmsg': 'ok'
         })
-
 
 class CreateAddressView(LoginMixin, View):
     def post(self, request):
@@ -363,7 +372,6 @@ class CreateAddressView(LoginMixin, View):
             # 'address': address_dict
         })
 
-
 class AddressView(LoginMixin, View):
     def get(self, request):
         try:
@@ -404,7 +412,6 @@ class AddressView(LoginMixin, View):
             'default_address_id': default_id,
             'addresses': address_list
         })
-
 
 class UpdateDestroyAddressView(LoginMixin, View):
     def put(self, request, address_id):
@@ -500,7 +507,6 @@ class UpdateDestroyAddressView(LoginMixin, View):
             'errmsg': 'ok',
         })
 
-
 class DefaultAddressView(LoginMixin, View):
     def put(self, request, address_id):
         try:
@@ -516,7 +522,6 @@ class DefaultAddressView(LoginMixin, View):
             'code': 0,
             'errmsg': 'ok'
         })
-
 
 class UpdateTitleAddressView(LoginMixin, View):
     def put(self, request, address_id):
@@ -539,7 +544,6 @@ class UpdateTitleAddressView(LoginMixin, View):
             'code': 0,
             'errmsg': 'ok'
         })
-
 
 class ChangePasswordView(LoginMixin, View):
     def put(self, request):
@@ -591,7 +595,6 @@ class ChangePasswordView(LoginMixin, View):
         logout(request)
         response.delete_cookie('username')
         return response
-
 
 class UserHistoryView(LoginMixin, View):
     """用户浏览记录"""

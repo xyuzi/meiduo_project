@@ -70,7 +70,7 @@ class SMSCodeView(View):
             })
         sms_code = '%06d' % random.randint(1, 999999)
         # 日志输出验证码
-        logger.info('短信验证码:', sms_code)
+        logger.info('短信验证码:%s'%sms_code)
         # 管道创建
         p1 = redis_conn.pipeline()
         # redis保存电话与验证码，保存倒计时时间

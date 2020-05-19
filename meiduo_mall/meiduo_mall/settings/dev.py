@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'carts',
     'orders',
     'payment',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -88,35 +89,35 @@ WSGI_APPLICATION = 'meiduo_mall.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': '127.0.0.1',
-#         'PORT': 3306,
-#         'USER': 'root',
-#         'PASSWORD': 'mysql',
-#         'NAME': 'meiduo_mall'
-#     }
-# }
-
 DATABASES = {
-    'default': {  # 写（主机）
-        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
-        'HOST': '127.0.0.1',  # 数据库主机
-        'PORT': 3306,  # 数据库端口
-        'USER': 'root',  # 数据库用户名
-        'PASSWORD': 'mysql',  # 数据库用户密码
-        'NAME': 'meiduo_mall'  # 数据库名字
-    },
-    'slave': {  # 读（从机）
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',
-        'PORT': 8306,
+        'PORT': 3306,
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': 'mysql',
         'NAME': 'meiduo_mall'
     }
 }
+
+# DATABASES = {
+#     'default': {  # 写（主机）
+#         'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+#         'HOST': '127.0.0.1',  # 数据库主机
+#         'PORT': 3306,  # 数据库端口
+#         'USER': 'root',  # 数据库用户名
+#         'PASSWORD': 'mysql',  # 数据库用户密码
+#         'NAME': 'meiduo_mall'  # 数据库名字
+#     },
+#     'slave': {  # 读（从机）
+#         'ENGINE': 'django.db.backends.mysql',
+#         'HOST': '127.0.0.1',
+#         'PORT': 8306,
+#         'USER': 'root',
+#         'PASSWORD': '123456',
+#         'NAME': 'meiduo_mall'
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -311,4 +312,4 @@ ALIPAY_URL = 'https://openapi.alipaydev.com/gateway.do'
 ALIPAY_RETURN_URL = "http://www.meiduo.site:8080/pay_success.html"
 
 # 数据库主从规则
-DATABASE_ROUTERS = ['meiduo_mall.utils.db_router.MasterSlaveDBRouter']
+# DATABASE_ROUTERS = ['meiduo_mall.utils.db_router.MasterSlaveDBRouter']
