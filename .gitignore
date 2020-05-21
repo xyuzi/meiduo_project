@@ -139,4 +139,5 @@ cython_debug/
 
 # 添加的忽略文件
 .idea
+logs/*
 *.log
