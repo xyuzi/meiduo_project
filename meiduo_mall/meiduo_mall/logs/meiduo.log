@@ -4274,3 +4274,214 @@ INFO 2020-05-19 07:32:51,594 autoreload 217 /home/ubuntu/Desktop/meiduo_project/
 INFO 2020-05-19 07:32:52,422 autoreload 597 Watching for file changes with StatReloader
 INFO 2020-05-19 07:33:25,294 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
 INFO 2020-05-19 07:33:26,051 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 08:20:40,812 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 08:20:47,553 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 08:20:52,375 basehttp 154 "GET /hot/115/ HTTP/1.1" 200 582
+INFO 2020-05-19 08:20:52,411 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 08:20:52,483 basehttp 154 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1561
+INFO 2020-05-19 08:20:54,917 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 08:20:54,928 basehttp 154 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2020-05-19 08:20:54,968 basehttp 154 "POST /browse_histories/ HTTP/1.1" 200 27
+INFO 2020-05-19 08:20:56,494 basehttp 154 "OPTIONS /carts/ HTTP/1.1" 200 0
+INFO 2020-05-19 08:20:56,518 basehttp 154 "POST /carts/ HTTP/1.1" 200 27
+INFO 2020-05-19 08:21:01,864 basehttp 154 "GET /carts/ HTTP/1.1" 200 376
+INFO 2020-05-19 08:21:03,512 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 200 377
+INFO 2020-05-19 08:21:07,921 views 19 进入省存储缓存
+INFO 2020-05-19 08:21:07,945 basehttp 154 "GET /addresses/ HTTP/1.1" 200 74
+INFO 2020-05-19 08:21:08,003 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-05-19 08:21:13,338 views 47 进入市存储缓存
+INFO 2020-05-19 08:21:13,354 basehttp 154 "GET /areas/110000/ HTTP/1.1" 200 141
+INFO 2020-05-19 08:21:13,984 views 47 进入市存储缓存
+INFO 2020-05-19 08:21:14,003 basehttp 154 "GET /areas/110100/ HTTP/1.1" 200 843
+INFO 2020-05-19 08:21:21,369 basehttp 154 "OPTIONS /addresses/create/ HTTP/1.1" 200 0
+INFO 2020-05-19 08:21:21,878 basehttp 154 "POST /addresses/create/ HTTP/1.1" 200 27
+INFO 2020-05-19 08:21:22,069 basehttp 154 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2020-05-19 08:21:22,143 basehttp 154 "GET /addresses/ HTTP/1.1" 200 280
+INFO 2020-05-19 08:21:23,698 basehttp 154 "GET /carts/ HTTP/1.1" 200 376
+INFO 2020-05-19 08:21:24,584 basehttp 154 "GET /orders/settlement/ HTTP/1.1" 200 546
+INFO 2020-05-19 08:21:28,968 basehttp 154 "OPTIONS /orders/commit/ HTTP/1.1" 200 0
+INFO 2020-05-19 08:21:29,125 basehttp 154 "POST /orders/commit/ HTTP/1.1" 200 66
+INFO 2020-05-19 08:21:31,329 basehttp 154 "GET /payment/20200519082128000000022/ HTTP/1.1" 200 903
+INFO 2020-05-19 11:37:48,658 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 11:39:42,040 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 12:28:29,952 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 12:28:31,350 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 12:33:03,338 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/serializers.py changed, reloading.
+INFO 2020-05-19 12:33:04,591 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:01:17,372 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 13:01:18,350 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:03:59,616 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 13:04:00,285 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:04:38,971 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/urls.py changed, reloading.
+INFO 2020-05-19 13:04:39,688 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:04:57,665 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 13:05:02,196 basehttp 154 "GET /info/ HTTP/1.1" 200 129
+INFO 2020-05-19 13:05:02,248 basehttp 154 "GET /browse_histories/ HTTP/1.1" 200 320
+INFO 2020-05-19 13:05:08,272 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+WARNING 2020-05-19 13:05:08,404 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:05:08,404 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+WARNING 2020-05-19 13:05:39,405 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:05:39,405 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+WARNING 2020-05-19 13:08:46,864 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:08:46,865 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+INFO 2020-05-19 13:09:21,187 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/urls.py changed, reloading.
+INFO 2020-05-19 13:09:22,678 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:09:41,525 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-05-19 13:09:41,531 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-05-19 13:12:30,856 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-05-19 13:12:31,578 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:12:51,204 basehttp 154 "GET /info/ HTTP/1.1" 200 146
+INFO 2020-05-19 13:12:51,207 basehttp 154 "GET /browse_histories/ HTTP/1.1" 200 320
+INFO 2020-05-19 13:13:23,647 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:15:04,422 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-05-19 13:16:47,174 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-05-19 13:16:49,606 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:17:05,631 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/celery_tasks/yuntongxun/ccp_sms.py changed, reloading.
+INFO 2020-05-19 13:17:07,047 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:17:28,516 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/urls.py changed, reloading.
+INFO 2020-05-19 13:17:30,123 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:17:47,106 basehttp 154 "GET /carts/simple/ HTTP/1.1" 200 44
+INFO 2020-05-19 13:17:56,941 basehttp 154 "GET /info/ HTTP/1.1" 200 146
+INFO 2020-05-19 13:17:56,954 basehttp 154 "GET /browse_histories/ HTTP/1.1" 200 320
+INFO 2020-05-19 13:18:01,760 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+WARNING 2020-05-19 13:18:01,869 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:18:01,872 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+INFO 2020-05-19 13:18:27,632 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 13:18:29,208 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-05-19 13:18:34,062 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:18:34,063 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+WARNING 2020-05-19 13:18:36,283 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:18:36,284 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+INFO 2020-05-19 13:18:50,000 basehttp 154 "GET /browse_histories/ HTTP/1.1" 200 320
+INFO 2020-05-19 13:18:50,001 basehttp 154 "GET /info/ HTTP/1.1" 200 146
+WARNING 2020-05-19 13:18:52,580 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:18:52,581 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+INFO 2020-05-19 13:21:27,174 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-05-19 13:21:28,708 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-05-19 13:21:34,496 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:21:34,499 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+INFO 2020-05-19 13:22:45,641 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-05-19 13:22:46,963 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:22:56,320 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-05-19 13:22:57,653 autoreload 597 Watching for file changes with StatReloader
+WARNING 2020-05-19 13:23:02,834 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:23:02,835 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+INFO 2020-05-19 13:34:45,039 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+WARNING 2020-05-19 13:34:45,788 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:34:45,789 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+WARNING 2020-05-19 13:34:56,914 log 228 Forbidden: /emails/
+WARNING 2020-05-19 13:34:56,916 basehttp 154 "PUT /emails/ HTTP/1.1" 403 46
+INFO 2020-05-19 13:39:21,014 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2020-05-19 13:39:23,510 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:39:35,154 basehttp 154 "GET /info/ HTTP/1.1" 200 146
+INFO 2020-05-19 13:39:35,250 basehttp 154 "GET /browse_histories/ HTTP/1.1" 200 320
+ERROR 2020-05-19 13:40:00,378 log 228 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 507, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 422, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'type'>`
+ERROR 2020-05-19 13:40:00,390 basehttp 154 "PUT /emails/ HTTP/1.1" 500 91209
+INFO 2020-05-19 13:40:37,141 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 13:40:38,448 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:49:53,626 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-19 13:49:57,660 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+ERROR 2020-05-19 13:49:57,960 log 228 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/utils/JudgeLogin.py", line 9, in wrapper
+    return func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 507, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 422, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'type'>`
+ERROR 2020-05-19 13:49:57,963 basehttp 154 "PUT /emails/ HTTP/1.1" 500 95398
+ERROR 2020-05-19 13:50:01,988 log 228 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/utils/JudgeLogin.py", line 9, in wrapper
+    return func(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 507, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 422, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'type'>`
+ERROR 2020-05-19 13:50:01,990 basehttp 154 "PUT /emails/ HTTP/1.1" 500 95398
+INFO 2020-05-19 13:50:29,171 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/apps/users/views.py changed, reloading.
+INFO 2020-05-19 13:50:30,598 autoreload 597 Watching for file changes with StatReloader
+ERROR 2020-05-19 13:50:35,344 log 228 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 507, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 422, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'type'>`
+ERROR 2020-05-19 13:50:35,346 basehttp 154 "PUT /emails/ HTTP/1.1" 500 91209
+ERROR 2020-05-19 13:50:37,620 log 228 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 507, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/meiduo_env/lib/python3.6/site-packages/rest_framework/views.py", line 422, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'type'>`
+ERROR 2020-05-19 13:50:37,622 basehttp 154 "PUT /emails/ HTTP/1.1" 500 91209
+INFO 2020-05-21 07:07:34,704 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-21 07:07:48,043 basehttp 154 "GET /info/ HTTP/1.1" 200 146
+INFO 2020-05-21 07:07:48,090 basehttp 154 "GET /browse_histories/ HTTP/1.1" 200 320
+INFO 2020-05-21 07:08:49,897 basehttp 154 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2020-05-21 07:08:50,068 basehttp 154 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2020-05-21 07:12:15,849 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/meiduo_mall/urls.py changed, reloading.
+INFO 2020-05-21 07:12:16,652 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-21 07:40:23,497 autoreload 597 Watching for file changes with StatReloader
+INFO 2020-05-21 07:41:12,832 autoreload 217 /home/ubuntu/Desktop/meiduo_project/meiduo_mall/celery_tasks/email/tasks.py changed, reloading.
+INFO 2020-05-21 07:41:13,320 autoreload 597 Watching for file changes with StatReloader

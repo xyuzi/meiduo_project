@@ -53,6 +53,15 @@ class UserSerializers(serializers.Serializer):
                                         mobile=validated_data['mobile'])
 
 
+class UserEmailSerializers(serializers.Serializer):
+    email = serializers.EmailField()
+
+    def update(self, instance, validated_data):
+        instance.email = validated_data['email']
+        instance.save()
+        return instance
+
+
 class UserModolesSerializers(serializers.ModelSerializer):
     class Meta:
         models = User
