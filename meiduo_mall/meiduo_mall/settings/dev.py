@@ -305,7 +305,6 @@ HAYSTACK_CONNECTIONS = {
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 4
 
-
 # 支付宝相关设置
 ALIPAY_APPID = '2016102200739447'
 ALIPAY_DEBUG = True
@@ -314,3 +313,27 @@ ALIPAY_RETURN_URL = "http://www.meiduo.site:8080/pay_success.html"
 
 # 数据库主从规则
 # DATABASE_ROUTERS = ['meiduo_mall.utils.db_router.MasterSlaveDBRouter']
+
+
+# jwt 认证
+REST_FRAMEWORK = {
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ),
+    # 先进行token认证 如果不行 进行session认证
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+import datetime
+
+JWT_AUTH = {
+    # 设置指向 添加user_id 和 username
+    'JWT_RESPONSE_PAYLOAD_HANDLER':
+        'meiduo_admin.utils.jwt_response_payload_handler',
+    # 默认300秒
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
+}

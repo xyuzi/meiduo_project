@@ -167,7 +167,9 @@ class LoginView(View):
                 'code': 400,
                 'errmsg': '缺少必穿参数'
             })
-        user = authenticate(username=username,
+        # 传入request让登录判断该次登录是前台登录
+        user = authenticate(request=request,
+                            username=username,
                             password=password)
         if user is None:
             return JsonResponse({'code': 400,
