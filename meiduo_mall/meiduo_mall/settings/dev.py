@@ -326,6 +326,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         # 'rest_framework.authentication.BasicAuthentication',
     ),
+    'EXCEPTION_HANDLER': ('meiduo_admin.utils.databaseserror.my_exception_handler')
 }
 
 import datetime
@@ -333,7 +334,7 @@ import datetime
 JWT_AUTH = {
     # 设置指向 添加user_id 和 username
     'JWT_RESPONSE_PAYLOAD_HANDLER':
-        'meiduo_admin.utils.jwt_response_payload_handler',
+        'meiduo_admin.utils.jwtresopnse.jwt_response_payload_handler',
     # 默认300秒
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=14),
 }
