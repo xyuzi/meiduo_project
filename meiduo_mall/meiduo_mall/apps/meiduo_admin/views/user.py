@@ -1,5 +1,6 @@
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.permissions import IsAdminUser
+from rest_framework.response import Response
 
 from meiduo_admin.serializers.user import UserInfoModelSerializer
 from meiduo_admin.utils.pageresponse import PageNum
@@ -7,7 +8,7 @@ from meiduo_admin.utils.pageresponse import PageNum
 from users.models import User
 
 
-class SelectUserInfoView(ListAPIView):
+class SelectUserInfoView(ListAPIView, CreateAPIView):
     permission_classes = [IsAdminUser]
     serializer_class = UserInfoModelSerializer
     pagination_class = PageNum
@@ -20,3 +21,4 @@ class SelectUserInfoView(ListAPIView):
         else:
             return User.objects.filter(username__istartswith=keyword,
                                        is_staff=False, is_superuser=False)
+

@@ -262,7 +262,7 @@ class EmailSerializersView(APIView):
 
     def put(self, request):
         try:
-            user = User.objects.get(id=request.user.id)  # 拿不到对象
+            user = User.objects.get(id=request.query_params.get('id'))  # 拿不到对象
         except:
             return Http404
         serializers = UserEmailSerializers(instance=user, data=request.data)
