@@ -4,8 +4,8 @@ from goods.models import SKUImage
 
 
 class SkuImageModelSerializer(serializers.ModelSerializer):
-    sku = serializers.PrimaryKeyRelatedField(read_only=True)
-
+    # sku = serializers.PrimaryKeyRelatedField(read_only=True)
+    sku = serializers.StringRelatedField(read_only=True)
     class Meta:
         model = SKUImage
         fields = ['id', 'sku', 'image']

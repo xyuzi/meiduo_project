@@ -1,6 +1,7 @@
 from django.conf import settings
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.status import HTTP_201_CREATED
 from meiduo_admin.serializers.image import SkuImageModelSerializer
 from meiduo_admin.utils.pageresponse import PageNum
 
@@ -23,9 +24,21 @@ class SKUImageView(ModelViewSet):
             {
                 'id': sku_img.id,
                 'sku': sku_id,
-                'image': settings.FDFS_URL+sku_img.image
+                'image': sku_img.image.url
             },
-            status=201
+            status=HTTP_201_CREATED
         )
 
-
+    def update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        fast = FastDFSStorage()
+        url = fast.save(name=None, content=request.FILES.get('image'))
+        instance.image = url
+        instance.save()
+        return Response({
+            "id": instance.id,
+            "sku": instance.sku_id,
+            "image": instance.image.url
+        },
+            status=HTTP_201_CREATED
+        )

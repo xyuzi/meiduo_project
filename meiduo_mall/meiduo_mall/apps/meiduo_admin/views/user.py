@@ -1,6 +1,5 @@
 from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.permissions import IsAdminUser
-from rest_framework.response import Response
 
 from meiduo_admin.serializers.user import UserInfoModelSerializer
 from meiduo_admin.utils.pageresponse import PageNum
@@ -16,9 +15,8 @@ class SelectUserInfoView(ListAPIView, CreateAPIView):
     def get_queryset(self):
         keyword = self.request.query_params.get('keyword')
 
-        if keyword is '' or keyword is None:
-            return User.objects.filter(is_staff=False, is_superuser=False)
-        else:
+        if keyword:
             return User.objects.filter(username__istartswith=keyword,
                                        is_staff=False, is_superuser=False)
-
+        else:
+            return User.objects.filter(is_staff=False, is_superuser=False)
