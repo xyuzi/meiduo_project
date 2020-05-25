@@ -1,4 +1,5 @@
 from django.conf import settings
+from fdfs_client.client import Fdfs_client
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.status import HTTP_201_CREATED
@@ -31,8 +32,17 @@ class SKUImageView(ModelViewSet):
 
     def update(self, request, *args, **kwargs):
         instance = self.get_object()
-        fast = FastDFSStorage()
-        url = fast.save(name=None, content=request.FILES.get('image'))
+        # fast = FastDFSStorage()
+        # url = fast.save(name=None, content=request.FILES.get('image'))
+        client = Fdfs_client(settings.FDFS_CLIENT_CONF)
+        try:
+            client.delete_file(instance.image.name)
+        except Exception as e:
+            pass
+        result = client.upload_by_buffer(request.FILES.get('image').read())
+        if result.get('Status') != 'Upload successed.':
+            raise Exception('上传文件到FDFS系统失败')
+        url = result.get('Remote file_id')
         instance.image = url
         instance.save()
         return Response({
@@ -42,3 +52,13 @@ class SKUImageView(ModelViewSet):
         },
             status=HTTP_201_CREATED
         )
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        client = Fdfs_client(settings.FDFS_CLIENT_CONF)
+        try:
+            client.delete_file(instance.image.name)
+        except Exception as e:
+            pass
+        instance.delete()
+        return Response(status=HTTP_201_CREATED)
