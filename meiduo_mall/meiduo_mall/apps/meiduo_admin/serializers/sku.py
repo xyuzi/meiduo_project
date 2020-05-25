@@ -7,3 +7,9 @@ class SKUModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = SKU
         fields = ['id', 'name']
+
+
+class SKUSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SKU
+        fields = '__all__'
