@@ -11,10 +11,12 @@ urlpatterns = [
     re_path(r'^statistical/month_increment/$', home.PeopleMonthCountView.as_view()),
     re_path(r'^users/$', user.SelectUserInfoView.as_view()),
     re_path(r'^skus/simple/$', sku.SKUInfoView.as_view()),
+    re_path(r'^goods/simple/$', sku.GoodsSimpleView.as_view()),
+    re_path(r'^goods/(?P<pk>\d+)/specs/$', sku.GoodsSpecificationView.as_view()),
 ]
 
 routers = DefaultRouter()
 
 routers.register('skus/images', image.SKUImageView, basename='SKU')
-
+routers.register('skus', sku.SKUView, basename='skus')
 urlpatterns += routers.urls
