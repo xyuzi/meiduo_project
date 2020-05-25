@@ -2,10 +2,12 @@ from django.core.paginator import Paginator
 from django.shortcuts import render
 
 # Create your views here.
+from django.utils import timezone
 from django.views import View
 
-from goods.models import GoodsCategory, SKU
+from goods.models import GoodsCategory, SKU, GoodsVisitCount
 from django.http import JsonResponse
+
 import logging
 
 from goods.utiles import get_breadcrumb
@@ -96,11 +98,14 @@ class HotGoodsView(View):
             'hot_skus': list
         })
 
+
 # 导入:
 from haystack.views import SearchView
 
+
 class MySearchView(SearchView):
-    '''重写SearchView类'''
+    """重写SearchView类"""
+
     def create_response(self):
         page = self.request.GET.get('page')
         # 获取搜索结果
@@ -108,13 +113,44 @@ class MySearchView(SearchView):
         data_list = []
         for sku in context['page'].object_list:
             data_list.append({
-                'id':sku.object.id,
-                'name':sku.object.name,
-                'price':sku.object.price,
-                'default_image_url':sku.object.default_image_url,
-                'searchkey':context.get('query'),
-                'page_size':context['page'].paginator.num_pages,
-                'count':context['page'].paginator.count
+                'id': sku.object.id,
+                'name': sku.object.name,
+                'price': sku.object.price,
+                'default_image_url': sku.object.default_image_url,
+                'searchkey': context.get('query'),
+                'page_size': context['page'].paginator.num_pages,
+                'count': context['page'].paginator.count
             })
         # 拼接参数, 返回
         return JsonResponse(data_list, safe=False)
+
+
+class DetailVisitView(View):
+    def post(self, request, category_id):
+        try:
+            goods = GoodsCategory.objects.get(id=category_id)
+        except Exception as e:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '数据库查询失败'
+            })
+        now = timezone.localdate()
+        try:
+            goods_visit = GoodsVisitCount.objects.get(date=now,
+                                                      category_id=category_id)
+        except Exception as e:
+            goods_visit = GoodsVisitCount()
+        try:
+
+            goods_visit.category = goods
+            goods_visit.count += 1
+            goods_visit.save()
+        except Exception as e:
+            return JsonResponse({
+                'code': 400,
+                'errmsg': '数据库存储失败'
+            })
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok'
+        })

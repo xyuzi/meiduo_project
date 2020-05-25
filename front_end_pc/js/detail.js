@@ -25,7 +25,8 @@ var vm = new Vue({
             3: 'stars_three',
             4: 'stars_four',
             5: 'stars_five',
-        }
+        },
+        category_id:cat,
     },
     computed: {
         sku_amount: function(){
@@ -53,6 +54,7 @@ var vm = new Vue({
         this.get_cart();
         this.get_hot_goods();
         this.get_comments();
+        this.detail_visit();
     },
     methods: {
          // 退出登录按钮
@@ -135,6 +137,22 @@ var vm = new Vue({
         // 获取商品评价信息
         get_comments: function(){
 
+        },
+        // 新增记录商品详情的访问量
+        detail_visit(){
+            if (this.category_id) {
+                var url = this.host + '/detail/visit/' + this.category_id + '/';
+                axios.post(url, {}, {
+                    responseType: 'json',
+                    withCredentials:true,
+                })
+                    .then(response => {
+                        console.log(response.data);
+                    })
+                    .catch(error => {
+                        console.log(error.response);
+                    });
+            }
         }
     }
 });
