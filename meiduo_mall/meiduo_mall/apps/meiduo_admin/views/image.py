@@ -3,6 +3,8 @@ from fdfs_client.client import Fdfs_client
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.status import HTTP_201_CREATED
+from rest_framework.permissions import IsAdminUser
+
 from meiduo_admin.serializers.image import SkuImageModelSerializer
 from meiduo_admin.utils.pageresponse import PageNum
 
@@ -11,6 +13,7 @@ from meiduo_mall.utils.fastdfs.fastdfs_storage import FastDFSStorage
 
 
 class SKUImageView(ModelViewSet):
+    permission_classes = [IsAdminUser]
     queryset = SKUImage.objects.all().order_by('sku_id')
     serializer_class = SkuImageModelSerializer
     pagination_class = PageNum

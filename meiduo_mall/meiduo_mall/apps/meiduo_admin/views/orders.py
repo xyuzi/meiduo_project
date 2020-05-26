@@ -1,4 +1,5 @@
 from rest_framework.generics import ListAPIView
+from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.status import HTTP_201_CREATED
@@ -9,6 +10,7 @@ from meiduo_admin.utils.pageresponse import PageNum
 
 
 class OrdersInfoView(ListAPIView):
+    permission_classes = [IsAdminUser]
     serializer_class = OrdersInfoSerializers
     pagination_class = PageNum
 
@@ -21,6 +23,8 @@ class OrdersInfoView(ListAPIView):
 
 
 class OrdersInforMationView(APIView):
+    permission_classes = [IsAdminUser]
+
     def get(self, request, pk):
         order = OrderInfo.objects.get(order_id=pk)
         serializer = OrdersInforMationModelSerializer(order)
@@ -28,6 +32,8 @@ class OrdersInforMationView(APIView):
 
 
 class OrdersStatusView(APIView):
+    permission_classes = [IsAdminUser]
+
     def put(self, request, order_id):
         status = request.data.get('status')
         order = OrderInfo.objects.get(order_id=order_id)
