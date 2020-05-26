@@ -1,6 +1,7 @@
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.status import HTTP_201_CREATED
 
 from carts.models import OrderInfo
 from meiduo_admin.serializers.orders import OrdersInfoSerializers, OrdersInforMationModelSerializer
@@ -24,3 +25,12 @@ class OrdersInforMationView(APIView):
         order = OrderInfo.objects.get(order_id=pk)
         serializer = OrdersInforMationModelSerializer(order)
         return Response(serializer.data)
+
+
+class OrdersStatusView(APIView):
+    def put(self, request, order_id):
+        status = request.data.get('status')
+        order = OrderInfo.objects.get(order_id=order_id)
+        order.status = status
+        order.save()
+        return Response({'order_id': order_id, 'status': status}, status=HTTP_201_CREATED)

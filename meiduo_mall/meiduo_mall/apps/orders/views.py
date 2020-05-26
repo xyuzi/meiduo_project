@@ -134,7 +134,7 @@ class OrderCommitView(LoginMixin, View):
             for sku_id in dict.keys():
                 while True:
                     sku = SKU.objects.get(id=sku_id)
-                    goods = sku.goods
+                    goods = sku.spu
                     goods_sales = goods.sales
                     stock = sku.stock
                     sales = sku.sales
@@ -162,7 +162,7 @@ class OrderCommitView(LoginMixin, View):
                     # sku.goods.sales += sku_count
                     # sku.goods.save()
 
-                    result = Goods.objects.filter(id=sku.goods_id).update(sales=new_goods)
+                    result = Goods.objects.filter(id=sku.spu_id).update(sales=new_goods)
                     if result == 0:
                         continue
 

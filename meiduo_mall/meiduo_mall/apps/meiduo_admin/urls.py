@@ -16,6 +16,7 @@ urlpatterns = [
     re_path(r'^goods/(?P<pk>\d+)/specs/$', sku.GoodsSpecificationView.as_view()),
     re_path(r'^orders/$', orders.OrdersInfoView.as_view()),
     re_path(r'^orders/(?P<pk>\d+)/$', orders.OrdersInforMationView.as_view()),
+    re_path(r'^orders/(?P<order_id>\d+)/status/$', orders.OrdersStatusView.as_view()),
 ]
 
 routers = DefaultRouter()

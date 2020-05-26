@@ -28,6 +28,7 @@ class SKUInfo(serializers.ModelSerializer):
 
 
 class OrdersInforMationModelSerializer(serializers.ModelSerializer):
+    user = serializers.StringRelatedField()
     skus = SKUInfo(many=True)
 
     class Meta:
