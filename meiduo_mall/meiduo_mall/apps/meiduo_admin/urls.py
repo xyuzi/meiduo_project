@@ -20,6 +20,8 @@ urlpatterns = [
     re_path(r'^goods/brands/simple/$', spu.GoodsBrandInfoView.as_view()),
     re_path(r'^goods/channel/categories/$', spu.GoodsCategoriesOneInfoView.as_view()),
     re_path(r'^goods/channel/categories/(?P<pk>\d+)/$', spu.GoodsCategoriesInfoView.as_view()),
+    re_path(r'^goods/channel_types/$', channel.ChannelGroupView.as_view()),
+    re_path(r'^goods/categories/$', channel.ChannelCategoriesView.as_view()),
 ]
 
 routers = DefaultRouter()
@@ -27,7 +29,6 @@ routers = DefaultRouter()
 
 routers.register('skus/images', image.SKUImageView, basename='SKU')
 routers.register('skus', sku.SKUView, basename='skus')
-routers.register('goods/categories', channel.ChannelInfoView, basename='channel')
 routers.register('goods/channels', channel.ChannelInfoView, basename='channel')
 routers.register('goods/specs', specs.SpecsInfoView, basename='specs')
 routers.register('goods', spu.GoodsInfoView, basename='goods')

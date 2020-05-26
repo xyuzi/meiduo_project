@@ -1,4 +1,5 @@
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
@@ -8,6 +9,7 @@ from meiduo_admin.utils.pageresponse import PageNum
 
 
 class SpecsInfoView(ModelViewSet):
+    permission_classes = [IsAdminUser]
     pagination_class = PageNum
     serializer_class = SpecsInfoModelSerializer
     queryset = GoodsSpecification.objects.all()
