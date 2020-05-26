@@ -17,7 +17,6 @@ urlpatterns = [
     re_path(r'^orders/$', orders.OrdersInfoView.as_view()),
     re_path(r'^orders/(?P<pk>\d+)/$', orders.OrdersInforMationView.as_view()),
     re_path(r'^orders/(?P<order_id>\d+)/status/$', orders.OrdersStatusView.as_view()),
-    re_path(r'^goods/$', spu.GoodsInfoView.as_view()),
     re_path(r'^goods/brands/simple/$', spu.GoodsBrandInfoView.as_view()),
     re_path(r'^goods/channel/categories/$', spu.GoodsCategoriesOneInfoView.as_view()),
     re_path(r'^goods/channel/categories/(?P<pk>\d+)/$', spu.GoodsCategoriesInfoView.as_view()),
@@ -27,4 +26,5 @@ routers = DefaultRouter()
 
 routers.register('skus/images', image.SKUImageView, basename='SKU')
 routers.register('skus', sku.SKUView, basename='skus')
+routers.register('goods', spu.GoodsInfoView, basename='goods')
 urlpatterns += routers.urls
