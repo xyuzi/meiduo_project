@@ -4,6 +4,7 @@ from goods.models import SKU, GoodsCategory, Goods, GoodsSpecification, Specific
 
 from django.db import transaction
 
+
 class SKUModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = SKU
@@ -20,8 +21,8 @@ class SpecsSerializer(serializers.ModelSerializer):
 
 
 class SKUSerializer(serializers.ModelSerializer):
-    spu_id = serializers.IntegerField(label='商品id', write_only=True)
-    category_id = serializers.IntegerField(label='从属类别id', write_only=True)
+    spu_id = serializers.IntegerField(label='商品id', )
+    category_id = serializers.IntegerField(label='从属类别id', )
     spu = serializers.StringRelatedField(required=False)
     category = serializers.StringRelatedField(required=False)
     specs = SpecsSerializer(many=True)
@@ -33,7 +34,6 @@ class SKUSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         specs = validated_data.pop('specs')
         with transaction.atomic():
-
             save_point = transaction.savepoint()
             sku = SKU.objects.create(**validated_data)
             for spec in specs:
@@ -41,6 +41,18 @@ class SKUSerializer(serializers.ModelSerializer):
 
             transaction.savepoint_commit(save_point)
             return sku
+
+    def update(self, instance, validated_data):
+        specs = validated_data.pop('specs')
+        with transaction.atomic():
+            save_point = transaction.savepoint()
+            instance = super().update(instance, validated_data)
+            for spec in specs:
+                SKUSpecification.objects.filter(sku=instance, spec_id=spec.get('spec_id')).update(
+                    option_id=spec.get('option_id'))
+
+            transaction.savepoint_commit(save_point)
+            return instance
 
 
 class SKUThreeSerializer(serializers.ModelSerializer):
