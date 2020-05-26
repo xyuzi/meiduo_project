@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from goods.models import SKU, GoodsCategory, Goods, GoodsSpecification, SpecificationOption, SKUSpecification
 
+from django.db import transaction
 
 class SKUModelSerializer(serializers.ModelSerializer):
     class Meta:
@@ -31,10 +32,15 @@ class SKUSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         specs = validated_data.pop('specs')
-        sku = SKU.objects.create(**validated_data)
-        for spec in specs:
-            SKUSpecification.objects.create(sku=sku, **spec)
-        return sku
+        with transaction.atomic():
+
+            save_point = transaction.savepoint()
+            sku = SKU.objects.create(**validated_data)
+            for spec in specs:
+                SKUSpecification.objects.create(sku=sku, **spec)
+
+            transaction.savepoint_commit(save_point)
+            return sku
 
 
 class SKUThreeSerializer(serializers.ModelSerializer):
