@@ -28,12 +28,27 @@ class GoodsCategory(BaseModel):
         return self.name
 
 
+class GoodsChannelGroup(BaseModel):
+    """商品频道组"""
+    name = models.CharField(max_length=20, verbose_name='频道组名')
+
+    class Meta:
+        db_table = 'tb_channel_group'
+        verbose_name = '商品频道组'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+
 class GoodsChannel(BaseModel):
     """
     商品频道表展示的内容
     """
     # 当前商品频道属于哪个组
-    group_id = models.IntegerField(verbose_name='组号')
+    group = models.ForeignKey(GoodsChannelGroup,
+                              on_delete=models.CASCADE,
+                              verbose_name='组号')
     # 频道对应的一级分类id
     category = models.ForeignKey(GoodsCategory,
                                  on_delete=models.CASCADE,
@@ -113,7 +128,6 @@ class Goods(BaseModel):
     desc_detail = models.TextField(default='', verbose_name='详细介绍')
     desc_pack = models.TextField(default='', verbose_name='包装信息')
     desc_service = models.TextField(default='', verbose_name='售后服务')
-
 
     class Meta:
         db_table = 'tb_goods'

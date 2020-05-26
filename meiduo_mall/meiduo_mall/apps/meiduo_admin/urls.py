@@ -2,7 +2,7 @@ from django.urls import re_path
 from rest_framework_jwt.views import obtain_jwt_token
 from rest_framework.routers import DefaultRouter, SimpleRouter
 
-from .views import home, user, image, sku, orders, spu, specs, options
+from .views import home, user, image, sku, orders, spu, specs, options, channel
 
 urlpatterns = [
     re_path(r'^authorizations/$', obtain_jwt_token),
@@ -27,6 +27,8 @@ routers = DefaultRouter()
 
 routers.register('skus/images', image.SKUImageView, basename='SKU')
 routers.register('skus', sku.SKUView, basename='skus')
+routers.register('goods/categories', channel.ChannelInfoView, basename='channel')
+routers.register('goods/channels', channel.ChannelInfoView, basename='channel')
 routers.register('goods/specs', specs.SpecsInfoView, basename='specs')
 routers.register('goods', spu.GoodsInfoView, basename='goods')
 routers.register('specs/options', options.OptionsInfoView, basename='options')
