@@ -108,6 +108,13 @@ class Goods(BaseModel):
     comments = models.IntegerField(default=0,
                                    verbose_name='评价数')
 
+    # 新增以下三个字段
+    # TODO 不迁移 迁移注释
+    desc_detail = models.TextField(default='', verbose_name='详细介绍')
+    desc_pack = models.TextField(default='', verbose_name='包装信息')
+    desc_service = models.TextField(default='', verbose_name='售后服务')
+
+
     class Meta:
         db_table = 'tb_goods'
         verbose_name = '商品'

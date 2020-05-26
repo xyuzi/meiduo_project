@@ -5,12 +5,26 @@ from goods.models import Goods, Brand, GoodsCategory
 
 class GoodsInfoSerializers(serializers.ModelSerializer):
     brand_id = serializers.IntegerField()
+    category1_id = serializers.IntegerField()
+    category2_id = serializers.IntegerField()
+    category3_id = serializers.IntegerField()
 
     class Meta:
         model = Goods
-        # brand, brand_id, category1_id, category2_id, category3_id, comments, id, name, sales
         fields = ['id', 'name', 'brand', 'brand_id', 'category1_id', 'category2_id', 'category3_id', 'sales',
-                  'comments']
+                  'comments', 'desc_detail', 'desc_pack', 'desc_service']
+
+        extra_kwargs = {
+            'brand': {
+                'required': False
+            },
+            'sales': {
+                'required': False
+            },
+            'comments': {
+                'required': False
+            }
+        }
 
 
 class GoodsBrandInfoSerializers(serializers.ModelSerializer):
