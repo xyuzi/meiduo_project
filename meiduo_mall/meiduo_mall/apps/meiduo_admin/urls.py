@@ -2,7 +2,7 @@ from django.urls import re_path
 from rest_framework_jwt.views import obtain_jwt_token
 from rest_framework.routers import DefaultRouter
 
-from .views import home, user, image, sku, orders, spu, specs, options, channel, brands, perms
+from .views import home, user, image, sku, orders, spu, specs, options, channel, brands, perms, simple
 
 urlpatterns = [
     re_path(r'^authorizations/$', obtain_jwt_token),
@@ -30,6 +30,8 @@ urlpatterns = [
     re_path(r'^goods/categories/$', channel.ChannelCategoriesView.as_view()),
 
     re_path(r'^permission/content_types/$', perms.PermissionGroupView.as_view()),
+
+    re_path(r'^permission/simple/$', simple.SimplenView.as_view()),
 ]
 
 routers = DefaultRouter()
@@ -44,6 +46,6 @@ routers.register('specs/options', options.OptionsInfoView, basename='options')
 
 routers.register('permission/perms', perms.PermissionView, basename='perms')
 
-routers.register('permission/simple', perms.PermissionView, basename='perms')
+routers.register('permission/groups', simple.GroupsView, basename='groups')
 
 urlpatterns += routers.urls
