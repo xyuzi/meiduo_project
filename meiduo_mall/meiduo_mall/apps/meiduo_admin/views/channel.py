@@ -16,11 +16,11 @@ class ChannelInfoView(ModelViewSet):
     queryset = GoodsChannel.objects.all().order_by('group_id', 'sequence')
     pagination_class = PageNum
 
-    @method_decorator(permission_required('goods.Goods_Channel'))
+    # @method_decorator(permission_required('goods.Goods_Channel'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    @method_decorator(permission_required('goods.Goods_Channel'))
+    # @method_decorator(permission_required('goods.Goods_Channel'))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
@@ -42,7 +42,7 @@ class ChannelCategoriesView(ListAPIView):
     queryset = GoodsCategory.objects.all()
     serializer_class = ChannelCategoriesModelSerializer
 
-    @method_decorator(permission_required('goods.Goods_Category'))
+    # @method_decorator(permission_required('goods.Goods_Category'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
@@ -52,6 +52,6 @@ class ChannelGroupView(ListAPIView):
     queryset = GoodsChannelGroup.objects.all()
     serializer_class = ChannelGroupModelSerializer
 
-    @method_decorator(permission_required('goods.Goods_Channel'))
+    # @method_decorator(permission_required('goods.Goods_Channel'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)

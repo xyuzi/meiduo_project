@@ -24,7 +24,7 @@ class SelectUserInfoView(ListAPIView, CreateAPIView):
         else:
             return User.objects.filter(is_staff=False, is_superuser=False)
 
-    @method_decorator(permission_required('users.User', raise_exception=True))
+    # @method_decorator(permission_required('users.User', raise_exception=True))
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
 

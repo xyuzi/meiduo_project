@@ -98,11 +98,11 @@ class AdminsView(ModelViewSet):
     #         "user_permissions": permission_list
     #     })
 
-    @method_decorator(permission_required('users.Staff_User'))
+    # @method_decorator(permission_required('users.Staff_User'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    @method_decorator(permission_required('users.Staff_User'))
+    # @method_decorator(permission_required('users.Staff_User'))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
@@ -120,6 +120,6 @@ class AdminSimplenView(ListAPIView):
     queryset = Group.objects.all()
     serializer_class = AdminSimplenModelSerializer
 
-    @method_decorator(permission_required('auth.Group_group'))
+    # @method_decorator(permission_required('auth.Group_group'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)

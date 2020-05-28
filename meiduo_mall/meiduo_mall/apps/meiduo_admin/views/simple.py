@@ -14,11 +14,11 @@ class GroupsView(ModelViewSet):
     serializer_class = GroupModelSerializer
     pagination_class = PageNum
 
-    @method_decorator(permission_required('auth.Group_group'))
+    # @method_decorator(permission_required('auth.Group_group'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    @method_decorator(permission_required('auth.Group_group'))
+    # @method_decorator(permission_required('auth.Group_group'))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
@@ -39,6 +39,6 @@ class SimplenView(ListAPIView):
     queryset = Permission.objects.all()
     serializer_class = SimplenModelSerializer
 
-    @method_decorator(permission_required('auth.Permission_permission'))
+    # @method_decorator(permission_required('auth.Permission_permission'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)

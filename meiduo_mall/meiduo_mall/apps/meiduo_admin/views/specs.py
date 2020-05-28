@@ -16,11 +16,11 @@ class SpecsInfoView(ModelViewSet):
     serializer_class = SpecsInfoModelSerializer
     queryset = GoodsSpecification.objects.all()
 
-    @method_decorator(permission_required('goods.Goods_Specification'))
+    # @method_decorator(permission_required('goods.Goods_Specification'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    @method_decorator(permission_required('goods.Goods_Specification'))
+    # @method_decorator(permission_required('goods.Goods_Specification'))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
@@ -37,7 +37,7 @@ class SpecsInfoView(ModelViewSet):
         return super().destroy(request, *args, **kwargs)
 
     @action(detail=False)
-    @method_decorator(permission_required('goods.Goods_Specification'))
+    # @method_decorator(permission_required('goods.Goods_Specification'))
     def simple(self, request):
         spec = GoodsSpecification.objects.all()
         serializer = SpecsSipmpleModelSerializer(spec, many=True)

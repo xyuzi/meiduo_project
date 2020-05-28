@@ -19,7 +19,7 @@ class SKUInfoView(ListAPIView):
     queryset = SKU.objects.all()
     serializer_class = SKUModelSerializer
 
-    @method_decorator(permission_required('goods.Goods_Sku'))
+    # @method_decorator(permission_required('goods.Goods_Sku'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
@@ -39,17 +39,17 @@ class SKUView(ModelViewSet):
             return SKU.objects.all()
 
     @action(detail=False)
-    @method_decorator(permission_required('goods.Goods_Sku'))
+    # @method_decorator(permission_required('goods.Goods_Sku'))
     def categories(self, request):
         goods = GoodsCategory.objects.filter(goodscategory=None)
         serializer = SKUThreeSerializer(goods, many=True)
         return Response(serializer.data)
 
-    @method_decorator(permission_required('goods.Goods_Sku'))
+    # @method_decorator(permission_required('goods.Goods_Sku'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    @method_decorator(permission_required('goods.Goods_Sku'))
+    # @method_decorator(permission_required('goods.Goods_Sku'))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
@@ -71,7 +71,7 @@ class GoodsSimpleView(ListAPIView):
     queryset = Goods.objects.all()
     serializer_class = GoodsSerializer
 
-    @method_decorator(permission_required('goods.Goods_Sku'))
+    # @method_decorator(permission_required('goods.Goods_Sku'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
@@ -79,7 +79,7 @@ class GoodsSimpleView(ListAPIView):
 class GoodsSpecificationView(APIView):
     permission_classes = [IsAdminUser]
 
-    @method_decorator(permission_required('goods.Goods_Specification'))
+    # @method_decorator(permission_required('goods.Goods_Specification'))
     def get(self, request, pk):
         goods = GoodsSpecification.objects.filter(spu_id=pk)
         serializer = GoodsSpecificationSerializer(goods, many=True)

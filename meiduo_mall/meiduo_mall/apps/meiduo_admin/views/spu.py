@@ -17,11 +17,11 @@ class GoodsInfoView(ModelViewSet):
     serializer_class = GoodsInfoSerializers
     queryset = goods = Goods.objects.all()
 
-    @method_decorator(permission_required('goods.Goods_spu'))
+    # @method_decorator(permission_required('goods.Goods_spu'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    @method_decorator(permission_required('goods.Goods_spu'))
+    # @method_decorator(permission_required('goods.Goods_spu'))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
@@ -43,7 +43,7 @@ class GoodsBrandInfoView(ListAPIView):
     serializer_class = GoodsBrandInfoSerializers
     queryset = Brand.objects.all()
 
-    @method_decorator(permission_required('goods.Goods_spu'))
+    # @method_decorator(permission_required('goods.Goods_spu'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
@@ -53,7 +53,7 @@ class GoodsCategoriesOneInfoView(ListAPIView):
     serializer_class = GoodsCategoryInfoSerializers
     queryset = GoodsCategory.objects.filter(parent_id=None)
 
-    @method_decorator(permission_required('goods.Goods_Category'))
+    # @method_decorator(permission_required('goods.Goods_Category'))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
