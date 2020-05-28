@@ -6,6 +6,9 @@ from meiduo_admin.utils.pageresponse import PageNum
 
 from users.models import User
 
+from django.contrib.auth.decorators import permission_required
+from django.utils.decorators import method_decorator
+
 
 class SelectUserInfoView(ListAPIView, CreateAPIView):
     permission_classes = [IsAdminUser]
@@ -20,3 +23,11 @@ class SelectUserInfoView(ListAPIView, CreateAPIView):
                                        is_staff=False, is_superuser=False)
         else:
             return User.objects.filter(is_staff=False, is_superuser=False)
+
+    @method_decorator(permission_required('users.User', raise_exception=True))
+    def get(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+    @method_decorator(permission_required('users.User', raise_exception=True))
+    def post(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)

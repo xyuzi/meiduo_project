@@ -1,4 +1,6 @@
 from django.conf import settings
+from django.contrib.auth.decorators import permission_required
+from django.utils.decorators import method_decorator
 from fdfs_client.client import Fdfs_client
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
@@ -18,6 +20,15 @@ class SKUImageView(ModelViewSet):
     serializer_class = SkuImageModelSerializer
     pagination_class = PageNum
 
+    @method_decorator(permission_required('goods.Sku_Image'))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
+
+    @method_decorator(permission_required('goods.Sku_Image'))
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, *args, **kwargs)
+
+    @method_decorator(permission_required('goods.Sku_Image'))
     def create(self, request, *args, **kwargs):
         sku_id = request.data.get('sku')
         fast = FastDFSStorage()
@@ -33,6 +44,7 @@ class SKUImageView(ModelViewSet):
             status=HTTP_201_CREATED
         )
 
+    @method_decorator(permission_required('goods.Sku_Image'))
     def update(self, request, *args, **kwargs):
         instance = self.get_object()
         # fast = FastDFSStorage()
@@ -56,6 +68,7 @@ class SKUImageView(ModelViewSet):
             status=HTTP_201_CREATED
         )
 
+    @method_decorator(permission_required('goods.Sku_Image'))
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
         client = Fdfs_client(settings.FDFS_CLIENT_CONF)

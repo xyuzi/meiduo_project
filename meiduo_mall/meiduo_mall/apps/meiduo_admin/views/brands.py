@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import permission_required
+from django.utils.decorators import method_decorator
 from fdfs_client.client import Fdfs_client
 from django.conf import settings
 from rest_framework.response import Response
@@ -15,6 +17,7 @@ class BrandsInfoView(ModelViewSet):
     queryset = Brand.objects.all()
     pagination_class = PageNum
 
+    @method_decorator(permission_required('goods.Brand'))
     def create(self, request, *args, **kwargs):
         name = request.data.get('name')
         first_letter = request.data.get('first_letter')
@@ -32,6 +35,7 @@ class BrandsInfoView(ModelViewSet):
             status=HTTP_201_CREATED
         )
 
+    @method_decorator(permission_required('goods.Brand'))
     def update(self, request, *args, **kwargs):
         instance = self.get_object()
         client = Fdfs_client(settings.FDFS_CLIENT_CONF)
@@ -56,6 +60,7 @@ class BrandsInfoView(ModelViewSet):
             status=HTTP_201_CREATED
         )
 
+    @method_decorator(permission_required('goods.Brand'))
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
         client = Fdfs_client(settings.FDFS_CLIENT_CONF)
@@ -65,3 +70,11 @@ class BrandsInfoView(ModelViewSet):
             pass
         instance.delete()
         return Response(status=HTTP_201_CREATED)
+
+    @method_decorator(permission_required('goods.Brand'))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
+
+    @method_decorator(permission_required('goods.Brand'))
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, *args, **kwargs)

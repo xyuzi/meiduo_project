@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import permission_required
+from django.utils.decorators import method_decorator
 from rest_framework.permissions import IsAdminUser
 from rest_framework.viewsets import ModelViewSet
 
@@ -11,3 +13,23 @@ class OptionsInfoView(ModelViewSet):
     queryset = SpecificationOption.objects.all()
     serializer_class = OptionsModelSerializer
     pagination_class = PageNum
+
+    @method_decorator(permission_required('goods.Goods_Specification'))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
+
+    @method_decorator(permission_required('goods.Goods_Specification'))
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, *args, **kwargs)
+
+    @method_decorator(permission_required('goods.Goods_Specification'))
+    def create(self, request, *args, **kwargs):
+        return super().create(request, *args, **kwargs)
+
+    @method_decorator(permission_required('goods.Goods_Specification'))
+    def update(self, request, *args, **kwargs):
+        return super().update(request, *args, **kwargs)
+
+    @method_decorator(permission_required('goods.Goods_Specification'))
+    def destroy(self, request, *args, **kwargs):
+        return super().destroy(request, *args, **kwargs)

@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import permission_required
+from django.utils.decorators import method_decorator
 from rest_framework.generics import ListAPIView
 from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
@@ -21,10 +23,15 @@ class OrdersInfoView(ListAPIView):
         else:
             return OrderInfo.objects.all()
 
+    @method_decorator(permission_required('carts.Order_Info'))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
+
 
 class OrdersInforMationView(APIView):
     permission_classes = [IsAdminUser]
 
+    @method_decorator(permission_required('carts.Order_Info'))
     def get(self, request, pk):
         order = OrderInfo.objects.get(order_id=pk)
         serializer = OrdersInforMationModelSerializer(order)
@@ -34,6 +41,7 @@ class OrdersInforMationView(APIView):
 class OrdersStatusView(APIView):
     permission_classes = [IsAdminUser]
 
+    @method_decorator(permission_required('carts.Order_Info'))
     def put(self, request, order_id):
         status = request.data.get('status')
         order = OrderInfo.objects.get(order_id=order_id)
