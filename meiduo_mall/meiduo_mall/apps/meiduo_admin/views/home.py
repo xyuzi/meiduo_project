@@ -1,3 +1,4 @@
+from django.db.models.functions import datetime
 from rest_framework.permissions import IsAdminUser
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -64,3 +65,18 @@ class PeopleMonthCountView(APIView):
             })
 
         return Response(list)
+
+
+class PeopleDayView(APIView):
+    permission_classes = [IsAdminUser]
+
+    def get(self, request):
+        day = date.today()
+        day_tomorrow = day + timedelta(days=1)
+
+        count = User.objects.filter(date_joined__gte=day, date_joined__lt=day_tomorrow).count()
+
+        return Response({
+            'count': count,
+            'date': day
+        })
