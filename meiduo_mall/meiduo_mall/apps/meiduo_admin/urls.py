@@ -12,6 +12,7 @@ urlpatterns = [
     re_path(r'^statistical/day_orders/$', home.PeopleOrderInfoCountView.as_view()),
     re_path(r'^statistical/month_increment/$', home.PeopleMonthCountView.as_view()),
     re_path(r'^statistical/day_increment/$', home.PeopleDayView.as_view()),
+    re_path(r'^statistical/goods_day_views/$', home.PeopleGoodsDayView.as_view()),
 
     re_path(r'^users/$', user.SelectUserInfoView.as_view()),
 

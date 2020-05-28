@@ -1,5 +1,6 @@
 from django.contrib.auth.models import Group
 from django.db.models import Q
+from rest_framework.permissions import IsAdminUser
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
@@ -15,6 +16,7 @@ class AdminsView(ModelViewSet):
     queryset = User.objects.filter(is_staff=True)
     serializer_class = AdminsModelSerializer
     pagination_class = PageNum
+    permission_classes = [IsAdminUser]
 
     # 模型类以实现 ↓list↓可以达到相同要求
     # def list(self, request, *args, **kwargs):
@@ -95,5 +97,6 @@ class AdminsView(ModelViewSet):
 
 
 class AdminSimplenView(ListAPIView):
+    permission_classes = [IsAdminUser]
     queryset = Group.objects.all()
     serializer_class = AdminSimplenModelSerializer

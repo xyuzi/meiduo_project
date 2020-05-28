@@ -2,6 +2,8 @@ from django.db.models.functions import datetime
 from rest_framework.permissions import IsAdminUser
 from rest_framework.views import APIView
 from rest_framework.response import Response
+
+from goods.models import GoodsVisitCount
 from users.models import User
 from datetime import date, timedelta
 
@@ -80,3 +82,17 @@ class PeopleDayView(APIView):
             'count': count,
             'date': day
         })
+
+
+class PeopleGoodsDayView(APIView):
+    permission_classes = [IsAdminUser]
+
+    def get(self, request):
+        goods = GoodsVisitCount.objects.all()
+
+        list = []
+
+        for good in goods:
+            list.append({'category': good.category.name, 'count': good.count})
+
+        return Response(list)
