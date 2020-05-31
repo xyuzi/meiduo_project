@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import permission_required
 from django.contrib.auth.models import Group
 from django.db.models import Q
 from django.utils.decorators import method_decorator
-from rest_framework.permissions import IsAdminUser
+from rest_framework.permissions import IsAdminUser, DjangoModelPermissions
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
@@ -37,7 +37,7 @@ class AdminsView(ModelViewSet):
     #     serializer.data.user_permissions = permission_list
     #     return self.get_paginated_response(serializer.data)
 
-    @method_decorator(permission_required('users.Staff_User'))
+    @method_decorator(permission_required('users.Staff_User', raise_exception=True))
     def create(self, request, *args, **kwargs):
         instance = request.data
         serializer = self.get_serializer(data=request.data)
@@ -98,19 +98,19 @@ class AdminsView(ModelViewSet):
     #         "user_permissions": permission_list
     #     })
 
-    # @method_decorator(permission_required('users.Staff_User'))
+    # @method_decorator(permission_required('users.Staff_User', raise_exception=True))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    # @method_decorator(permission_required('users.Staff_User'))
+    # @method_decorator(permission_required('users.Staff_User', raise_exception=True))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
-    @method_decorator(permission_required('users.Staff_User'))
+    @method_decorator(permission_required('users.Staff_User', raise_exception=True))
     def update(self, request, *args, **kwargs):
         return super().update(request, *args, **kwargs)
 
-    @method_decorator(permission_required('users.Staff_User'))
+    @method_decorator(permission_required('users.Staff_User', raise_exception=True))
     def destroy(self, request, *args, **kwargs):
         return super().destroy(request, *args, **kwargs)
 
@@ -120,6 +120,6 @@ class AdminSimplenView(ListAPIView):
     queryset = Group.objects.all()
     serializer_class = AdminSimplenModelSerializer
 
-    # @method_decorator(permission_required('auth.Group_group'))
+    # @method_decorator(permission_required('auth.Group_group', raise_exception=True))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)

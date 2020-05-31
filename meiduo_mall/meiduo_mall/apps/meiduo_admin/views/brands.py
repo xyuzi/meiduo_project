@@ -17,7 +17,7 @@ class BrandsInfoView(ModelViewSet):
     queryset = Brand.objects.all()
     pagination_class = PageNum
 
-    @method_decorator(permission_required('goods.Brand'))
+    @method_decorator(permission_required('goods.Brand', raise_exception=True))
     def create(self, request, *args, **kwargs):
         name = request.data.get('name')
         first_letter = request.data.get('first_letter')
@@ -35,7 +35,7 @@ class BrandsInfoView(ModelViewSet):
             status=HTTP_201_CREATED
         )
 
-    @method_decorator(permission_required('goods.Brand'))
+    @method_decorator(permission_required('goods.Brand', raise_exception=True))
     def update(self, request, *args, **kwargs):
         instance = self.get_object()
         client = Fdfs_client(settings.FDFS_CLIENT_CONF)
@@ -60,7 +60,7 @@ class BrandsInfoView(ModelViewSet):
             status=HTTP_201_CREATED
         )
 
-    @method_decorator(permission_required('goods.Brand'))
+    @method_decorator(permission_required('goods.Brand', raise_exception=True))
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
         client = Fdfs_client(settings.FDFS_CLIENT_CONF)
@@ -71,10 +71,10 @@ class BrandsInfoView(ModelViewSet):
         instance.delete()
         return Response(status=HTTP_201_CREATED)
 
-    # @method_decorator(permission_required('goods.Brand'))
+    # @method_decorator(permission_required('goods.Brand', raise_exception=True))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    # @method_decorator(permission_required('goods.Brand'))
+    # @method_decorator(permission_required('goods.Brand', raise_exception=True))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)

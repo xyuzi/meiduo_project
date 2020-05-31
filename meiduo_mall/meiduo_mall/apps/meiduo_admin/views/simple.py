@@ -14,23 +14,23 @@ class GroupsView(ModelViewSet):
     serializer_class = GroupModelSerializer
     pagination_class = PageNum
 
-    # @method_decorator(permission_required('auth.Group_group'))
+    # @method_decorator(permission_required('auth.Group_group', raise_exception=True))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    # @method_decorator(permission_required('auth.Group_group'))
+    # @method_decorator(permission_required('auth.Group_group', raise_exception=True))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
-    @method_decorator(permission_required('auth.Group_group'))
+    @method_decorator(permission_required('auth.Group_group', raise_exception=True))
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
 
-    @method_decorator(permission_required('auth.Group_group'))
+    @method_decorator(permission_required('auth.Group_group', raise_exception=True))
     def update(self, request, *args, **kwargs):
         return super().update(request, *args, **kwargs)
 
-    @method_decorator(permission_required('auth.Group_group'))
+    @method_decorator(permission_required('auth.Group_group', raise_exception=True))
     def destroy(self, request, *args, **kwargs):
         return super().destroy(request, *args, **kwargs)
 
@@ -39,6 +39,6 @@ class SimplenView(ListAPIView):
     queryset = Permission.objects.all()
     serializer_class = SimplenModelSerializer
 
-    # @method_decorator(permission_required('auth.Permission_permission'))
+    # @method_decorator(permission_required('auth.Permission_permission', raise_exception=True))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)

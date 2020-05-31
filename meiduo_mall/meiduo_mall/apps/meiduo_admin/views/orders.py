@@ -23,7 +23,7 @@ class OrdersInfoView(ListAPIView):
         else:
             return OrderInfo.objects.all()
 
-    # @method_decorator(permission_required('carts.Order_Info'))
+    # @method_decorator(permission_required('carts.Order_Info', raise_exception=True))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
@@ -31,7 +31,7 @@ class OrdersInfoView(ListAPIView):
 class OrdersInforMationView(APIView):
     permission_classes = [IsAdminUser]
 
-    # @method_decorator(permission_required('carts.Order_Info'))
+    # @method_decorator(permission_required('carts.Order_Info', raise_exception=True))
     def get(self, request, pk):
         order = OrderInfo.objects.get(order_id=pk)
         serializer = OrdersInforMationModelSerializer(order)
@@ -41,7 +41,7 @@ class OrdersInforMationView(APIView):
 class OrdersStatusView(APIView):
     permission_classes = [IsAdminUser]
 
-    @method_decorator(permission_required('carts.Order_Info'))
+    @method_decorator(permission_required('carts.Order_Info', raise_exception=True))
     def put(self, request, order_id):
         status = request.data.get('status')
         order = OrderInfo.objects.get(order_id=order_id)

@@ -143,3 +143,5 @@ logs/*
 *.log
 *.pyc
 *.pyo
+uwsgi.log
+uwsgi.pid

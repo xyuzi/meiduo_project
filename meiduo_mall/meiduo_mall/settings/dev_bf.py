@@ -24,9 +24,12 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 SECRET_KEY = '81o4a5e9m6h)q1^_c_%=^$il@$z*@=ml(54mt1f$po&oy!-x!f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['api.meiduo.site',
+                 '127.0.0.1',
+                 'localhost',
+                 'www.meiduo.site']
 
 # Application definition
 
@@ -239,12 +242,9 @@ AUTH_USER_MODEL = 'users.User'
 CORS_ORIGIN_ALLOW_ALL = True
 # CORS跨域请求白名单设置
 CORS_ORIGIN_WHITELIST = (
-    'http://127.0.0.1',
-    'http://localhost',
-    'http://www.meiduo.site',
-    'http://127.0.0.1:8000',
-    'http://localhost:8000',
-    'http://www.meiduo.site:8000',
+    'http://127.0.0.1:8080',
+    'http://localhost:8080',
+    'http://www.meiduo.site:8080',
 )
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 
@@ -257,7 +257,7 @@ QQ_CLIENT_ID = '101474184'
 # 申请的 客户端秘钥
 QQ_CLIENT_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'
 # 申请时添加的: 登录成功后回调的路径
-QQ_REDIRECT_URI = 'http://www.meiduo.site/oauth_callback.html'
+QQ_REDIRECT_URI = 'http://www.meiduo.site:8080/oauth_callback.html'
 
 # 发送短信的相关设置, 这些设置是当用户没有发送相关字段时, 默认使用的内容:
 # 发送短信必须进行的设置:
@@ -274,7 +274,7 @@ EMAIL_HOST_PASSWORD = 'JWLRNDOLNSUPFXDY'
 # 收件人看到的发件人
 EMAIL_FROM = 'xyz<15972148869@163.com>'
 # 激活邮件拼接地址
-EMAIL_VERIFY_URL = 'http://www.meiduo.site/success_verify_email.html?token='
+EMAIL_VERIFY_URL = 'http://www.meiduo.site:8080/success_verify_email.html?token='
 
 # FDFS需要的配置文件路径(即: client.conf文件绝对路径).
 FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')
@@ -310,7 +310,7 @@ HAYSTACK_SEARCH_RESULTS_PER_PAGE = 4
 ALIPAY_APPID = '2016102200739447'
 ALIPAY_DEBUG = True
 ALIPAY_URL = 'https://openapi.alipaydev.com/gateway.do'
-ALIPAY_RETURN_URL = "http://www.meiduo.site/pay_success.html"
+ALIPAY_RETURN_URL = "http://www.meiduo.site:8080/pay_success.html"
 
 # 数据库主从规则
 # DATABASE_ROUTERS = ['meiduo_mall.utils.db_router.MasterSlaveDBRouter']

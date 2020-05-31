@@ -17,23 +17,23 @@ class GoodsInfoView(ModelViewSet):
     serializer_class = GoodsInfoSerializers
     queryset = goods = Goods.objects.all()
 
-    # @method_decorator(permission_required('goods.Goods_spu'))
+    # @method_decorator(permission_required('goods.Goods_spu', raise_exception=True))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
-    # @method_decorator(permission_required('goods.Goods_spu'))
+    # @method_decorator(permission_required('goods.Goods_spu', raise_exception=True))
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
 
-    @method_decorator(permission_required('goods.Goods_spu'))
+    @method_decorator(permission_required('goods.Goods_spu', raise_exception=True))
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
 
-    @method_decorator(permission_required('goods.Goods_spu'))
+    @method_decorator(permission_required('goods.Goods_spu', raise_exception=True))
     def update(self, request, *args, **kwargs):
         return super().update(request, *args, **kwargs)
 
-    @method_decorator(permission_required('goods.Goods_spu'))
+    @method_decorator(permission_required('goods.Goods_spu', raise_exception=True))
     def destroy(self, request, *args, **kwargs):
         return super().destroy(request, *args, **kwargs)
 
@@ -43,7 +43,7 @@ class GoodsBrandInfoView(ListAPIView):
     serializer_class = GoodsBrandInfoSerializers
     queryset = Brand.objects.all()
 
-    # @method_decorator(permission_required('goods.Goods_spu'))
+    # @method_decorator(permission_required('goods.Goods_spu', raise_exception=True))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
@@ -53,7 +53,7 @@ class GoodsCategoriesOneInfoView(ListAPIView):
     serializer_class = GoodsCategoryInfoSerializers
     queryset = GoodsCategory.objects.filter(parent_id=None)
 
-    # @method_decorator(permission_required('goods.Goods_Category'))
+    # @method_decorator(permission_required('goods.Goods_Category', raise_exception=True))
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
@@ -61,7 +61,7 @@ class GoodsCategoriesOneInfoView(ListAPIView):
 class GoodsCategoriesInfoView(APIView):
     permission_classes = [IsAdminUser]
 
-    @method_decorator(permission_required('goods.Goods_Category'))
+    @method_decorator(permission_required('goods.Goods_Category', raise_exception=True))
     def get(self, request, pk):
         goodsclass = GoodsCategory.objects.filter(parent_id=pk)
         serializer = GoodsCategoryInfoSerializers(goodsclass, many=True)
